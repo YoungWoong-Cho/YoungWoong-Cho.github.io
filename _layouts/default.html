@@ -1,5 +1,19 @@
-{% include head.html %}
+<!DOCTYPE html>
+<html>
 
-  {{content}}
+  {% include head.html %}
+  <body class="home-template">
+      <div id="page" class="site">
 
-{% include footer.html %}
+        {% include header.html %}
+        <div class="page-content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+
+            {% include footer.html %}
+        <div class="overlay"></div>
+      </div><!-- #page -->
+  </body>
+</html>
