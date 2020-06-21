@@ -1,35 +1,15 @@
-# lucas gatsas Theme/Blog - Jekyll Theme
-# the library theme: https://github.com/SpaceG/library
-# Author: LucasGatsas
-# Theme: library
-# Source: https://github.com/spaceg/library
-# Mail: space@lucasgatsas.ch
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Amokläufer
-#What is the name of the events or talks you would like to host? (Example Brownbags, Talks, Lighting Talks)
-event_label: Events
-
-description: > # "
-  Lucas Gatsas, is a Web -Developer, Front -End Engineer & UI/UX Designer based in  St. Gallen, Switerland.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://blog.lucasgatsas.ch" # the base hostname & protocol for your site
-
-#These settings might be able to go?
-author: Lucas Gatsas
-twitter_username: lucasgatsas
-github_username:  spaceg
-company_name: lucasgatsas
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/urban-theme" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-
-#Have to show future posts for future events.
-future: true
-
-permalink: /event/:title.html
+permalink: pretty
