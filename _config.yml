@@ -2,19 +2,17 @@
 #
 
 # Site settings
-title: Spectral
-description: |
-  Another fine responsive  
-  site template freebie  
-  crafted by [HTML5 UP](http://html5up.net)
-owner: Your Name # or company name
-first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+title: Welcome | YoungWoong Cho
+description: 
+  Welcome to my homepage. You can view my resume and portfolio from this site. Want to know more of me? Feel free to contact!
+owner: YoungWoong Cho
+first_published: 2020 # if migrating another site, the year of your first publish
+email: herocho1997@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://youngwoong-cho.github.io" # the base hostname & protocol for your site
 social:
   twitter: https://twitter.com/<username>
-  github: https://github.com/<username>
+  github: https://github.com/youngwoong-cho
   linkedin-square: https://linkedin.com/in/<username>
   facebook-official: https://facebook.com/<username>
   google-plus-square: https://plus.google.com/u/0/+<username>
