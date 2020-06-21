@@ -1,37 +1,65 @@
-## Welcome to GitHub Pages
+# Library 
+Library - Rails on Ruby - Jekyll Theme
+Preview: http://www.blog.lucasgatsas.ch
 
-You can use the [editor on GitHub](https://github.com/YoungWoong-Cho/YoungWoong-Cho.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Clone to Desktop
+<code>git clone https://github.com/SpaceG/library.git  </code>
+Delete the cname file.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+<code>cd Desktop </code><br>
+<code>cd library </code><br>
+<code>$ jekyll serve </code>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+watch your localhost <code> 127.0.0.1:8080 </code>
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+to but the code in a static html file :
+<code>
+{% highlight ruby linenos %}
+// array literlas
+  var = empty = [];
+  var = numbers = [
+  'zero', 'one', 'two', 'three', 'four',
+  'five', 'six', 'seven', 'eight', 'nine'
+  ];
+  empty[1] // undefined
+  numbers[1] // 'one'
+  empty.lenght // 0
+  numbers.lenght //10
+{% endhighlight %}
 
-- Bulleted
-- List
+{% highlight ruby linenos %}
+  // The Object Literal
+  var numbers_object = {
+    '0': 'zero', '1': 'one', '2': 'two',
+    '0': 'three', '4': 'four', '5': 'five',
+    '6': 'six', '7': 'seven', '8': 'eight',
+    '9': 'nine'
+  };
+{% endhighlight %}
+</code>
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+The MIT License (MIT)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/YoungWoong-Cho/YoungWoong-Cho.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Support or Contact
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
