@@ -11,12 +11,12 @@ email: herocho1997@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://youngwoong-cho.github.io" # the base hostname & protocol for your site
 social:
-  twitter: https://twitter.com/<username>
+  #twitter: https://twitter.com/<username>
   github: https://github.com/youngwoong-cho
-  linkedin-square: https://linkedin.com/in/<username>
-  facebook-official: https://facebook.com/<username>
-  google-plus-square: https://plus.google.com/u/0/+<username>
-  #email: /contact/
+  linkedin-square: https://www.linkedin.com/in/youngwoong-cho-09b587197/
+  #facebook-official: https://facebook.com/<username>
+  #google-plus-square: https://plus.google.com/u/0/+<username>
+  email: herocho1997@gmail.com
   #flickr:
   #instagram:
   #youtube-square:
@@ -52,6 +52,6 @@ social:
   #amazon:
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
 #sass:
 #  style: compressed
