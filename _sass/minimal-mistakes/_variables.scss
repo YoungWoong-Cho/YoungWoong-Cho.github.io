@@ -13,7 +13,7 @@ $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: Georgia, Times, serif !default;
+// $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
@@ -23,8 +23,8 @@ $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 // @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 // @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 // @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-// @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-// $serif: "Nanum Myeongjo", serif !default;
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+$serif: "Nanum Myeongjo", serif !default;
 // $sans-serif: "Nanum Myeongjo", sans-serif !default;
 
 /* sans serif typefaces */
