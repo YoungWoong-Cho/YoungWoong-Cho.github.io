@@ -19,7 +19,13 @@ $indent-var: 1.3em !default;
    font-weight: 400;
    font-style: normal;
 }
-$serif: "Nanum Myeongjo", Georgia, Times, serif;
+@font-face {
+   font-family: 'GowunBatang-Regular';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+$serif: "GowunBatang-Regular", Georgia, Times, serif;
 $sans-serif: "Pretendard-Regular", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
