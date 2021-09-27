@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Youngwoong Cho's blog"
+title                    : "Youngwoong Cho's website"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Youngwoong Cho"
-description              : "Youngwoong Cho's blog"
+description              : "Youngwoong Cho's website"
 url                      : "https://youngwoong-cho.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
