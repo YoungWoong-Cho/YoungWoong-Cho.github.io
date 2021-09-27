@@ -6,6 +6,7 @@ main:
   
 docs:
   - title: About
+    url: about
 
   - title: Deep learning
     children:
