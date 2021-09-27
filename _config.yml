@@ -105,11 +105,11 @@ author:
   avatar           : /assets/images/profile.PNG
   bio              : "The Cooper Union '23.<br>Seoul Robotics ML Research Intern.<br>Robotics, perception, and deep learning."
   location         : "Seoul, Korea"
-  email            :
+  email            : "herocho1997@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "herocho1997@gmail.com"
+      # url: "herocho1997@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
