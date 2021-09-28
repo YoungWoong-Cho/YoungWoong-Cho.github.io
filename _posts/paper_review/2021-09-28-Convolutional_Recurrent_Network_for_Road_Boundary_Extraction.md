@@ -12,7 +12,7 @@ header:
 ---
 
 ### Preliminary
-- If you think you are not familiar with **convolutional neural network**, check out this [post](https://www.youtube.com).
+- If you are not familiar with **convolutional neural network**, check out this [post](https://www.youtube.com).
 
 ---
 
