@@ -24,7 +24,12 @@ CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, D
 
 Before we begin, prepare **a cup of coffee** that will help us through the paper.
 
-# Curb detection and HD map
+# HD map and Curb detection
+
 **High definition map** is a roadmap that is as accurate as down to centimeter scales. It contains important information of the static part of the scene, such as drivable area (where the vehicle is allowed to drive), crosswalks, stoplines, etc. They are extremely important for perception, path planning, and localization.
+
 However, annotating HD maps is an awfully laborious task. Imagine annotating tens of millions of points that corresponds to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
-In this paper, the authors focus on the extraction of the drivable area from LiDAR and camera input, employing  the convolutional neural networks(CNN) and convolutional recurrent network(CRNN).
+
+In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks(CNN) and convolutional recurrent network(CRNN).
+
+# What are the inputs?
