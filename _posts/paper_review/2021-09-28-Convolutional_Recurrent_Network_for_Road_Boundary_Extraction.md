@@ -77,5 +77,5 @@ where $H$ and $W$ is the height and the width of the input image.
 For a given input $I \in \mathbb{R}^{5 \times H \times W}$, the desired output is a list of **vectorized road boundary**. Each road boundary is a polyline, which basically is a ordered list of $\left(x, y\right)$ coordinates.  
 Mathematically speaking, output $O$ can be expressed as
 $$
-O = \left\{O_i\right\} \quad \text{with} \quad O_i = \left\{p_j | p_j \in \mathbb{R}^2\right\}
+O = \left\{O_i\right\} O_i = \left\{p_j | p_j \in \mathbb{R}^2\right\}
 $$
