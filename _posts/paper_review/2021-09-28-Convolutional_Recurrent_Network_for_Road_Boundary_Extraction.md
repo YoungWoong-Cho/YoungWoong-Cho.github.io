@@ -67,4 +67,4 @@ The authors of Convolutional Recurrent Network for Road Boundary Extraction adop
 
 > We also input as an extra channel the gradient of the LiDAR’s height value. This input channel is very informative since the drivable and non-drivable regions of the road in a city are mostly flat surfaces at different heights that are separated by a curb.
 
-Long story short, the point cloud data from LiDAR is projected onto the grid in the $x$-$y$ plane, and to each pixel the intensity and the gradient of the height value are assigned. This is then concatenated with the correspponding RGB image, resulting in a 5-dimensional input image.
+Long story short, the point cloud data from LiDAR is projected onto the grid in the $x$-$y$ plane, and to each pixel the intensity and the gradient of the height value are assigned. This is then concatenated with the corresponding RGB image, resulting in a 5-dimensional input image.
