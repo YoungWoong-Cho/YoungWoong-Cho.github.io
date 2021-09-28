@@ -30,6 +30,6 @@ Before we begin, prepare **a cup of coffee** that will help us through the paper
 
 However, annotating HD maps is an awfully laborious task. Imagine annotating tens of millions of points that corresponds to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
 
-In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks(CNN) and convolutional recurrent network(CRNN).
+In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks(CNN) and convolutional recurrent network(CRNN).  
 
 # What are the inputs?
