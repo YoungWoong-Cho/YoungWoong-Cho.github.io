@@ -68,10 +68,14 @@ The authors of Convolutional Recurrent Network for Road Boundary Extraction adop
 > We also input as an extra channel the gradient of the LiDAR’s height value. This input channel is very informative since the drivable and non-drivable regions of the road in a city are mostly flat surfaces at different heights that are separated by a curb.
 
 Long story short, the point cloud data from LiDAR is projected onto the grid in the $x$-$y$ plane, and to each pixel the intensity and the gradient of the height value are assigned. This is then concatenated with the corresponding RGB image, resulting in a 5-dimensional input image. Mathematically speaking, each input tensor is
-$$ I \in \mathbb{R}^{5 \times H \times W} $$
+$$
+I \in \mathbb{R}^{5 \times H \times W}
+$$
 where $H$ and $W$ is the height and the width of the input image.
 
 # What is the desired output?
 For a given input $I \in \mathbb{R}^{5 \times H \times W}$, the desired output is a list of **vectorized road boundary**. Each road boundary is a polyline, which basically is a ordered list of $\left(x, y\right)$ coordinates.  
 Mathematically speaking, output $O$ can be expressed as
-$$ O =$$
+$$
+O = \left\{O_i\right\} \quad \text{with} \quad O_i = \left\{p_j | p_j \in \mathbb{R}^2\right\}
+$$
