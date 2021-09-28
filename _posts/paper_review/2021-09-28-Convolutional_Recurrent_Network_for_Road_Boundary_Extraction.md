@@ -42,4 +42,4 @@ In this paper, the authors focus on the extraction of the **drivable area** from
 
 Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis. Something like `pts_2d = pts_3d[:, :2]`.
 
-At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the lasts column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, researchers add extra channel to the input tensor of the LiDAR that accounts for the "height" information. 
+At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the lasts column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, we usually add extra channels to the input tensor of the LiDAR that accounts for the "height" information. 
