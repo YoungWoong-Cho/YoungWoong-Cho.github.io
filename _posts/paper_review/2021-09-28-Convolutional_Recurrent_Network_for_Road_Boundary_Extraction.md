@@ -38,8 +38,8 @@ However, annotating HD maps is an awfully laborious task. Imagine labeling tens 
 In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks (CNN) and convolutional recurrent network (CRNN).
 
 # What are the inputs?
-3D point cloud data from LiDAR and 2D imagery from RGB camera are used for the creation of HD map. However, they can not be directly consumed by the model, since the nature of the data from two sensors differ a lot. (How can you directly combine 3-D unordered points from LiDAR and 2-D 3-channel pixels from camera together?)
+3D point cloud data from LiDAR and 2D imagery from RGB camera are used for the creation of HD map. However, they can not be directly consumed by the model, since the nature of the data from two sensors differ a lot. (How can you directly combine 3D unordered points from LiDAR and 2D 3-channel pixels from camera together?)
 
-Thus, the authors create a **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3-D to 2-D "flattening" of the point cloud data can be easily done by removing the z-axis. Something like `pts_2d = pts_3d[:, :2]`.
+Thus, the authors create a **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis. Something like `pts_2d = pts_3d[:, :2]`.
 
-At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the lasts column (which is z-coordinates) will lose some data. Therefore, in order not to lose our precious 3-D information, researchers add extra channel to the input tensor of the LiDAR that accounts for the "height" information. 
+At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the lasts column (which is z-coordinates) will lose some data. Therefore, in order not to lose our precious 3D information, researchers add extra channel to the input tensor of the LiDAR that accounts for the "height" information. 
