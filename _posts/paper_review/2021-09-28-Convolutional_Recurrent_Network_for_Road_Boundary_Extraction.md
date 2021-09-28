@@ -11,9 +11,6 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/8e2gal_GIE8)"
 ---
 
----
-> Extraction of drivable road boundary is important for self-driving cars. In this paper, the authors propose a convolutional recurrent network that extracts the road boundary from LiDAR and camera images.
-
 ### Preliminary
 - If you think you are not familiar with **convolutional neural network**, check out this [post](https://www.youtube.com).
 
@@ -23,6 +20,7 @@ header:
 CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, Dilated convolutional layers, Instance normalization, STN
 
 ---
+> Extraction of drivable road boundary is important for self-driving cars. In this paper, the authors propose a convolutional recurrent network that extracts the road boundary from LiDAR and camera images.
 
 Before we begin, prepare **a cup of coffee** that will help us through the paper.
 
