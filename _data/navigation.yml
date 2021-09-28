@@ -11,9 +11,9 @@ docs:
   - title: Project
     children:
       - title: "Decay"
-        url: project/Decay
+        url: Decay
 
   - title: Paper review
     children:
       - title: "Convolutional Recurrent Network for Road Boundary Extraction"
-        url: paper_review/Convolutional_Recurrent_Network_for_Road_Boundary_Extraction
+        url: Convolutional_Recurrent_Network_for_Road_Boundary_Extraction
