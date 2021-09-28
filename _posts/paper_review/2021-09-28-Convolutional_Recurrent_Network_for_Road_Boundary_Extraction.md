@@ -23,18 +23,18 @@ CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, D
 ---
 > Extraction of drivable road boundary is important for self-driving cars. In this paper, the authors propose a convolutional recurrent network that extracts the road boundary from LiDAR and camera input.
 
-Before we begin, prepare **a cup of coffee** that will help us through the paper.
+Before we begin, you may bring **a cup of coffee** that can help us through the paper.
 
 # HD map and Curb detection
 
-**High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for perception, path planning, and localization.
+**High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for the tasks such ad perception, path planning, and localization.
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
   <figcaption><b>Figure 1.</b> Here is a sample HD map, from <i>nuScenes map expansion</i>. It contains various annotations such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
 
-However, annotating HD maps is an awfully laborious task. Imagine labeling tens of millions of points that corresponds to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
+However, annotating HD maps is an awfully laborious task. Imagine labeling tens of millions of points that correspond to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
 
 In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks (CNN) and convolutional recurrent network (CRNN).
 
@@ -57,17 +57,17 @@ However, it turns out that a 3D CNN is an extremely expensive operation. First, 
 
 Yet, even after we apply voxelation, a convolution operation in 3D space is not desirable, since the point clouds are "sparse" by nature. For images, we have a value assigned to each pixel; however, for point clouds obtained from a LiDAR, most of the space is vacant. Therefore, after we convolve around the kernel, most of the resulting feature map would remain zero. (Since zero times whatever number is zero!)
 
-One possible solution is reducing the unnecessary convolution operation caused by having too much of zeros. Since applying the kernal to the empty space would simply yield zeros, we can apply the convolution operation to the non-zero area only. This is the idea behind the **sparse tensor**, which contains the information of non-zero voxels only, and can be implemented via [**Minkowski Engine**](https://github.com/NVIDIA/MinkowskiEngine). Sparse tensor and Minkowski Engine will be discussed furthur in the following [post](https://youngwoong-cho.github.io).
+One possible solution is reducing the unnecessary convolution operation caused by having most of the space filled with zero. Since applying the kernel to the empty space would simply yield zeros, we can apply the convolution operation to the non-zero area only. This is the idea behind the **sparse tensor**, which contains the information of non-zero voxels only, and can be implemented via [**Minkowski Engine**](https://github.com/NVIDIA/MinkowskiEngine). Sparse tensor and Minkowski Engine will be discussed furthur in the following [post](https://youngwoong-cho.github.io).
 
-Another possible solution is, simply reducing the dimensionality to 2D, and applying the conventional 2D convolution operation. This, as pointed out above, requires another step in order to minimize the information loss that is caused by dimension reduction.
-For example, the authors of [**PointPillars: Fast Encoders for Object Detection from Point Clouds**](https://arxiv.org/pdf/1812.05784.pdf) suggests a way of converting the point cloud to a pseudo-image, each of whose pixels is a 9-dimensional vector that includes the $z$ coordinate. including the height information. More on the paper above can be found from the following [post](https://youngwoong-cho.github.io).
-The authors of [**Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks**](https://arxiv.org/pdf/1703.03613.pdf) state that, after creating a grid in the $x$-$y$ plane, statistics such as mean, standard deviation, minimum, and maximum elevation are computed for each grid. More on the paper above can be found from this [post](https://youngwoong-cho.github.io).
+Another possible solution is, simply reducing the dimensionality to 2D, and applying the conventional 2D convolution operation. This, as pointed out before, requires another step in order to minimize the information loss that is caused by dimension reduction.  
+For example, the authors of [**PointPillars: Fast Encoders for Object Detection from Point Clouds**](https://arxiv.org/pdf/1812.05784.pdf) suggest a way of converting the point cloud to a pseudo-image, each of whose pixels is a 9-dimensional vector that includes the height information. More on this paper can be found from the following [post](https://youngwoong-cho.github.io).  
+The authors of [**Fast LIDAR-based Road Detection Using Fully Convolutional Neural Networks**](https://arxiv.org/pdf/1703.03613.pdf) state that, after creating a grid in the $x$-$y$ plane, statistics such as mean, standard deviation, minimum, and maximum elevation are computed for each grid. More on this paper can be found from this [post](https://youngwoong-cho.github.io).
 
 The authors of Convolutional Recurrent Network for Road Boundary Extraction adopted the latter solution of adding extra channels:
 
 > We also input as an extra channel the gradient of the LiDAR’s height value. This input channel is very informative since the drivable and non-drivable regions of the road in a city are mostly flat surfaces at different heights that are separated by a curb.
 
-Long story short, the point cloud data from LiDAR is projected onto the grid in the $x$-$y$ plane, and to each pixel the intensity and the gradient of the height value are assigned. This is then concatenated with the correspponding RGB image, resulting in a 5-dimensional input image. Mathematically speaking, each input tensor is
+Long story short, the point cloud data from LiDAR is projected onto the grid in the $x$-$y$ plane, and to each pixel the intensity and the gradient of the height value are assigned. This is then concatenated with the corresponding RGB image, resulting in a 5-dimensional input image. Mathematically speaking, each input tensor is
 $$
 I \in \mathbb{R}^{5 \times H \times W}
 $$
