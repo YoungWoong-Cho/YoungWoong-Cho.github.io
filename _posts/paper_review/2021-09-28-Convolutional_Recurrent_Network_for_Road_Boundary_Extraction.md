@@ -23,7 +23,7 @@ CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, D
 ---
 > Extraction of drivable road boundary is important for self-driving cars. In this paper, the authors propose a convolutional recurrent network that extracts the road boundary from LiDAR and camera input.
 
-Before we begin, prepare **a cup of coffee** that will help us through the paper.
+Before we begin, you may bring **a cup of coffee** that can help us through the paper.
 
 # HD map and Curb detection
 
