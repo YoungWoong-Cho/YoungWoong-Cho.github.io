@@ -29,7 +29,7 @@ Before we begin, prepare **a cup of coffee** that will help us through the paper
 **High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area (where the vehicle is allowed to drive), lane lines, crosswalks, stoplines, etc. They are extremely important for perception, path planning, and localization.
 
 <figure style="width: 500px" class="align-center">
-  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig1.png" alt="">
+  <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
   <figcaption><b>Figure 1.</b> Here is a sample HD map, from nuScenes map extension. You can see it is annotated with various components such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
 
