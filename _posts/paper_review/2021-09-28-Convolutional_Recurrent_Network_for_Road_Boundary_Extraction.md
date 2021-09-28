@@ -3,8 +3,14 @@ layout: posts
 title: "[Paper Review] Convolutional Recurrent Network for Road Boundary Extraction"
 sidebar:
   nav: "docs"
+
+excerpt: "This post should display a **header with an overlay image**, if the theme supports it."
 header:
-  image: /assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/header.PNG
+  overlay_image: /assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/header.PNG
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  actions:
+    - label: "More Info"
+      url: "https://unsplash.com"
 ---
 
 ---
