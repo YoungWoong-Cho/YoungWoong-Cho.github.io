@@ -8,17 +8,12 @@ docs:
   - title: About
     url: about
 
-  - title: Deep learning
+  - title: Project
     children:
       - title: "Decay"
-        url: Decay
+        url: project/Decay
 
   - title: Paper review
     children:
       - title: "Convolutional Recurrent Network for Road Boundary Extraction"
-        url: Convolutional_Recurrent_Network_for_Road_Boundary_Extraction
-
-  - title: Projects
-    children:
-      - title: "Bipedal PID robot"
-        url: BipedalPIDRobot
+        url: paper_review/Convolutional_Recurrent_Network_for_Road_Boundary_Extraction
