@@ -19,5 +19,10 @@ Before we begin, prepare **a cup of coffee** that will help us through the paper
 # Preliminary
 - If you want to know more about **convolutional neural network**, check out this [post](https://www.youtube.com).
 
+---
+
 # Keywords
 CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, Dilated convolutional layers, Instance normalization, STN
+
+---
+
