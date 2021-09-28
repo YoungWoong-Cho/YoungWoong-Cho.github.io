@@ -27,7 +27,7 @@ Before we begin, you may bring **a cup of coffee** that can help us through the 
 
 # HD map and Curb detection
 
-**High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for perception, path planning, and localization.
+**High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for the tasks such ad perception, path planning, and localization.
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
