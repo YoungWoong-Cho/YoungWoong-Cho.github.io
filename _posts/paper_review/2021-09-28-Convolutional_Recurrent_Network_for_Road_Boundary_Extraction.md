@@ -28,7 +28,7 @@ Before we begin, prepare **a cup of coffee** that will help us through the paper
 
 **High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for perception, path planning, and localization.
 
-<figure style="width: 500px" class="align-center">
+<figure style="width: 80%" class="align-center">
   <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
   <figcaption><b>Figure 1.</b> Here is a sample HD map, from nuScenes map extension. You can see it is annotated with various components such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
@@ -42,4 +42,4 @@ In this paper, the authors focus on the extraction of the **drivable area** from
 
 Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis. Something like `pts_2d = pts_3d[:, :2]`.
 
-At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the lasts column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, we usually add one or more extra channels to the input tensor of the LiDAR that could retain the "height" information. 
+At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the lasts column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, we usually add one or more extra channels to the input tensor of the LiDAR that could retain the "height" information.
