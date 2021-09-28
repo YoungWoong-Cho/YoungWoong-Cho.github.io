@@ -16,6 +16,8 @@ header:
 
 Before we begin, prepare **a cup of coffee** that will help us through the paper.
 
+---
+
 # Preliminary
 - If you think you are not familiar with **convolutional neural network**, check out this [post](https://www.youtube.com).
 
