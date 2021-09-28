@@ -33,7 +33,7 @@ Before we begin, prepare **a cup of coffee** that will help us through the paper
   <figcaption><b>Figure 1.</b> Here is a sample HD map, from nuScenes map extension. You can see it is annotated with various components such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
 
-However, annotating HD maps is an awfully laborious task. Imagine annotating tens of millions of points that corresponds to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
+However, annotating HD maps is an awfully laborious task. Imagine labeling tens of millions of points that corresponds to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
 
 In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks(CNN) and convolutional recurrent network(CRNN).
 
