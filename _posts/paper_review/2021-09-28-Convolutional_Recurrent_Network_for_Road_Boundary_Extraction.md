@@ -6,7 +6,7 @@ sidebar:
 ---
 
 ---
-> Our project began with a question, *"what if inorganic things **'decay'**, like organic things?"*
+> Extraction of drivable road boundary is important for self-driving cars. In this papers, the authors proposes a convolutional recurrent network that extracts the road boundary from LiDAR and camera images.
 
 ## Preliminary
-Before we begin, prepare ##a cup of coffee## that will help us through the paper.
+Before we begin, prepare **a cup of coffee** that will help us through the paper.
