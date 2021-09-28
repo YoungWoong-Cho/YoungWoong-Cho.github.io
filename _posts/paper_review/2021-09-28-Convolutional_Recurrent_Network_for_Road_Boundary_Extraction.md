@@ -3,6 +3,8 @@ layout: posts
 title: "[Paper Review] Convolutional Recurrent Network for Road Boundary Extraction"
 sidebar:
   nav: "docs"
+header:
+  image: /assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/header.PNG
 ---
 
 ---
