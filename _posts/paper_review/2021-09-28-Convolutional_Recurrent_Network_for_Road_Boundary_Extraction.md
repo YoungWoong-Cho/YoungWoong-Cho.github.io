@@ -77,8 +77,30 @@ where $H$ and $W$ is the height and the width of the input image.
 
 # What is the desired output?
 For a given input $I \in \mathbb{R}^{5 \times H \times W}$, the desired output is a list of **vectorized road boundary**. Each road boundary is a polyline, which basically is a ordered list of $\left(x, y\right)$ coordinates.  
-Mathematically speaking, output $O$ can be expressed as
+Mathematically speaking, the output $O$ can be expressed as
 
 $$
 O = \left\{O_i\right\} \quad \text{with} \quad O_i = \left\{p_j | p_j \in \mathbb{R}^2\right\}
 $$
+or, in a more computer science format,
+```
+output = [[(x0_0, y1_0), (x0_1, y0_1), ...],
+          [(x1_0, y1_0), (x1_1, y1_1), ...],
+          ...
+          [(xi_0, yi_0), (xi_1, yi_1), ...],
+          ...
+          [(xn_0, yn_0), (xn_1, yn_1), ...]]
+```
+Notice that the output is a list of **polylines**. A polyline is an ordered set of point, which when connected sequentially, produces a line of interest.
+
+# So, what's the plan?
+Remember that the desired output is in a vector, not a raster. In other words, we want a set of point coordinates instead of pixels on the images. However, CNN is designed for the images, since it applies the weights and biases to the pixels.  
+**So, here' the plan**: we will train the model that outputs one or more feature maps (since feature maps are "images"), and we are going to apply another algorithm that generates a set of point coordinates from the feature maps. Easy, right? But, what kind of feature map are we looking for? In other words, what kind of images do we expect our model to translate the input image into?
+
+One can conclude that the feature maps should have properties that are useful for the extraction of the polylines. The authors suggest three feature maps: **detection map**, **endpoint map**, and **direction map**. Let us take a look at each of the feature maps.
+
+First, a **detection map**. Authors define a detection map to be an **inverse truncated distsance transform image**.  
+"A... what?"  
+Don't worry. Let me paraphrase it for you.
+
+A **distance transform**, or a distance map, is a map where each pixel represents the distance to the nearest boundary pixel. Take a look at the figure below.
