@@ -104,3 +104,9 @@ First, a **detection map**. Authors define a detection map to be an **inverse tr
 Don't worry. Let me paraphrase it for you.
 
 A **distance transform**, or a distance map, is a map where each pixel represents the distance to the nearest boundary pixel. Take a look at the figure below.
+
+<figure style="width: 80%" class="align-center">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/distance_transform.gif" alt="">
+  <figcaption><b>Figure 3.</b> A binary image (left) and a corresponding distance transform (right). Each pixel in the distance transform indicate the distance to the nearest boundary.</figcaption>
+</figure>
+
