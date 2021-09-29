@@ -110,3 +110,4 @@ A **distance transform**, or a distance map, is a map where each pixel represent
   <figcaption><b>Figure 3.</b> A binary image (left) and a corresponding distance transform (right). Each pixel in the distance transform indicate the distance to the nearest boundary.</figcaption>
 </figure>
 
+When using a distance transform, an appropriate metric for the distance should be chosen. For example, if you are an authentic engineer, you can measure a distance using the good old **Euclidean distance**; if you are a big fan of *Piet Mondrian*, then you can go with **Manhattan distance**; or if you are a professional chess player, you can try a **Chessboard distance**.
