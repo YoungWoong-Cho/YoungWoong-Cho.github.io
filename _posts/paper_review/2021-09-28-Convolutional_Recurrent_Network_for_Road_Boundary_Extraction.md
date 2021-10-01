@@ -72,7 +72,7 @@ $$
 
 or, in a more computer science format,
 ```
-output = [[(x0_0, y1_0), (x0_1, y0_1), ...],
+output = [[(x0_0, y0_0), (x0_1, y0_1), ...],
           [(x1_0, y1_0), (x1_1, y1_1), ...],
           ...
           [(xi_0, yi_0), (xi_1, yi_1), ...],
