@@ -107,7 +107,7 @@ First, a **detection map**. Authors define a detection map to be an **inverse tr
 
 "A... what?"
 
-If you are stuttering, don't worry. Let me explain it for you.
+If you are stuttering, don't worry. Let's dissect it one by one.
 
 A **distance transform**, or a distance map, is a map where each pixel represents the distance to the nearest boundary pixel. Take a look at the figure below.
 
