@@ -25,6 +25,8 @@ docs:
         url: STN
       - title: "HD map"
         url: HD_map
+      - title: "Distance transform"
+        url: distance_transform
 
   - title: Paper review
     children:
