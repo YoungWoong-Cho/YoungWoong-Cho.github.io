@@ -154,7 +154,7 @@ If you are a Physics student and are familiar with the field theory, you can thi
 Also, Bear in mind that the *detection map* is the inverse distance map, so we don't have to account for the negative sign in front of the following relationship:
 
 $$
-\vec{F} = - \nabla \cdot U
+\vec{F} = - \vec{\nabla} \cdot U
 $$
 
 
