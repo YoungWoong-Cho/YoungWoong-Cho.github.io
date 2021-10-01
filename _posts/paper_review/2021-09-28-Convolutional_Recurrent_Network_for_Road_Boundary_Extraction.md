@@ -138,7 +138,7 @@ $$
 D \in \mathbb{R}^{2 \times H \times W}
 $$
 
-How do we take the gradient of an image? We can implement a partial derivative operation, but we already have a splendid kernel that does the task that we're after, namely, the **Sobel filter**.  For those who are not familiar with image processing, the Sobel filter is a special type of a filter used in CNN, which is particularly used for the edge detection. It is a discrete differentiation operator, whoch computes an approximation of the gradient of the pixel value of the image. The authors state that they have used the Sobel derivative to obtain the direction map.
+How do we take the gradient of an image? We can implement a partial derivative operation, but we already have a splendid kernel that does the task that we're after, namely, the **Sobel filter**. The Sobel filter is a special type of a filter used in CNN, which is particularly used for the edge detection. It is a discrete differentiation operator, whoch computes an approximation of the gradient of the pixel value of the image. The authors state that they have used the Sobel derivative to obtain the direction map.
 >We obtain the ground truth by taking the Sobel derivative of the road boundaries’ distance transform image followed by a normalization step.
 
 ### Quick tip for Physics students
