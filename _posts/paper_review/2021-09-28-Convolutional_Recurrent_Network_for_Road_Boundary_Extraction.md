@@ -44,7 +44,7 @@ In this paper, the authors focus on the **extraction of the drivable area from L
 </figure> 
 
 # What are the inputs?
-**3D point cloud data from LiDAR** and **2D images from RGB camera** are used for the extraction of drivable area. However, they can <u>not</u> be directly consumed by the model, since the nature of the data from two sensors differ a lot. (How can you directly combine 3D unordered points from LiDAR and 2D 3-channel pixels from camera together?)
+**3D point cloud data from LiDAR** and **2D images from RGB camera** are used for the extraction of drivable area. However, they can <u>not</u> be directly consumed by the model, since the nature of the data from two sensors are completely different. How can you directly combine the 3D unordered points from LiDAR and 2D 3-channel pixels from camera together?
 
 Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
 
