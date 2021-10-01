@@ -146,7 +146,7 @@ $$
 How do we take the gradient of an image? We can implement a partial derivative operation, but we already have a splendid kernel that does the task that we're after, namely, the **Sobel filter**. The Sobel filter is a special type of a filter used in CNN, which is particularly used for the edge detection. It is a discrete differentiation operator, which computes an approximation of the gradient of the pixel value of the image. The authors state that they have used the Sobel derivative to obtain the direction map.
 >We obtain the ground truth by taking the Sobel derivative of the road boundaries’ distance transform image followed by a normalization step.
 
-*Aha*, now we understand why the authors used the *inverse* distance transform. **If we take the sobel derivative of the inverse distance transform, the direction would naturally pointing towards the nearest curb**, since the direction of the gradient vector is always toward where the value increases the most rapidly.
+*Aha*, now we understand why the authors used the *inverse* distance transform. **If we take the sobel derivative of the inverse distance transform, the direction would be naturally pointing towards the nearest curb**, since the direction of the gradient vector is always heading towards where the value increases the most rapidly.
 
 ### Quick tip for Physics students
 If you are a Physics student and are familiar with the field theory, you can think of a distance map as a potential field and a direction map as a force field.
@@ -171,6 +171,18 @@ $$
 ### Why use detection map and direction map, if we can use heatmap for all?
 At this point, a question might arise in reader's mind.
 
-"If we can generate a heatmap that encodes the probabiliry of each point belonging to the curb, shouldn't that to the work? We might just have to connect the points where the probability is higher than the threshold."
+"If we can generate a heatmap/binary map that encodes the probabiliry of each point belonging to the curb, shouldn't that to the work? We might just have to connect the points where the probability is higher than the threshold."
 
-Well, the reason we want to output the detection map and the 
+Well, the reason we want to output the detection map and the direction map is that, they are **dense maps** and thus **can encode more information about the locations of the road boundaries**. According to the authors,
+
+> In contrast to predicting binary outputs at the road boundary pixels which are very sparse, the truncated inverse distance transforms encodes more information about the locations of the road boundaries.
+
+There are many cases in reality where the location of the curb should be inferred from the context. For example, in most cases, there will be a huge change in height at the curbsides. However, this might not be true for some cases, such as at the crosswalks, roll curbs, or curb ramps. The curb might simply be under construction or is partially destroyed. For such cases, the deep learning model should be able to think from the context, which a binary map or a heatmap cannot provide.
+
+Suppose you are provided with a binary map, or a heatmap that encodes the location of the curbside. Your task is to find a polyline of the curbs. You might first connect the *obvious* points, *i.e.*, where the binary map is `1` or where the heatmap is close to `1`.
+
+But, what next? The distribution of the `1`s is likely to be pretty noisy. Here is where the contextual reasoning comes into play. You can do something like:  
+*"Well, since I have a chunk of points from which I deduced one line segment here, and another over there, and they kinda look like they belong to the same curb, lemme connect these two to continue my polyline."*  
+This is exactly what we expect our model would be doing. Or, at least similar to what we are expecting from the model. The *kinda look like they belong to the same curb* part is taken care by the detection map and direction map, since the contextual information that each pixel of the feature map is holding can tell if the line segment here and there belong to the same curb.
+
+# Network architecture
