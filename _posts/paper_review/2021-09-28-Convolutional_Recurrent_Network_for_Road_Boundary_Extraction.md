@@ -87,9 +87,9 @@ Notice that the output is a list of **polylines**. A polyline is an ordered set 
 </figure> 
 
 # So, what's the plan from input to output?
-Remember that the input was a 5-dimensional image, but the desired output is a set of vector, not a raster. In other words, we want a set of point coordinates instead of pixels on the images. However, CNN is designed for the images, since it applies the weights and biases to the pixels. What should we do?
+Remember that the input was a 5-dimensional image, but the desired output is a set of polylines. In other words, we want a set of point coordinates as output. However, a CNN is designed for the images, since it applies the weights and biases to the pixels. What should we do?
 
-**Here's the plan**: as an intermediate step, we will train the model that **outputs one or more feature maps** (since feature maps are "images"), and we are going to apply another algorithm that **generates a set of point coordinates from the feature maps**. Easy, right? But, what kind of feature map are we looking for? In other words, what kind of images do we expect our model to translate the input image into?
+**Here's the plan**. As an intermediate step, we will train the model that **outputs one or more feature maps** (since feature maps are "images"), and we are going to apply another algorithm that **generates a set of point coordinates from the feature maps**. Easy, right? But, what kind of feature map are we looking for? In other words, what kind of images do we expect our model to translate the input image into?
 
 It would be great if the feature maps have properties that are useful for the extraction of the polylines. As to achieve this goal, the authors suggest three feature maps: **detection map**, **direction map**, and **endpoint map**, which are denoted as $S$, $D$, and $E$, respectively.
 
