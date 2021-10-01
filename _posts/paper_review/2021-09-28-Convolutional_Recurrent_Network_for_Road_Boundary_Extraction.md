@@ -35,7 +35,7 @@ CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, D
 
 # HD map and Curb detection
 
-**High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for the tasks such ad perception, path planning, and localization.
+As we have discussed about HD maps (High Definition maps) in the [post](https://youngwoong-cho.github.io/HD-maps), one of the limitations of HD map is that **High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for the tasks such ad perception, path planning, and localization.
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">

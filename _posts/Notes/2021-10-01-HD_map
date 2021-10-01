@@ -1,0 +1,13 @@
+---
+layout: posts
+title: "High Definition maps"
+sidebar:
+  nav: "docs"
+
+use_math: true
+excerpt: "HD map is a roadmap with accuracy level down to centimeter scales."
+header:
+  overlay_image: /assets/images/2021-10-01-HD_map/HD_map.jpg
+  overlay_filter: 0.5
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com/photos/_SFJhRPzJHs)"
+---
