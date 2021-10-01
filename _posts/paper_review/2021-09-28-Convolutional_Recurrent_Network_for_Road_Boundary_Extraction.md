@@ -48,7 +48,7 @@ In this paper, the authors focus on the **extraction of the drivable area from L
 
 Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. In other words, the lidar point cloud data is projected onto the $x$-$y$ plane, then translated into an image.Though not stated explicitely in the paper, a 3D to 2D projection, or "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
 
-At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved. This [post](https://youngwoong-cho.github.io/2021-10-01-3D_point_cloud_features) discusses about various ways of achieving the goal.
+At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved. This [post](https://youngwoong-cho.github.io/3D_point_cloud_features) discusses about various ways of achieving the goal.
 
 The authors stipluated that they added the following extra channels:
 
