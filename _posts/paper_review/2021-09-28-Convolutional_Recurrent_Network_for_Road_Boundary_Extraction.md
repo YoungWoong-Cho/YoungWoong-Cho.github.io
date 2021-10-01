@@ -146,7 +146,7 @@ $$
 How do we take the gradient of an image? We can implement a partial derivative operation, but we already have a splendid kernel that does the task that we're after, namely, the **Sobel filter**. The Sobel filter is a special type of a filter used in CNN, which is particularly used for the edge detection. It is a discrete differentiation operator, which computes an approximation of the gradient of the pixel value of the image. The authors state that they have used the Sobel derivative to obtain the direction map.
 >We obtain the ground truth by taking the Sobel derivative of the road boundaries’ distance transform image followed by a normalization step.
 
-*Aha*, now we understand why the authors used the *inverse* distance transform. If we take the sobel derivative of the inverse distance transform, the direction would naturally pointing towards the nearest curb, since the direction of the gradient vector is always toward where the value increases the most rapidly.
+*Aha*, now we understand why the authors used the *inverse* distance transform. **If we take the sobel derivative of the inverse distance transform, the direction would naturally pointing towards the nearest curb**, since the direction of the gradient vector is always toward where the value increases the most rapidly.
 
 ### Quick tip for Physics students
 If you are a Physics student and are familiar with the field theory, you can think of a distance map as a potential field and a direction map as a force field.
