@@ -12,7 +12,6 @@ docs:
     children:
       - title: "Decay"
         url: Decay
-    children:
       - title: "Vi-DI"
         url: Vi_DI
 
