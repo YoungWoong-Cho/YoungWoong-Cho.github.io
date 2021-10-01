@@ -130,10 +130,14 @@ $$
 
 Suppose our model did a good job on predicting the inverse truncated distance transform image. Then we can generate the polyline by finding the points that maximizes the detection map values.
 
-## Direction map: where should I go from here?
-Let's say we have successfully generated a distance map. It means for each pixel on the BEV image, we know how far we are from the nearest curb. However, that is not what we want. At the end of the day, we want to find the exact location of the curb in a form of polyline. Thus, we need an information of where to move in order to find a curb.
+Why would we want to invert the values of the detection map? The reason will become clear when we move on to the direction map.
 
-Intuitively, we can take a partial derivative of the distance map with respect to each direction — or, take the **gradient** ($\nabla$) of the direction map — in order to obtain the direction map. Note that the result of gradient operation is a vector; thus, the authors stipulate that the direction map is a **vector field**, *i.e.*,
+## Direction map: where should I go from here?
+Let's say we have successfully generated a detection map. It means for each pixel on the BEV image, we know how far we are from the nearest curb. However, that is not what we want. At the end of the day, we want to find the exact location of the curb in a form of polyline. Thus, we need an information of where to move in order to find a curb.
+
+Intuitively, we can take a partial derivative of the detection map with respect to each direction — or, take the **gradient** ($\nabla$) of the direction map — in order to obtain the direction map.
+
+Note that the result of gradient operation is a vector; thus, the authors stipulate that the direction map is a **vector field**, *i.e.*,
 
 $$
 D \in \mathbb{R}^{2 \times H \times W}
@@ -142,8 +146,16 @@ $$
 How do we take the gradient of an image? We can implement a partial derivative operation, but we already have a splendid kernel that does the task that we're after, namely, the **Sobel filter**. The Sobel filter is a special type of a filter used in CNN, which is particularly used for the edge detection. It is a discrete differentiation operator, which computes an approximation of the gradient of the pixel value of the image. The authors state that they have used the Sobel derivative to obtain the direction map.
 >We obtain the ground truth by taking the Sobel derivative of the road boundaries’ distance transform image followed by a normalization step.
 
+Aha, now it makes why the authors used the *inverse* distance transform. If we take the sobel derivative of the inverse distance transform, the direction would naturally pointing towards the nearest curb, since the direction of the gradient vector is always toward where the value increases the most rapidly.
+
 ### Quick tip for Physics students
 If you are a Physics student and are familiar with the field theory, you can think of a distance map as a potential field and a direction map as a force field.
+
+Also, Bear in mind that the *detection map* is the inverse distance map, so we don't have to account for the negative sign in front of the following relationship:
+
+$$
+\vec{F} = - \nabla \cdot U
+$$
 
 
 ## Endpoint map: where should the curb begin?
@@ -157,5 +169,8 @@ $$
 
 
 ### Why use detection map and direction map, if we can use heatmap for all?
-At this point, a question might arise in reader's mind. If we can generate a heatmap that encodes the probabiliry of each point belonging to the curb, shouldn't that to the work? We might just have to connect the points where the probability is higher than the threshold.
+At this point, a question might arise in reader's mind.
 
+"If we can generate a heatmap that encodes the probabiliry of each point belonging to the curb, shouldn't that to the work? We might just have to connect the points where the probability is higher than the threshold."
+
+Well, the reason we want to output the detection map and the 
