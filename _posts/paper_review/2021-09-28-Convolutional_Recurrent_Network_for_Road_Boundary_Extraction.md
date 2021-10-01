@@ -35,16 +35,14 @@ CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, D
 
 # HD map and Curb detection
 
-As we have discussed about HD maps (High Definition maps) in the [post](https://youngwoong-cho.github.io/HD_map), one of the limitations of HD map is that **High definition map** is a roadmap with accuracy level down to centimeter scales. It contains important information of the static part of the scene, such as drivable area, lane lines, crosswalks, stoplines, etc. They are extremely important for the tasks such ad perception, path planning, and localization.
+As we have discussed about HD maps (High Definition maps) in the [post](https://youngwoong-cho.github.io/HD_map), one of the limitations of HD map is that the annotation of HD map is an awfully laborious task. Hence, there have been numerous efforts to automate the map construction process.
+
+In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks (CNN) and convolutional recurrent network (CRNN).
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
   <figcaption><b>Figure 1.</b> Here is a sample HD map, from <i>nuScenes map expansion</i>. It contains various annotations such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
-
-However, annotating HD maps is an awfully laborious task. Imagine labeling tens of millions of points that correspond to the exact position of the curb, lanes, crosswalks, and so forth. Hence, there have been numerous efforts to automate the map construction process.
-
-In this paper, the authors focus on the extraction of the **drivable area** from LiDAR and camera input, employing the convolutional neural networks (CNN) and convolutional recurrent network (CRNN).
 
 # What are the inputs?
 3D point cloud data from LiDAR and 2D imagery from RGB camera are used for the creation of HD map. However, they can not be directly consumed by the model, since the nature of the data from two sensors differ a lot. (How can you directly combine 3D unordered points from LiDAR and 2D 3-channel pixels from camera together?)
