@@ -39,7 +39,7 @@ As we have discussed about HD maps (High Definition maps) in the [post](https://
 In this paper, the authors focus on the **extraction of the drivable area from LiDAR and camera input**, employing the convolutional neural networks (CNN) and convolutional recurrent network (CRNN).
 
 <figure style="width: 80%" class="align-center">
-  <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig1.png" alt="">
   <figcaption><b>Figure 1.</b> A sample HD map taken from <i>nuScenes map expansion</i>. It contains various annotations such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
 
@@ -80,6 +80,11 @@ output = [[(x0_0, y0_0), (x0_1, y0_1), ...],
           [(xn_0, yn_0), (xn_1, yn_1), ...]]
 ```
 Notice that the output is a list of **polylines**. A polyline is an ordered set of point, which when connected sequentially, produces a line of interest.
+
+<figure style="width: 80%" class="align-center">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig2.png" alt="">
+  <figcaption><b>Figure 2.</b> A polyline is an ordered set of point, which when connected sequentially, produces a line of interest.</figcaption>
+</figure> 
 
 # So, what's the plan?
 Remember that the desired output is in a vector, not a raster. In other words, we want a set of point coordinates instead of pixels on the images. However, CNN is designed for the images, since it applies the weights and biases to the pixels.  
