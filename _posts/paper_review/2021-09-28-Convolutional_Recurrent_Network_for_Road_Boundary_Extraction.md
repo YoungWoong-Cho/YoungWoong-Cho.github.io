@@ -63,7 +63,7 @@ $$
 where $H$ and $W$ is the height and the width of the input image.
 
 # What is the desired output?
-For a given input $I \in \mathbb{R}^{5 \times H \times W}$, the desired output is a list of **vectorized road boundary**. Each road boundary is a polyline, which basically is a ordered list of $\left(x, y\right)$ coordinates.  
+For a given input $I \in \mathbb{R}^{5 \times H \times W}$, the desired output is **a list of vectorized road boundary**. Each road boundary is a polyline, which basically is a ordered list of $\left(x, y\right)$ coordinates.  
 Mathematically speaking, the output $O$ can be expressed as
 
 $$
