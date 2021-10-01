@@ -33,7 +33,7 @@ CNN, HD map, Curb detection, LiDAR, Distance transform, FPN, Skip connections, D
 
 ---
 
-# Problem definition: Drivable road boundary extraction
+# Problem definition
 As we have discussed about HD maps (High Definition maps) in the [post](https://youngwoong-cho.github.io/HD_map), one of the limitations of HD map is that its annotation is awfully laborious. Hence, there have been numerous efforts to automate the map construction process.
 
 In this paper, the authors focus on the **extraction of the drivable area from LiDAR and camera input**, employing the convolutional neural networks (CNN) and convolutional recurrent network (CRNN).
