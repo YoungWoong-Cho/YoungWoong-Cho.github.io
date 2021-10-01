@@ -96,9 +96,11 @@ It would be great if the feature maps have properties that are useful for the ex
 Let us take a look at each of the feature maps.
 
 ## Detection map: how much more should I go?
-First, a **detection map**. Authors define a detection map to be an **inverse truncated distsance transform image**.  
-"A... what?"  
-Don't worry. Let me paraphrase it for you.
+First, a **detection map**. Authors define a detection map to be an **inverse truncated distance transform image**.  
+
+"A... what?"
+
+If you are stuttering, don't worry. Let me explain it for you.
 
 A **distance transform**, or a distance map, is a map where each pixel represents the distance to the nearest boundary pixel. Take a look at the figure below.
 
