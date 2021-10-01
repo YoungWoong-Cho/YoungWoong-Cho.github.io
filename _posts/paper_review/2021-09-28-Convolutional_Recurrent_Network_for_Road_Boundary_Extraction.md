@@ -40,18 +40,15 @@ In this paper, the authors focus on the **extraction of the drivable area from L
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets\images\2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction\fig1.png" alt="">
-  <figcaption><b>Figure 1.</b> Here is a sample HD map, from <i>nuScenes map expansion</i>. It contains various annotations such as lane, walkway, stop line, drivable area, etc.</figcaption>
+  <figcaption><b>Figure 1.</b> A sample HD map taken from <i>nuScenes map expansion</i>. It contains various annotations such as lane, walkway, stop line, drivable area, etc.</figcaption>
 </figure> 
 
 # What are the inputs?
 **3D point cloud data from LiDAR** and **2D images from RGB camera** are used for the extraction of drivable area. However, they can <u>not</u> be directly consumed by the model, since the nature of the data from two sensors are completely different. How can you directly combine the 3D unordered points from LiDAR and 2D 3-channel pixels from camera together?
 
-Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. In other words, after projecting each lidar point cloud data onth the $x$-$y$ plane, the entire scene is translated into an image.
+Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. In other words, the lidar point cloud data is projected onto the $x$-$y$ plane, then translated into an image.Though not stated explicitely in the paper, a 3D to 2D projection, or "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
 
-
-Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
-
-At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved.
+At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved. If you want to take a look at some 
 
 ### Sidenote: how to retain the 3D information of point cloud
 Convolutional neural network, or CNN, is useful when the spatial relation of the input data is important. A conventional 2D convolution operation is well suited for 2D inputs, such as images. Applying the idea of CNN to the point clouds is seemingly a nice idea, since spatial relationship among the points are crucial.
