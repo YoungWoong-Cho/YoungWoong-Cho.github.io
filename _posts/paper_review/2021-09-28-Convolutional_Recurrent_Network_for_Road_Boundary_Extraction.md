@@ -109,7 +109,7 @@ First, a **detection map**. Authors define a detection map to be an **inverse tr
 
 If you are stuttering, don't worry. Let's dissect it one by one.
 
-Let us first brieflt review what distance transform is. A **distance transform**, or a distance map, is a map where each pixel represents the distance to the nearest boundary pixel. Take a look at the figure below.
+Let us first briefly review what distance transform is. A **distance transform**, or a distance map, is a map where each pixel represents the distance to the nearest boundary pixel. Take a look at the figure below.
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets/images/2021-10-01-distance_transform/fig1.gif" alt="">
@@ -120,7 +120,7 @@ If you are still confused and want a bit more of distance transform, this [post]
 
 Suppose our model did a good job on predicting the inverse truncated distance transform image. Then we can generate the polyline by finding the points that maximizes the detection map values.
 
-But, why would we want to invert the values of the detection map? The reason will become clear when we move on to the direction map.
+But, why would we want to *invert* the values of the detection map? The reason will become clear when we move on to the direction map.
 
 ## Direction map: where should I go from here?
 Let's say we have successfully generated a detection map. It means for each pixel on the BEV image, we know how far we are from the nearest curb. However, that is not what we want. At the end of the day, we want to find the exact location of the curb in a form of polyline. Thus, we need an information of where to move in order to find a curb.
