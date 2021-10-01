@@ -12,6 +12,18 @@ docs:
     children:
       - title: "Decay"
         url: Decay
+    children:
+      - title: "Vi-DI"
+        url: Vi_DI
+
+  - title: Notes
+    children:
+      - title: "Convolutional Neural Networks"
+        url: CNN
+      - title: "Feature Pyramid Networks"
+        url: FPN
+      - title: "Spatial Transformer Networks"
+        url: STN
 
   - title: Paper review
     children:
