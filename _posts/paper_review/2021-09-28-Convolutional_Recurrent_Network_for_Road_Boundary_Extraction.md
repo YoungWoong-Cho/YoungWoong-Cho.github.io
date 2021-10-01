@@ -122,6 +122,7 @@ So... back to the detection map. The detection map can say something about the l
 But be careful, the authors didn't use vanilla distance transform. They used the *inverse truncated* distance transform. They used **inverse** distance transform because they wanted the values to be the maximum at the curb. Also, they used the **truncated** distance transform so that the points that are further away than the threshold distance have the value of zero.
 
 Note that the detection map is a **scalar field**, *i.e.*,
+
 $$
 S \in \mathbb{R}^{1 \times H \times W}
 $$
@@ -132,6 +133,7 @@ Suppose our model did a good job on predicting the inverse truncated distance tr
 Let's say we have successfully generated a distance map. It means for each pixel on the BEV image, we know how far we are from the nearest curb. However, that is not what we want. At the end of the day, we want to find the exact location of the curb in a form of polyline. Thus, we need an information of where to move in order to find a curb.
 
 Intuitively, we can take a partial derivative of the distance map with respect to each direction — or, take the **gradient** ($\nabla$) of the direction map — in order to obtain the direction map. Note that the result of gradient operation is a vector; thus, the authors stipulate that the direction map is a **vector field**, *i.e.*,
+
 $$
 D \in \mathbb{R}^{2 \times H \times W}
 $$
