@@ -82,6 +82,7 @@ Mathematically speaking, the output $O$ can be expressed as
 $$
 O = \left\{O_i\right\} \quad \text{with} \quad O_i = \left\{p_j | p_j \in \mathbb{R}^2\right\}
 $$
+
 or, in a more computer science format,
 ```
 output = [[(x0_0, y1_0), (x0_1, y0_1), ...],
