@@ -50,7 +50,7 @@ Thus, the authors create **bird-eye view (BEV) representations** of the sensor r
 
 At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved. This [post](https://youngwoong-cho.github.io/3D_point_cloud_features) discusses about various ways of achieving the goal.
 
-The authors stipluated that they added the following extra channels:
+The authors stipluated that they added the gradient of the height value as an extra channel:
 
 > We also input as an extra channel the **gradient** of the LiDAR’s height value. This input channel is very informative since the drivable and non-drivable regions of the road in a city are mostly flat surfaces at different heights that are separated by a curb.
 
