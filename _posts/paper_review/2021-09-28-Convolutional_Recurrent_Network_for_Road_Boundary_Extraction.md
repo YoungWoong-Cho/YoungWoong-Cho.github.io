@@ -97,8 +97,11 @@ Notice that the output is a list of **polylines**. A polyline is an ordered set 
 Remember that the desired output is in a vector, not a raster. In other words, we want a set of point coordinates instead of pixels on the images. However, CNN is designed for the images, since it applies the weights and biases to the pixels.  
 **So, here' the plan**: we will train the model that outputs one or more feature maps (since feature maps are "images"), and we are going to apply another algorithm that generates a set of point coordinates from the feature maps. Easy, right? But, what kind of feature map are we looking for? In other words, what kind of images do we expect our model to translate the input image into?
 
-One can conclude that the feature maps should have properties that are useful for the extraction of the polylines. The authors suggest three feature maps: **detection map**, **endpoint map**, and **direction map**. Let us take a look at each of the feature maps.
+One can conclude that the feature maps should have properties that are useful for the extraction of the polylines. The authors suggest three feature maps: **detection map**, **direction map**, and **endpoint map**. The authors denote each map as $S$, $D$, and $E$, respectively.
 
+Let us take a look at each of the feature maps.
+
+## Detection map: how much more should I go?
 First, a **detection map**. Authors define a detection map to be an **inverse truncated distsance transform image**.  
 "A... what?"  
 Don't worry. Let me paraphrase it for you.
@@ -118,4 +121,28 @@ So... back to the detection map. The detection map can say something about the l
 
 But be careful, the authors didn't use vanilla distance transform. They used the *inverse truncated* distance transform. They used **inverse** distance transform because they wanted the values to be the maximum at the curb. Also, they used the **truncated** distance transform so that the points that are further away than the threshold distance have the value of zero.
 
+Note that the detection map is a **scalar field**, *i.e.*,
+$$
+S \in \mathbb{R}^{1 \times H \times W}
+$$
+
 Suppose our model did a good job on predicting the inverse truncated distance transform image. Then we can generate the polyline by finding the points that maximizes the detection map values.
+
+## Direction map: where should I go from here?
+Let's say we have successfully generated a distance map. It means for each pixel on the BEV image, we know how far we are from the nearest curb. However, that is not what we want. At the end of the day, we want to find the exact location of the curb in a form of polyline. Thus, we need an information of where to move in order to find a curb.
+
+Intuitively, we can take a partial derivative of the distance map with respect to each direction — or, take the **gradient** ($\nabla$) of the direction map — in order to obtain the direction map. Note that the result of gradient operation is a vector; thus, the authors stipulate that the direction map is a **vector field**, *i.e.*,
+$$
+D \in \mathbb{R}^{2 \times H \times W}
+$$
+
+How do we take the gradient of an image? We can implement a partial derivative operation, but we already have a splendid kernel that does the task that we're after, namely, the **Sobel filter**.  For those who are not familiar with image processing, the Sobel filter is a special type of a filter used in CNN, which is particularly used for the edge detection. It is a discrete differentiation operator, whoch computes an approximation of the gradient of the pixel value of the image. The authors state that they have used the Sobel derivative to obtain the direction map.
+>We obtain the ground truth by taking the Sobel derivative of the road boundaries’ distance transform image followed by a normalization step.
+
+### Quick tip for Physics students
+If you are a Physics student and are familiar with the field theory, you can think of a distance map as a potential field and a direction map as a force field.
+
+
+## Endpoint map: where should the curb begin?
+
+### Why use detection map and direction map, if we can use heatmap for all?
