@@ -125,7 +125,7 @@ But, why would we want to *invert* the values of the detection map? The reason w
 ## Direction map: where should I go from here?
 Let's say we have successfully generated a detection map. It means for each pixel on the BEV image, we know how far we are from the nearest curb. However, that is not what we want. At the end of the day, we want to find the exact location of the curb in a form of polyline. Thus, we need an information of where to move in order to find a curb.
 
-Intuitively, we can take a partial derivative of the detection map with respect to each direction — or, take the **gradient** ($\nabla$) of the direction map — in order to obtain the direction map.
+Intuitively, we can take a partial derivative of the detection map with respect to each direction — or, take the **gradient** ($\nabla$) of the detection map — in order to obtain the direction map.
 
 Note that the result of gradient operation is a vector; thus, the authors stipulate that the direction map is a **vector field**, *i.e.*,
 
