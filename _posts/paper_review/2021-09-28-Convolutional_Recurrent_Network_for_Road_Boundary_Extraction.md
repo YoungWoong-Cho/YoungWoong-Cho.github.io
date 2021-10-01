@@ -46,7 +46,10 @@ In this paper, the authors focus on the **extraction of the drivable area from L
 # What are the inputs?
 **3D point cloud data from LiDAR** and **2D images from RGB camera** are used for the extraction of drivable area. However, they can <u>not</u> be directly consumed by the model, since the nature of the data from two sensors are completely different. How can you directly combine the 3D unordered points from LiDAR and 2D 3-channel pixels from camera together?
 
-Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
+Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. In other words, after projecting each lidar point cloud data onth the $x$-$y$ plane, the entire scene is translated into an image.
+
+
+Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
 
 At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved.
 
