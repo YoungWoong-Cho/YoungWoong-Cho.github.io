@@ -23,6 +23,8 @@ docs:
         url: FPN
       - title: "Spatial Transformer Networks"
         url: STN
+      - title: "HD map"
+        url: HD_map
 
   - title: Paper review
     children:
