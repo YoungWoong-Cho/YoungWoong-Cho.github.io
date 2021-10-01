@@ -43,7 +43,7 @@ In this paper, the authors focus on the extraction of the **drivable area** from
 
 Thus, the authors create **bird-eye view (BEV) representations** of the sensor readings and use them as the input to the system. Though not stated explicitely in the paper, a 3D to 2D "flattening" of the point cloud data can be easily done by removing the z-axis — something like, `pts_2d = pts_3d[:, :2]`.
 
-At this point, some might argue: "Wait, how can you just remove a dimension? Isn't that kinda... losing some information?" Well, it's correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved.
+At this point, some might argue: "Wait, how can you just remove a dimension? Doesn't that kinda... lose some information?" Well, that's completely correct. Simply removing the last column (which is z-coordinates) will lose some data. Therefore, in order to keep our precious 3D information, one or more additional channels are usually added to the input tensor of the LiDAR so that the "height" information can be preserved.
 
 ### Sidenote: how to retain the 3D information of point cloud
 Convolutional neural network, or CNN, is useful when the spatial relation of the input data is important. A conventional 2D convolution operation is well suited for 2D inputs, such as images. Applying the idea of CNN to the point clouds is seemingly a nice idea, since spatial relationship among the points are crucial.
@@ -146,5 +146,15 @@ If you are a Physics student and are familiar with the field theory, you can thi
 
 
 ## Endpoint map: where should the curb begin?
+Lastly, we need a point from which we can begin constructing the polyline. The authors propose to use a heatmap that encodes the probability of each pixel of being an endpoint. In other words, each pixel of the endpoints heatmap stores a value between 0 and 1, which tells the probability of the pixel of being an endpoint; if the point can function as an endpoint, it will have a value close to 1; if not, it will have a value close to 0.
+
+Also note that the endpoint heatmap has a dimesionality of
+
+$$
+E \in \mathbb{R}^{1 \times H \times W}
+$$
+
 
 ### Why use detection map and direction map, if we can use heatmap for all?
+At this point, a question might arise in reader's mind. If we can generate a heatmap that encodes the probabiliry of each point belonging to the curb, shouldn't that to the work? We might just have to connect the points where the probability is higher than the threshold.
+
