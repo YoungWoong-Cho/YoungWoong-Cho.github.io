@@ -32,5 +32,5 @@ docs:
     children:
       - title: "Convolutional Recurrent Network for Road Boundary Extraction"
         url: Convolutional_Recurrent_Network_for_Road_Boundary_Extraction
-       - title: "HDMapNet: An Online HD Map Construction and Evaluation Framework"
+      - title: "HDMapNet: An Online HD Map Construction and Evaluation Framework"
         url: HDMapNet
