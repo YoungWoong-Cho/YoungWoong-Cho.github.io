@@ -176,3 +176,4 @@ But, what next? The distribution of the `1`s is likely to be pretty noisy. Here 
 This is exactly what we expect our model would be doing. Or, at least similar to what we are expecting from the model. The *kinda look like they belong to the same curb* part is taken care by the detection map and direction map, since the contextual information that each pixel of the feature map is holding can tell if the line segment here and there belong to the same curb.
 
 # Network architecture
+More to come...
