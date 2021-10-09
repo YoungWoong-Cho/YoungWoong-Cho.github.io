@@ -195,6 +195,7 @@ The dilated convolutional layers is useful for its ability in **increasing the r
 ## Decoder
 The decoder part consists of the same number of **decoder blocks** as the encoder blocks. Each decoder block contains **four convolutional layers**.  To the end of each decoder block is attached a **nearest neighbor upsampling of 2x**.
 
-<br>
-Prior to each convolutional layer, the **instance normalization** followed by a **ReLU** activation layer is attached.
+For both the encoder and the decoder part, prior to each convolutional layer, the **instance normalization** followed by a **ReLU** activation layer is attached.
 
+## Output branches
+The network has **three output branches**, corresponding to the distance transform, endpoints heatmap, and direction map, accordingly. The feature maps generated from the output branches all have the same spatiala dimension as the input imate $I$.
