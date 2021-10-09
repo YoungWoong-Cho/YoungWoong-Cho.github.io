@@ -175,6 +175,10 @@ But, what next? The distribution of the `1`s is likely to be pretty noisy. Here 
 *"Well, since I have a chunk of points from which I deduced one line segment here, and another over there, and they kinda look like they belong to the same curb, lemme connect these two to continue my polyline."*  
 This is exactly what we expect our model would be doing. Or, at least similar to what we are expecting from the model. The *kinda look like they belong to the same curb* part is taken care by the detection map and direction map, since the contextual information that each pixel of the feature map is holding can tell if the line segment here and there belong to the same curb.
 
+---
+
+Okay, it's time to get real. Let us take a look at the network that is capable of performing the tasks mentioned above.
+
 # Network architecture
 The authors used a **encoder-decoder architecture similar to FPN**. A FPN, or a **Feature Pyramid Networks**, is a network that is designed to carry out the **object detection task in various scale**.
 
@@ -199,3 +203,9 @@ For both the encoder and the decoder part, prior to each convolutional layer, th
 
 ## Output branches
 The network has **three output branches**, corresponding to the distance transform, endpoints heatmap, and direction map, accordingly. The feature maps generated from the output branches all have the same spatiala dimension as the input imate $I$.
+
+---
+
+Now that we have all the key feature maps that can be helpful for the generation of the road boundary, let us take a look at the *road boundry extraction module*, or **cSnake**, as the authors refer to as.
+
+# Road boundry extraction module
