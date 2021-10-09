@@ -208,7 +208,22 @@ The network has **three output branches**, corresponding to the distance transfo
 
 Now that we have all the key feature maps that can be helpful for the generation of the road boundary, let us take a look at the *road boundry extraction module*, or **cSnake**, as the authors refer to as.
 
-# Road boundry extraction module
+# Road boundary extraction module
 Making use of the feature maps predicted by the FPN-like encoder-decoder network, we are now ready to extract the road boundary. Remember that what we want in the end is **a set of polylines**, where each polyline is **a sequence of points**. The author proposes that this can be done by **iteratively outputting the vertices of a polyline corresponding to a road boundary**.
 
-Let me elaborate on this a bit more. First, we find the **initial vertices** of the road boundary from the endpoint heatmap $E$.
+Let me elaborate on this a bit more. First, we begin from finding the **initial vertex** $x_0$ of the road boundary by analyzing the **endpoint heatmap** $E$. It can be done by computing the **local maxima** of $E$.
+
+Next, we compute the **direction vector** $v_0$ at point $x_0$. The direction vector is where the road boundary will be "*propagating*" forward, and can be found through the following steps. First, we pick a pixel from the **direction map** $D$ which is **closest to the initial vertex** $x_0$. The direction vector from $D$ at this pixel should be "pointing towards" the road boundary, either from left to right or from right to left. In either cases, we can obtain $v_0$ by rotating this vector by 90 degrees, pointing away from the "cropped image boundary".
+
+Now, using the vertex $x_0$ and the direction vector $v_0$, a **rotated ROI** can be cropped, using a **Spatial Transform Network**. The rotated ROI is cropped from the **concatenated image of the detection map $S$ and the direction map $D$**. This rotated ROI is fed into a CNN, which computes the next vertes $x_1$. The detailed structure of the CNN will be illustrated below.
+
+> More on Spatial Transform Network (STN) can be found from the following [post](https:/youngwoong-cho.github.io/STN).
+
+This is a single step for locating $x_1$, the point on the road boundary that follows the initial vertex $x_0$. From here, the processes mentioned above can be repetitively applied in order to continue the polyline; *i.e.*, compute $v_1$ from the direction map $D$, then apply a STN to extract the ROI, and input the rotated ROI into a CNN to locate the next vertex, $x_2$.
+
+## Network Architecture of the extraction module
+The road boundary extraction module described above requires an additional CNN that takes in a rotated ROI that is cropped from the concatenation of $S$ and $D$, and predicts the next vertex. The network architecture of the CNN is as follows.
+
+The CNN has an architecture that is **identical to the encoder-decoder backbone** that is used for the prediction of the feature maps, except for that it has **one less convolutional layer** in both the encoder and decoder blocks.
+
+The **output** of the CNN is a **score map**, whose **argmax** can be used to obtain the next vertex for cropping.1
