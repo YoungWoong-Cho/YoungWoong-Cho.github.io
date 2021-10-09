@@ -209,4 +209,6 @@ The network has **three output branches**, corresponding to the distance transfo
 Now that we have all the key feature maps that can be helpful for the generation of the road boundary, let us take a look at the *road boundry extraction module*, or **cSnake**, as the authors refer to as.
 
 # Road boundry extraction module
-more to come...
+Making use of the feature maps predicted by the FPN-like encoder-decoder network, we are now ready to extract the road boundary. Remember that what we want in the end is **a set of polylines**, where each polyline is **a sequence of points**. The author proposes that this can be done by **iteratively outputting the vertices of a polyline corresponding to a road boundary**.
+
+Let me elaborate on this a bit more. First, we find the **initial vertices** of the road boundary from the endpoint heatmap $E$.
