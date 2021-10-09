@@ -185,3 +185,9 @@ An FPN consists of two parts: a **bottom-up** pathway and a **top-down** pathway
   <figcaption><b>Figure 3.</b> A Feature Pyramid Network.</figcaption>
 </figure>
 
+The authors mention that they chose the FPN-like network because of its efficiency and its ability to keep spatial information. Remember that the skip connections between the encoder and decoder can recover the lost spatial information.
+
+## Encoder
+The **encoder part** of the network consists of several **encoder blocks**, each of which corresponds to the "stage" from FPN. **Each encoder block** contains **two residual blocks**, and **each residual block** contains **three *dilated convolutional layers***.
+
+The dilated convolutional layers is useful for its ability in **increasing the receptive field** without losing much spatial dimension. More of the dilated CNN can be found from the following [post](https://youngwoong-cho.github.io/dilated_CNN).
