@@ -176,3 +176,12 @@ But, what next? The distribution of the `1`s is likely to be pretty noisy. Here 
 This is exactly what we expect our model would be doing. Or, at least similar to what we are expecting from the model. The *kinda look like they belong to the same curb* part is taken care by the detection map and direction map, since the contextual information that each pixel of the feature map is holding can tell if the line segment here and there belong to the same curb.
 
 # Network architecture
+The authors used a **encoder-decoder architecture similar to FPN**. A FPN, or a **Feature Pyramid Networks**, is a network that is designed to carry out the **object detection task in various scale**.
+
+An FPN consists of two parts: a **bottom-up** pathway and a **top-down** pathway. At each corresponding stage in bottom-up and top-down pathways, the **lateral connection** combines the low-resolution, semantically strong features from the top-down pathway with high-resolution, semantically weak features from the bottom-up pathway. Take a look at the following [post](https://youngwoong-cho.github.io/FPN) for more information about FPN.
+
+<figure style="width: 80%" class="align-center">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig4.png" alt="">
+  <figcaption><b>Figure 3.</b> A Feature Pyramid Network.</figcaption>
+</figure>
+
