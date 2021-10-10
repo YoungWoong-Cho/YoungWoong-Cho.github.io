@@ -248,7 +248,7 @@ $$
 
 Here, $P$ is a **predicted polyline** and $Q$ is a **ground truth road boundary**, and $p$ and $q$ are the **rasterized edge pixels** of $P$ and $Q$ respectively.
 
-**Be careful**, we are **not** looking at the **vectorized vertices**, *i.e.*, something like $p_i = \left(x_i, y_i\right)$. We are interested in the **pixel values**, where we take a look at each and every **pixel values** of the image, *i.e.*, $\left\{ p_i \,|\, p_i \in \mathbb{R}^{H \times W} \right\}$.
+**Be careful**, we are **not** looking at the **vectorized vertices**, *i.e.*, something like $p_i = \left(x_i, y_i\right)$. We are interested in the **pixel values**, where we take a look at each and every **pixel values** of the image, *i.e.*, $p_i \in \mathbb{R}^{H \times W}$.
 
 Notice that the loss above is a **L-2 Chamfer Distance** between the polyline and the ground truth boundary. A **distance map** $D$ can be helpful for this computation. Why? Suppose we want to compute the term 
 
