@@ -258,3 +258,4 @@ $$
 
 for some pixel $p_i \in P$. Then, all we have to do is simply take a look at the value from the distance map $D$ at the corresponding pixel value, since it already contains the information of the **distance to the nearest boundary**, which is exactly what we're after.
 
+More on distance metrics such as **Chamfer Distance** and **Wasserstein Distance** can be found from the following [post](https://youngwoong-cho.github.io/distance)[.](http://graphics.stanford.edu/courses/cs468-17-spring/LectureSlides/L14%20-%203d%20deep%20learning%20on%20point%20cloud%20representation%20(analysis).pdf)
