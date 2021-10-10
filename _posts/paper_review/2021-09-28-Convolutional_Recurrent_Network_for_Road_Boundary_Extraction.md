@@ -204,6 +204,17 @@ For both the encoder and the decoder part, prior to each convolutional layer, th
 ## Output branches
 The network has **three output branches**, corresponding to the distance transform, endpoints heatmap, and direction map, accordingly. The feature maps generated from the output branches all have the same spatiala dimension as the input imate $I$.
 
+## Learning
+For the learning of the feature maps, the following loss is used.
+
+$$
+l\left(S, E, D\right) = l_{det}\left(S\right) + \lambda_1 l_{end} \left(E\right) + \lambda_2 l_{dir} \left(D\right)
+$$
+
+The **regression loss** is used for the distance transform $S$ and the endpoint heatmap $E$, and the **cosine similarity loss** is used for the direction map $D$.
+
+Also, the loss weighting parameters $\lambda_1$ and $\lambda_2$ are experimentally determined to be 10. This is to balance the magnitude of each loss components so that the learning process won't be biased.
+
 ---
 
 Now that we have all the key feature maps that can be helpful for the generation of the road boundary, let us take a look at the *road boundry extraction module*, or **cSnake**, as the authors refer to as.
@@ -226,4 +237,15 @@ The road boundary extraction module described above requires an additional CNN t
 
 The CNN has an architecture that is **identical to the encoder-decoder backbone** that is used for the prediction of the feature maps, except for that it has **one less convolutional layer** in both the encoder and decoder blocks.
 
-The **output** of the CNN is a **score map**, whose **argmax** can be used to obtain the next vertex for cropping.1
+The **output** of the CNN is a **score map**, whose **argmax** can be used to obtain the next vertex for cropping.
+
+## Learning
+For the learning of the CNN used as part of the extraction module, the following loss is used.
+
+$$
+L \left(P,Q\right) = \sum_{i}\min_{q \in Q} ||p_i - q||_2 + \sum_{i}\min_{p \in P} ||p - q_j||_2
+$$
+
+Here, $P$ is a **predicted polyline** and $Q$ is a **ground truth road boundary**, and $p$ and $q$ are the **rasterized edge pixels** of $P$ and $Q$ respectively. **Be careful**, we are **not** looking at the vectorized vertices, *i.e.*, something like $p_i = \left(x_i, y_i\right)$. We are interested in the **pixel values**, where we take a look at each and every **pixel values** of the image.
+
+Notice that the loss above is a L-2 **Chamfer Distance** between the polyline and the ground truth boundary.
