@@ -248,7 +248,7 @@ $$
 
 Here, $P$ is a **predicted polyline** and $Q$ is a **ground truth road boundary**, and $p$ and $q$ are the **rasterized edge pixels** of $P$ and $Q$ respectively.
 
-**Be careful**, we are **not** looking at the **vectorized vertices**, *i.e.*, something like $p_i = \left(x_i, y_i\right)$. We are interested in the **pixel values**, where we take a look at each and every **pixel values** of the image, *i.e.*, $\\{p_i | p_i \in \mathbb{R}^{H \times W} \\}$.
+**Be careful**, we are **not** looking at the **vectorized vertices**, *i.e.*, something like $p_i = \left(x_i, y_i\right)$. We are interested in the **pixel values**, where we take a look at each and every **pixel values** of the image, *i.e.*, $ \\{p_i | p_i \in \mathbb{R}^{H \times W} \\} $.
 
 Notice that the loss above is a **L-2 Chamfer Distance** between the polyline and the ground truth boundary. A **distance map** $D$ can be helpful for this computation. Why? Suppose we want to compute the term 
 
@@ -266,7 +266,7 @@ The authors provide the experimental evaluation result in the paper.
 ## Dataset
 The dataset that is used for the training of the model consist of **BEV projected LiDAR and camera images**, which amounts to 4750$km$ of driving, 50$km^2$ of area.
 
-The LiDAR dataset contains approximately 540 billion points in total. Also, the images has the dimension of $1927\text{px} \left(\pm893\right) \times 2162\text{px}\left(\pm 712 \right)$, with $4\text{cm}/\text{px}$ resolution.
+The LiDAR dataset contains approximately 540 billion points in total. Also, the images has the dimension of 1927px ($\pm$893) $\times$ 2162px($\pm$712), with 4cm/px resolution.
 
 The LiDAR point clouds and camera images are tiled and splitted into 2500, 1000, 1250 train/val/test sets.
 
@@ -307,4 +307,7 @@ Below are some inference results.
 </figure>
 
 # Conclusion
-The road boundary extraction algorithm proposed from the paper 
+The road boundary extraction algorithm proposed by the paper could successfully extract the road boundary from the given LiDAR point cloud and camera imagery data. However, there were several limitations.
+
+- Endpoint heatmap is not a robust method to account for cases where the road boundary is not clear. If the road boundary is not clear, it might not be possible to begin the cSnake module.
+- 
