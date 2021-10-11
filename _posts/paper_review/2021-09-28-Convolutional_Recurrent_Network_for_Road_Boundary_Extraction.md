@@ -295,13 +295,16 @@ $M$ is assumed to be a positive integer value; *i.e.*, we ignore the case where 
 Below is a evaluation result. The authors compared the distance transform (DT) baseline with their model.
 
 <figure style="width: 80%" class="align-center">
-  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig5.png" alt="">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig5.PNG" alt="">
   <figcaption><b>Figure 6.</b> Evaluation result compared with the distance transform baseline.</figcaption>
 </figure>
 
 # Inference
 Below are some inference results.
 <figure style="width: 80%" class="align-center">
-  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig6.png" alt="">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig6.PNG" alt="">
   <figcaption><b>Figure 7.</b> Qualitative results. First and third rows are the ground truth, and second and fourth rows are the inference.</figcaption>
 </figure>
+
+# Conclusion
+The road boundary extraction algorithm proposed from the paper 
