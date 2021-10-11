@@ -113,7 +113,7 @@ Let us first briefly review what distance transform is. A **distance transform**
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets/images/2021-10-01-distance_transform/fig1.gif" alt="">
-  <figcaption><b>Figure 3.</b> A binary image (left) and a corresponding distance transform (right). Each pixel in the distance transform indicate the distance to the nearest boundary.</figcaption>
+  <figcaption><b>Figure 4.</b> A binary image (left) and a corresponding distance transform (right). Each pixel in the distance transform indicate the distance to the nearest boundary.</figcaption>
 </figure>
 
 If you are still confused and want a bit more of distance transform, this [post](https://youngwoong-cho.github.io/distance_transform) will be helpful.
@@ -186,7 +186,7 @@ An FPN consists of two parts: a **bottom-up** pathway and a **top-down** pathway
 
 <figure style="width: 80%" class="align-center">
   <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig4.png" alt="">
-  <figcaption><b>Figure 3.</b> A Feature Pyramid Network.</figcaption>
+  <figcaption><b>Figure 5.</b> A Feature Pyramid Network.</figcaption>
 </figure>
 
 The authors mention that they chose the FPN-like network because of its efficiency and its ability to keep spatial information. Remember that the skip connections between the encoder and decoder can recover the lost spatial information.
@@ -259,3 +259,49 @@ $$
 for some pixel $p_i \in P$. Then, all we have to do is simply take a look at the value from the distance map $D$ at the corresponding pixel value, since it already contains the information of the **distance to the nearest boundary**, which is exactly what we're after.
 
 More on distance metrics such as **Chamfer Distance** and **Wasserstein Distance** can be found from the following [post](https://youngwoong-cho.github.io/distance)[.](http://graphics.stanford.edu/courses/cs468-17-spring/LectureSlides/L14%20-%203d%20deep%20learning%20on%20point%20cloud%20representation%20(analysis).pdf)
+
+# Evaluation
+The authors provide the experimental evaluation result in the paper.
+
+## Dataset
+The dataset that is used for the training of the model consist of **BEV projected LiDAR and camera images**, which amounts to 4750$km$ of driving, 50$km^2$ of area.
+
+The LiDAR dataset contains approximately 540 billion points in total. Also, the images has the dimension of $1927\text{px} \left(\pm893\right) \times 2162\text{px}\left(\pm 712 \right)$, with $4\text{cm}/\text{px}$ resolution.
+
+The LiDAR point clouds and camera images are tiled and splitted into 2500, 1000, 1250 train/val/test sets.
+
+## Metrics
+The metrics used for the evaluation of the performance of the model is as follows.
+
+### Precision and Recall
+The definition of precision and recall is detailed in the following [post](https://youngwoong-cho.github.io/precision_recall).
+
+The precision and recall metrics are used to tell if the **points on the predicted poylines** are within the threshold of the **ground truth polyline**.
+
+### Connectivity
+The authors proposes the following metric to evaluate how well the predicted polylines are "connected".
+
+$$
+\text{Connectivity} = \frac{1}{M}
+$$
+
+Here, $M$ is the number of **predicted polylines** that is assigned to a **single ground truth polyline**. For example, if for a ground truth polyline the model predicts two polylines, the connectivity is $\frac{1}{M}=\frac{1}{2}=0.5$.
+
+The connectivity is at its maximum of $1$ when the model successfully propagates through the ground truth polyline from beginning to end, resulting in $M=1$.
+
+$M$ is assumed to be a positive integer value; *i.e.*, we ignore the case where the model fails to assign any prediction to the ground truth polyline.
+
+## Evaluation result
+Below is a evaluation result. The authors compared the distance transform (DT) baseline with their model.
+
+<figure style="width: 80%" class="align-center">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig5.png" alt="">
+  <figcaption><b>Figure 6.</b> Evaluation result compared with the distance transform baseline.</figcaption>
+</figure>
+
+# Inference
+Below are some inference results.
+<figure style="width: 80%" class="align-center">
+  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/fig6.png" alt="">
+  <figcaption><b>Figure 7.</b> Qualitative results. First and third rows are the ground truth, and second and fourth rows are the inference.</figcaption>
+</figure>
