@@ -12,6 +12,8 @@ docs:
     children:
       - title: "Decay"
         url: Decay
+      - title: "Center of Furniture"
+        url: CoF
       - title: "Vi-DI"
         url: Vi_DI
 
