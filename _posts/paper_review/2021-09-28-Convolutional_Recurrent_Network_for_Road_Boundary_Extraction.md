@@ -309,5 +309,9 @@ Below are some inference results.
 # Conclusion
 The road boundary extraction algorithm proposed by the paper could successfully extract the road boundary from the given LiDAR point cloud and camera imagery data. However, there were several limitations.
 
-- Endpoint heatmap is not a robust method to account for cases where the road boundary is not clear. If the road boundary is not clear, it might not be possible to begin the cSnake module.
-- 
+- Endpoint heatmap is not a robust method to account for cases where the road boundary is not clear, vanishes, or merges/splitted. These cases might result in the situation where it might not be possible to begin/conclude the cSnake module.
+- The paper does not explain much about the vertical hindrance; *i.e.*, the possibility of street trees/lamps blocking the BEV LiDAR/camera data.
+
+---
+
+Great, we made it to the end of the paper. If you find this post useful, or have any questions/comments, please leave a comment.
