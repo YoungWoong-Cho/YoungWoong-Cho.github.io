@@ -3,6 +3,7 @@ layout: posts
 title: "[Paper Review] Convolutional Recurrent Network for Road Boundary Extraction"
 sidebar:
   nav: "docs"
+toc: true
 
 use_math: true
 excerpt: "A CNN extracts the location and direction of road boundaries, and a CRNN outputs a polyline representation"
