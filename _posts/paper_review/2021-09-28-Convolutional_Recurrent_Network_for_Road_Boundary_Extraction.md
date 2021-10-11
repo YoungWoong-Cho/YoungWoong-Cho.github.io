@@ -17,6 +17,9 @@ Before we begin, you may bring **a cup of coffee** that can help us through the 
 ***
 
 # Overview
+Paper link: https://arxiv.org/pdf/2012.12160.pdf
+Authors: Justin Liang, Namdar Homayounfar, Wei-Chiu Ma, Shenlong Wang, Raquel Urtasun
+
 In this paper, the authors propose a neural network that extracts the drivable road boundary from LiDAR and camera image input.
 
 > Extraction of drivable road boundary is important for self-driving cars. In this paper, the authors propose a convolutional recurrent network that extracts the road boundary from LiDAR and camera input.
