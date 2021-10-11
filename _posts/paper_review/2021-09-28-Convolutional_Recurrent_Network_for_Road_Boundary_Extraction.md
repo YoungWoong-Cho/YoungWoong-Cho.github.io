@@ -268,7 +268,7 @@ More on distance metrics such as **Chamfer Distance** and **Wasserstein Distance
 The authors provide the experimental evaluation result in the paper.
 
 ## Dataset
-The dataset that is used for the training of the model consist of **BEV projected LiDAR and camera images**, which amounts to 4750$km$ of driving, 50$km^2$ of area.
+The dataset that is used for the training of the model consist of **BEV projected LiDAR and camera images**, which amounts to 4750km of driving, 50km$^2$ of area.
 
 The LiDAR dataset contains approximately 540 billion points in total. Also, the images has the dimension of 1927px ($\pm$893) $\times$ 2162px($\pm$712), with 4cm/px resolution.
 
