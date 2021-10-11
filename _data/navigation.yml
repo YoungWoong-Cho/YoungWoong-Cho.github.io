@@ -8,7 +8,7 @@ docs:
   - title: About
     url: about
 
-  - title: Project
+  - title: Projects
     children:
       - title: "Decay"
         url: Decay
