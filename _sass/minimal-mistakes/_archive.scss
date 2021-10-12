@@ -3,6 +3,19 @@
    ========================================================================== */
 
 iframe[src*="ads-iframe"] { display: none; }
+
+.crop {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 400px;
+  height: 300px;
+  margin: -75px 0 0 -100px;
+}
+
 .archive {
   margin-top: 1em;
   margin-bottom: 2em;
