@@ -12,7 +12,7 @@ docs:
   - title: About
     url: about
 
-  - title: Projects
+  - title: "Projects"
     url: projects
     children:
       - title: "Decay"
@@ -22,7 +22,7 @@ docs:
       - title: "Vi-DI"
         url: ViDI
 
-  - title: Notes
+  - title: "Notes"
     children:
       - title: "Convolutional Neural Networks"
         url: CNN
@@ -35,7 +35,7 @@ docs:
       - title: "Distance transform"
         url: distance_transform
 
-  - title: Paper Review
+  - title: "Paper Review"
     url: paper_review
     children:
       - title: "Convolutional Recurrent Network for Road Boundary Extraction"
