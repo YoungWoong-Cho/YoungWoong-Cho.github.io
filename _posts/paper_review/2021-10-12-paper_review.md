@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: posts
 sidebar:
   nav: "docs"
 ---
