@@ -19,7 +19,7 @@ A CNN extracts the location and direction of road boundaries, and a CRNN outputs
 ---
 
 <figure style="width: 25%" class="align-left">
-  <img src="/assets/images/2021-09-28-Convolutional_Recurrent_Network_for_Road_Boundary_Extraction/header.PNG" alt="this is a placeholder image">
+  <img src="/assets/images/2021-10-05-HDMapNet/header.jpg" alt="this is a placeholder image">
 </figure>
 
 ## [Paper Review] HDMapNet: An Online HD Map Construction and Evaluation Framework
