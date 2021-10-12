@@ -2,6 +2,12 @@
 main:
   - title: "About"
     url: https://youngwoong-cho.github.io/about
+  - title: "Projects"
+    url: https://youngwoong-cho.github.io/projects
+  - title: "Notes"
+    url: https://youngwoong-cho.github.io/notes
+  - title: "Paper Review"
+    url: https://youngwoong-cho.github.io/paper_review
 
   
 docs:
