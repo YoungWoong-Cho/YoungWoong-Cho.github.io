@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "da
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Youngwoong Cho's website"
+title                    : "Youngwoong Cho
 title_separator          : "-"
 subtitle                 : "The Cooper Union ME&CS"
 name                     : "Youngwoong Cho"
-description              : "Youngwoong Cho"
+description              : "Youngwoong Cho's website"
 url                      : "https://youngwoong-cho.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
