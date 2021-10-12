@@ -4,8 +4,6 @@ sidebar:
   nav: "docs"
 ---
 
----
-
 # Paper reviews
 
 ---
