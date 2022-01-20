@@ -27,7 +27,7 @@ docs:
     children:
       - title: "Vector Spaces"
         url: Vector_Spaces
-      - title: "Linear subspaces"
+      - title: "Linear Subspaces"
         url: Linear_Subspaces
 
   - title: "Notes"
