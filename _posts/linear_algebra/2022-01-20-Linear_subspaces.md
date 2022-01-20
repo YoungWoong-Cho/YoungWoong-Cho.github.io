@@ -76,7 +76,7 @@ $$
 \end{bmatrix}
 $$
 
-3차원 공간에 이 column vector들을 시각화 해봅시다.
+이 column vector들을 3차원 공간에 시각화 해봅시다.
 
 이 두 column vector의 선형 결합으로 span되는 공간이 바로 column space입니다.
 
@@ -91,3 +91,31 @@ $$
 **선형 종속** (linearly dependent) 적인 column vector들로 구성된 행렬의 경우는 어떨까요? 어떤 column vector는 나머지 column vector들의 선형 합으로 나타내어 질 수 있으니, column vector 중 **basis로 기능하지 못하는 벡터**가 있을 것입니다. 따라서 이 때는 column vector의 개수보다 basis의 개수가 적을 것이고, rank 또한 작아집니다.
 
 정리하자면, 행렬 $A$의 column vector들 가운데 **선형 독립 (linearly independent) 적인 column vector의 개수는 곧 basis vector의 개수와 같으며, 이는 rank와도 같습니다**. 특히 모든 column vector들이 linearly independent할 경우를 **full rank**라고 부릅니다.
+
+## Row space
+Column space에 대해 이해했다면, row space에 관한 내용도 곧바로 이해할 수 있습니다. 이름에서 알 수 있다시피, row space는 row vector들로 span되는 space를 뜻합니다.
+
+앞서의 $m \times n$ 행렬 $A$로 돌아가서, 이번에는 row vector의 모음으로 나타내 봅시다.
+
+$$A = 
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+2 & -1
+\end{bmatrix} =
+\begin{bmatrix}
+— & \vec{u}_1 & — \\
+— & \vec{u}_2 & — \\
+— & \vec{u}_3 & —
+\end{bmatrix}
+$$
+
+이 row vector들 ($\vec{u}_1$, $\vec{u}_2$, $\vec{u}_3$)의 선형 결합으로 span되는 공간이 바로 row space입니다.
+
+참고로, row space는 $A^T$의 column space와 같으므로, 다음과 같이 나타냅니다.
+$$
+C(A^T) = \text{span}(\vec{u}_1, \vec{u}_2, \vec{u}_3)
+$$
+
+## Null space
+Null space는 kernel이라고도 불립니다.
