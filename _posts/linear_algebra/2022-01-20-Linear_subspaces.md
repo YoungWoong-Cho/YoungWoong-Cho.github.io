@@ -118,4 +118,29 @@ C(A^T) = \text{span}(\vec{u}_1, \vec{u}_2, \vec{u}_3)
 $$
 
 ## Null space
-Null space는 kernel이라고도 불립니다.
+Null space는 kernel이라고도 불립니다. Null space는 선형 변환 이후에 zero vector가 되는 공간을 뜻합니다.
+
+$m \times n$ 행렬 $A$에 대하여
+
+$$
+N(A) = \text{ker}(A) = \{ \vec{v} \in K^m \; | \; A\vec{v} = \vec{0} \}
+$$
+
+가 성립하는 벡터 $\vec{v}$의 집합이 바로 null space가 됩니다.
+
+Null space도 linear subspace이므로 vector space의 속성을 만족합니다.  
+즉, $\vec{v}_1 \in N(A)$이고 $\vec{v}_2 \in N(A)$ 이면 $\vec{v}_1 + \vec{v}_2 \in N(A)$가 성립합니다.  
+또한 $\vec{v}_1 \in N(A)$이고 $c \in K^m$이면 $c\vec{v}_1 \in N(A)$가 성립합니다.
+
+## Left null space
+Null space와 left null space의 관계는 column space와 row space와의 관계와 유사합니다.
+
+$m \times n$ 행렬 $A$에 대하여
+
+$$
+N(A^T) = \text{ker}(A^T) = \{ \vec{v} \in K^n \; | \; A^T \vec{v} = \vec{0} \quad \text{or} \quad \vec{v}^TA = \vec{0}^T \}
+$$
+
+가 성립하는 벡터 $\vec{v}$의 집합이 바로 left null space가 됩니다.
+
+Left null space가 **left** null space인 이유는 $\vec{v}^TA=\vec{0}^T$에서 linear operation의 대상이 되는 $\vec{v}^T$가 operator인 $A$의 왼쪽에 위치하게 되기 때문입니다.
