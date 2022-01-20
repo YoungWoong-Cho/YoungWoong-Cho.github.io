@@ -47,6 +47,33 @@ $$
 
 이 때, **각각의 column vector의 가능한 모든 선형 합**을 **A의 column space**라고 부릅니다. 다른 말로, $A$의 column space는 **column vector들의 span**이라고 할 수 있습니다.
 
-> $m \times n$ matrix A의 column space는 column vector ($\vec{v}_1$, $\vec{v}_2$, ...)들의 span이다!
+> $m \times n$ matrix $A$의 column space는 column vector ($\vec{v}_1$, $\vec{v}_2$, ...)들의 span이다!
 
 즉, 임의의 실수 $c_i$에 대해 $c_1 \vec{v}_1 + c_2 \vec{v}_2 + ...$ 로 갈 수 있는 모든 공간이 A의 column space가 되는 것입니다.
+
+예시를 한 번 볼까요? $3 \times 2$ 행렬 $A$가 다음과 같다고 해 봅시다.
+
+$$A = 
+\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+2 & -1
+\end{bmatrix}
+$$
+
+Column vector는 다음과 같습니다.
+
+$$
+\vec{v}_1 = \begin{bmatrix}
+1 \\
+0 \\
+2
+\end{bmatrix}, \quad
+\vec{v}_2 = \begin{bmatrix}
+0 \\
+1 \\
+-1
+\end{bmatrix}
+$$
+
+3차원 공간에 column vector를 시각화 해 봅시다.
