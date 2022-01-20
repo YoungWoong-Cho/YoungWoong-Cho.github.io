@@ -22,6 +22,12 @@ docs:
       - title: "Vi-DI"
         url: ViDI
 
+  - title: "Linear Algebra"
+    url: linear_algebra
+    children:
+      - title: "Spaces"
+        url: Spaces
+
   - title: "Notes"
     children:
       - title: "Convolutional Neural Networks"
