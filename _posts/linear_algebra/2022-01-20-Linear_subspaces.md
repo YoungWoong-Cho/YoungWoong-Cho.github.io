@@ -144,3 +144,12 @@ $$
 가 성립하는 벡터 $\vec{v}$의 집합이 바로 left null space가 됩니다.
 
 Left null space가 **left** null space인 이유는 $\vec{v}^TA=\vec{0}^T$에서 linear operation의 대상이 되는 $\vec{v}^T$가 operator인 $A$의 왼쪽에 위치하게 되기 때문입니다.
+
+# Summary
+- 선형 부분공간(linear subspace)이란 vector space의 속성 (벡터 합, 스칼라 곱에 대해 닫혀 있고 zero vector를 포함)을 가지는 vector space의 부분집합을 뜻합니다.
+- Column space는 행렬 $A$의 column vector로 span되는 선형 부분공간입니다.
+- Row space는 행렬 $A$의 row vector로 span되는 선형 부분공간입니다.
+- Null space는 행렬 $A$로 나타내어지는 선형 변환에 의해 zero vector가 되는 선형 부분공간입니다.
+- Left null space는 행렬 $A^T$로 나타내어지는 선형 변환에 의해 zero vector가 되는 선형 부분공간입니다.
+- Basis는 선형 독립(linearly independent)한 벡터의 집합입니다.
+- Rank는 basis의 개수입니다.
