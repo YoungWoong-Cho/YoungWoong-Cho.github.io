@@ -31,35 +31,35 @@ $$
 ## 벡터 공간의 Axiom
 상기한 조건을 만족하는 벡터 합과 스칼라 곱 연산을 정의한다고 해서 무조건 벡터 공간이 되지는 않습니다. 벡터 공간이 되기 위해서는 위의 연산들이 다음의 axiom들을 만족해야 합니다.
 
-- Associativity of vector addition
+- Associativity of vector addition  
 $$
 \vec{u} + (\vec{v} + \vec{w}) = (\vec{u} + \vec{v}) + \vec{w}
 $$
-- Commutativity of vector addition
+- Commutativity of vector addition  
 $$
 \vec{u} + \vec{v} = \vec{v} + \vec{u}
 $$
-- Identity element of vector addition
+- Identity element of vector addition  
 $$
 \exists \;\; \vec{0} \in \mathcal{V} \quad \text{s.t.} \quad \vec{v} + \vec{0} = \vec{v} \quad \forall \; \vec{v} \in \mathcal{V}
 $$
-- Inverse element of vector addition
+- Inverse element of vector addition  
 $$
 \forall \;\; \vec{v} \in \mathcal{V} \;\; \exists \; -\vec{v} \quad \text{s.t.} \quad \vec{v} + \left(-\vec{v}\right) = \vec{0}
 $$
-- Compatibility of scalar multiplication with field multiplication
+- Compatibility of scalar multiplication with field multiplication  
 $$
 a(b\vec{v}) = (ab)\vec{v}
 $$
-- Identity element of scalar multiplication
+- Identity element of scalar multiplication  
 $$
 1\vec{v} = v
 $$
-- Distributivity of scalar multiplication with respect to vector addition 
+- Distributivity of scalar multiplication with respect to vector addition  
 $$
 a\left(\vec{u} + \vec{v}\right) = a\vec{u} + a\vec{v}
 $$
-- Distributivity of scalar multiplication with respect to field addition
+- Distributivity of scalar multiplication with respect to field addition  
 $$
 \left(a + b\right)\vec{v} = a\vec{v} + b\vec{v}
 $$
