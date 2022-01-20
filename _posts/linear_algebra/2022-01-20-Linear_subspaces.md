@@ -76,4 +76,18 @@ $$
 \end{bmatrix}
 $$
 
-3차원 공간에 column vector를 시각화 해 봅시다.
+3차원 공간에 이 column vector들을 시각화 해봅시다.
+
+이 두 column vector의 선형 결합으로 span되는 공간이 바로 column space입니다.
+
+$$
+C(A) = \text{span}(\vec{v}_1, \vec{v}_2)
+$$
+
+## Rank와 basis
+앞서 예시로 들었던 $A$는 **선형 독립**, 즉 linearly independent한 행렬입니다. 선형 독립인 column vector들은 각각이 column space의 **basis**가 될 수 있습니다. 그리고 이 linearly independent한 colum space의 basis의 개수가 바로 **rank**가 됩니다.
+
+
+**선형 종속** (linearly dependent) 적인 column vector들로 구성된 행렬의 경우는 어떨까요? 어떤 column vector는 나머지 column vector들의 선형 합으로 나타내어 질 수 있으니, column vector 중 **basis로 기능하지 못하는 벡터**가 있을 것입니다. 따라서 이 때는 column vector의 개수보다 basis의 개수가 적을 것이고, rank 또한 작아집니다.
+
+정리하자면, 선형 독립 (linearly independent) 적인 column vector의 개수는 곧 basis vector의 개수와 같으며, 이는 rank와도 같습니다. 특히 모든 column vector들이 linearly independent할 경우를 **full rank**라고 부릅니다.
