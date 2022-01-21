@@ -18,12 +18,20 @@ author_profile: true
 
 $$
 T = \begin{bmatrix}
-R & t \\
+R & p \\
 0 & 1
 \end{bmatrix}
 $$
 
-여기서 $R$는 $SO(3)$군에 속하는 $3 \times 3$ 행렬이며, $t$는 $3 \times 1$ column vector입니다.
+여기서 $R$는 $SO(3)$군에 속하는 $3 \times 3$ 행렬이며, $p$는 $3 \times 1$ column vector입니다.
+
+변환 행렬은 다음의 속성을 가집니다.
+- $T^{-1} = \begin{bmatrix}
+R^T & -R^Tp \\
+0 & 1
+\end{bmatrix}$
+- $(T_1 T_2)T_3 = T_1(T_2 T_3)$
+- $T_1 T_2 \neq T_2 T_1$
 
 ## O(3), SO(3), SE(3)
 $O(3)$은 $3 \times 3$ 행렬 가운데 determinant가 $\pm1$인 orthogonal matrix를 뜻합니다.
