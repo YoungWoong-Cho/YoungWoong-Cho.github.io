@@ -14,7 +14,41 @@ author_profile: true
 
 # 변환 행렬이란?
 
-**변환 행렬 (Transformation matrix)**는 rotation과 translation을 함께 표현하는 $4 \times 4$ 행렬이며, 다음과 같은 모양을 가집니다.
+**변환 행렬 (Transformation matrix)**은 $\mathbb{R}^n$에서 $\mathbb{R}^m$으로의 선형 변환 mapping을 표현하는 $m \times n$ 행렬을 뜻합니다.
+
+$$
+T(\vec{x}) = A\vec{x} \quad \text{where} \quad 
+A = \begin{bmatrix}
+a_{11} & a_{12} & ... & a_{1n} \\
+a_{21} & a_{22} & ... & a_{2n} \\
+... \\
+a_{m1} & a_{m2} & ... & a_{mn}
+\end{bmatrix} 
+$$
+
+# 기하 변환 (Geometric transformation)
+변환 행렬 중 컴퓨터 비전/로보틱스 분야에서 많이 쓰이는 종류는 바로 기하 변환 (geometric transformation) 입니다.
+
+기하 변환의 종류에는 여러 가지가 있지만, 주로 사용되는 변환은 다음과 같습니다.
+
+- Translation transformation
+    - 거리와 절대 각도 유지 (변환 전후의 local coord의 방향이 동일)
+- Rotation transformation
+    - 거리와 상대 각도 유지 (변환 전후의 local coord의 방향이 다름)
+- Homogeneous transformation
+    - Translation과 rotation을 homogeneous matrix로 한꺼번에 표현
+- Similarity transformation
+    - 상대 각도와 거리 비율 유지 (resizing)
+- Affine transformation
+    - 선형성, 평행성 유지 (scaling, shear)
+- Projective transformation (Homography)
+    - Colinearity 유지 (변환 전의 직선이 변환 후에도 직선)
+
+
+
+
+
+는 rotation과 translation을 함께 표현하는 $4 \times 4$ 행렬이며, 다음과 같은 모양을 가집니다.
 
 $$
 T = \begin{bmatrix}
