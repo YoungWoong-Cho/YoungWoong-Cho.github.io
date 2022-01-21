@@ -76,8 +76,6 @@ $$
 \end{bmatrix}
 $$
 
-이 column vector들을 3차원 공간에 시각화 해봅시다.
-
 이 두 column vector의 선형 결합으로 span되는 공간이 바로 column space입니다.
 
 $$
@@ -128,9 +126,9 @@ $$
 
 가 성립하는 벡터 $\vec{v}$의 집합이 바로 null space가 됩니다.
 
-Null space도 linear subspace이므로 vector space의 속성을 만족합니다.  
-즉, $\vec{v}_1 \in N(A)$이고 $\vec{v}_2 \in N(A)$ 이면 $\vec{v}_1 + \vec{v}_2 \in N(A)$가 성립합니다.  
-또한 $\vec{v}_1 \in N(A)$이고 $c \in K^m$이면 $c\vec{v}_1 \in N(A)$가 성립합니다.
+Full rank가 아닌 선형 변환, 즉 linearly dependent한 column vector를 포함하는 행렬의 경우에는 필연적으로 차원 감소가 이루어지고, 이 감소된 차원들은 zero vector로 mapping되게 됩니다.
+
+Null space도 linear subspace이므로 vector space의 속성을 만족합니다. 즉, $\vec{v}_1 \in N(A)$이고 $\vec{v}_2 \in N(A)$ 이면 $\vec{v}_1 + \vec{v}_2 \in N(A)$가 성립하며, $\vec{v}_1 \in N(A)$이고 $c \in K^m$이면 $c\vec{v}_1 \in N(A)$가 성립합니다.
 
 ## Left null space
 Null space와 left null space의 관계는 column space와 row space와의 관계와 유사합니다.
