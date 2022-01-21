@@ -26,7 +26,8 @@ $$
 여기서 $R$는 $SO(3)$군에 속하는 $3 \times 3$ 행렬이며, $p$는 $3 \times 1$ column vector입니다.
 
 변환 행렬은 다음의 속성을 가집니다.
-- $T^{-1} = \begin{bmatrix}
+- $T^{-1} =
+\begin{bmatrix}
 R^T & -R^Tp \\
 0 & 1
 \end{bmatrix}$
