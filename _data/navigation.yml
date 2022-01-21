@@ -29,6 +29,8 @@ docs:
         url: Vector_Spaces
       - title: "Linear Subspaces"
         url: Linear_Subspaces
+      - title: "Transformation Matrix"
+        url: Transformation_Matrix
 
   - title: "Notes"
     children:

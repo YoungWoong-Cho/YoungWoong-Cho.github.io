@@ -1,0 +1,35 @@
+---
+layout: home
+title: "Linear Algebra - Vector Spaces"
+sidebar:
+  nav: "docs"
+author_profile: true
+---
+
+---
+
+본 포스팅에서는 **변환 행렬 (Transformation matrix)**에 대해 다루어 봅니다.
+
+***
+
+# 변환 행렬이란?
+
+**변환 행렬 (Transformation matrix)**는 rotation과 translation을 함께 표현하는 $4 \times 4$ 행렬이며, 다음과 같은 모양을 가집니다.
+
+$$
+T = \begin{bmatrix}
+R & t \\
+0 & 1
+\end{bmatrix}
+$$
+
+여기서 $R$는 $SO(3)$군에 속하는 $3 \times 3$ 행렬이며, $t$는 $3 \times 1$ column vector입니다.
+
+## O(3), SO(3), SE(3)
+$O(3)$은 $3 \times 3$ 행렬 가운데 determinant가 $\pm1$인 orthogonal matrix를 뜻합니다.
+
+> Orthogonal matrix는 $QQ^{-1}=Q^{-1}Q=I$를 만족하는 행렬 $Q$입니다. 즉, $Q^{-1}=Q^T$입니다.
+
+$SO(3)$은 **S**pecial **O**rthogonal group을 뜻하며, $O(3)$ 행렬 중에서 distance-preserving transformation이 성립하는 행렬을 뜻합니다.
+
+$SE(3)$는 **S**pecial **E**uclidean group을 뜻하며, 상기한 $T$ 행렬 가운데 affine transformation과 rigid transformation이 성립하는 행렬을 뜻합니다.
