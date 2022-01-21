@@ -33,6 +33,12 @@ R^T & -R^Tp \\
 - $(T_1 T_2)T_3 = T_1(T_2 T_3)$
 - $T_1 T_2 \neq T_2 T_1$
 
+변환 행렬은 $SE(3)$에 속합니다.
+
+$$
+T \in SE(3)
+$$
+
 ## O(3), SO(3), SE(3)
 $O(3)$은 $3 \times 3$ 행렬 가운데 determinant가 $\pm1$인 orthogonal matrix를 뜻합니다.
 
