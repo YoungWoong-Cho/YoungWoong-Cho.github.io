@@ -45,10 +45,8 @@ $$
     - Colinearity 유지 (변환 전의 직선이 변환 후에도 직선)
 
 
-
-
-
-는 rotation과 translation을 함께 표현하는 $4 \times 4$ 행렬이며, 다음과 같은 모양을 가집니다.
+# Homogeneous transformation
+Homogeneous transformation matrix는 rotation과 translation을 함께 표현하는 $4 \times 4$ 행렬이며, 다음과 같은 모양을 가집니다.
 
 $$
 T = \begin{bmatrix}
@@ -59,7 +57,7 @@ $$
 
 여기서 $R$는 $SO(3)$군에 속하는 $3 \times 3$ 행렬이며, $p$는 $3 \times 1$ column vector입니다.
 
-변환 행렬은 다음의 속성을 가집니다.
+Homogeneous transformation matrix은 다음의 속성을 가집니다.
 - $T^{-1} =
 \begin{bmatrix}
 R^T & -R^Tp \\
@@ -68,7 +66,7 @@ R^T & -R^Tp \\
 - $(T_1 T_2)T_3 = T_1(T_2 T_3)$
 - $T_1 T_2 \neq T_2 T_1$
 
-변환 행렬은 $SE(3)$에 속합니다.
+Homogeneous transformation matrix은 $SE(3)$에 속합니다.
 
 $$
 T \in SE(3)
