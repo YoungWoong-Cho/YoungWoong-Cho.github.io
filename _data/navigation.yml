@@ -25,7 +25,6 @@ docs:
         url: ViDI
 
   - title: "Linear Algebra"
-    url: linear_algebra
     children:
       - title: "Vector Spaces"
         url: Vector_Spaces
@@ -54,3 +53,8 @@ docs:
         url: Convolutional_Recurrent_Network_for_Road_Boundary_Extraction
       - title: "HDMapNet: An Online HD Map Construction and Evaluation Framework"
         url: HDMapNet
+  
+  - title: "Introduction to Full Stack Engineering"
+    children:
+      - title: "Introduction"
+        url: full_stack_engineering_introduction
