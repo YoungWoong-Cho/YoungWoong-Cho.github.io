@@ -1,0 +1,80 @@
+---
+layout: home
+title: "Introduction to Full Stack Engineering - Introduction"
+sidebar:
+  nav: "docs"
+author_profile: true
+---
+
+---
+
+Full Stack Software Engineering for Beginners
+
+June 20th, 2023
+
+***
+
+# Introduction to software engineering and full stack development
+
+**Software engineering** is a discipline that encompasses the systematic design, development, and maintenance of software systems. It involves applying engineering principles and practices to create reliable, efficient, and scalable software solutions.
+
+**Full stack development** refers to the skill set required to develop both the **front-end** and **back-end** components of a web application.
+
+A full stack developer is proficient in multiple programming languages and frameworks, enabling them to work on all layers of the software stack, from the user interface to the server-side logic and database integration. This holistic approach allows full stack developers to understand the entire software development process and build end-to-end solutions that meet user requirements.
+
+## Frontend vs. Backend
+
+<figure style="width: 80%" class="align-center">
+  <img src="assets/images/2023-06-20-week1_class1/img1.webp" alt="">
+  <figcaption><b>Figure 1.</b>Difference between frontend and backend.</figcaption>
+</figure> 
+
+**Frontend development** focuses on the user interface and user experience (UI/UX) aspects of an application. It involves creating the visual elements and interactive features that users interact with directly. Frontend developers use technologies like HTML, CSS, and JavaScript to build the frontend of an application. They work on designing and developing the layout, appearance, and behavior of web pages or mobile screens, ensuring that they are visually appealing, responsive, and intuitive to use.
+
+**Backend development**, on the other hand, deals with the server-side of an application. It involves handling the business logic, data storage, and processing tasks that are necessary for the application to function properly. Backend developers work with programming languages like Python, Java, or Ruby and frameworks like Node.js or Django. They build the server infrastructure, implement APIs (Application Programming Interfaces) to communicate with the frontend, and interact with databases and external services to manage and process data.
+
+
+## 3-tier architecture
+Three-tier architecture is a software architecture pattern that divides an application into three distinct layers, each responsible for specific functionalities. This architectural approach separates the user interface, business logic, and data storage into separate layers, promoting modularity, scalability, and maintainability.
+
+1. **Presentation Layer**: The presentation layer, also known as the client layer or the user interface (UI) layer, is responsible for the user interaction and interface. It focuses on displaying information to users and receiving user input. This layer includes components such as web pages, mobile screens, forms, and UI elements. It communicates with the other layers to retrieve and present data, as well as to handle user actions and inputs. The presentation layer is often implemented using technologies like HTML, CSS, JavaScript, or client-side frameworks.
+
+2. **Application Layer (Business Logic Layer)**: The application layer, also referred to as the business logic layer or the middle layer, contains the core functionality and business rules of the application. It processes requests from the presentation layer, performs computations, implements business logic, and interacts with data sources and external services. The application layer is responsible for validating and manipulating data, enforcing business rules, and coordinating the flow of data and operations within the application. It encapsulates the application's logic and ensures its consistency and integrity.
+
+3. **Data Layer (Persistence Layer)**: The data layer, also known as the persistence layer or the backend layer, deals with data storage and retrieval. It manages the application's data persistence and interacts with databases or other data storage mechanisms. The data layer is responsible for tasks such as storing data, querying databases, and handling data access. It provides the necessary interfaces and methods for the application layer to interact with the data, ensuring proper data management and integrity.
+
+<figure style="width: 80%" class="align-center">
+  <img src="assets/images/2023-06-20-week1_class1/img2.png" alt="">
+  <figcaption><b>Figure 2.</b>3-tier architecture.</figcaption>
+</figure> 
+
+
+## MVC design pattern
+**MVC** stands for **Model-View-Controller**, which is a popular design pattern used in software development to separate the concerns of an application's user interface, data, and control logic. The MVC design pattern provides a structured and modular approach to building applications, making them easier to understand, maintain, and modify.
+
+1. **Model**: The model represents the application's data and business logic. It encapsulates the data structure and methods for manipulating and accessing the data. The model component is responsible for managing the application's data, performing calculations, implementing business rules, and interacting with data sources such as databases. It represents the underlying data and ensures its consistency and integrity.
+
+2. **View**: The view represents the presentation of the data to the user. It is responsible for displaying information and interacting with the user interface. The view component renders the user interface elements, such as web pages, forms, or graphical interfaces, based on the data provided by the model. It focuses on the visual aspects and user experience, without having direct knowledge of the data or the business logic behind it.
+
+3. **Controller**: The controller acts as the intermediary between the model and the view. It handles user input, updates the model based on the user's actions, and updates the view accordingly. The controller receives user input from the view, processes it, and triggers the appropriate actions in the model. It also communicates changes in the model to the view, ensuring that the user interface reflects the updated data. The controller component orchestrates the flow of data and controls the interactions between the model and the view.
+
+## 3-tier vs. MVC
+The MVC design pattern is a design pattern that helps structure the internal components of a **single application**, while the 3-tier architecture is an architectural pattern that focuses on the **overall organization** and separation of concerns within an entire system. They can complement each other, and it is possible to implement the MVC design pattern within one or more layers of the 3-tier architecture to achieve a well-structured and modular system.
+
+
+***
+
+# Overview of web development technologies
+HTML, CSS, and JavaScript are three fundamental technologies used in web development to create and enhance websites and web applications.
+
+<figure style="width: 80%" class="align-center">
+  <img src="assets/images/2023-06-20-week1_class1/img3.png" alt="">
+  <figcaption><b>Figure 3.</b>HTML, CSS, and JS</figcaption>
+</figure> 
+
+
+1. **HTML (Hypertext Markup Language)**: HTML is the standard markup language used for creating the structure and content of web pages. It provides a set of predefined tags that define the elements of a webpage, such as headings, paragraphs, links, images, tables, forms, and more. HTML tags are used to structure and organize the content, allowing browsers to understand and render the page correctly. HTML is a static language, meaning it defines the structure and content of the page but doesn't provide interactivity or dynamic behavior.
+
+2. **CSS (Cascading Style Sheets)**: CSS is a styling language used to control the visual appearance of HTML elements on a web page. It allows developers to define the layout, colors, fonts, spacing, and other visual aspects of the webpage. With CSS, you can create consistent and visually appealing designs by applying styles to HTML elements. CSS works by selecting HTML elements using selectors and applying specific styles or properties to those elements. It enables the separation of content and presentation, making it easier to update and maintain the styling of a website.
+
+3. **JavaScript**: JavaScript is a programming language that adds interactivity, dynamic behavior, and functionality to web pages. It allows developers to create interactive features, handle events, manipulate HTML elements, perform calculations, make HTTP requests, and much more. JavaScript can be used to respond to user actions, validate form inputs, create animations, update content dynamically, and interact with APIs to fetch and manipulate data. It is a versatile language that runs on the client-side (in the user's browser) and can also be used on the server-side (with technologies like Node.js).
