@@ -58,3 +58,5 @@ docs:
     children:
       - title: "Introduction"
         url: full_stack_engineering_introduction
+      - title: "Week1"
+        url: week1
