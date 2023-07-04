@@ -60,3 +60,5 @@ docs:
         url: full_stack_engineering_introduction
       - title: "Week1"
         url: week1
+      - title: "Week2"
+        url: week2
