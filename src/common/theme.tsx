@@ -14,9 +14,44 @@ const theme = createTheme({
       },
     },
     typography: {
-    //   "fontFamily": `'NanumSquare', sans-serif`
-    //   "fontFamily": `'GongGothicMedium', sans-serif`
-    "fontFamily": `'SUIT-Regular', sans-serif`
+      "fontFamily": `'GowunBatang', sans-serif`,
+      h1: {
+        fontSize: 28,
+        fontWeight: 700
+      },
+      h2: {
+        fontSize: 24,
+        fontWeight: 700
+      },
+      h3: {
+        fontSize: 20,
+        fontWeight: 500
+      },
+      h4: {
+        fontSize: 18,
+        fontWeight: 500
+      },
+      h5: {
+        fontSize: 16,
+        fontWeight: 300
+      },
+      h6: {
+        fontSize: 14,
+        fontWeight: 300
+      },
+      body1: {
+        fontSize: 16,
+        fontWeight: 500
+      },
+      body2: {
+        fontSize: 14,
+        fontWeight: 300
+      },
+      button: {
+        textTransform: 'none',
+        fontSize: 14,
+        fontWeight: 300,
+      }
     }
   });
 

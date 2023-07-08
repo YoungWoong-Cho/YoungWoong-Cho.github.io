@@ -29,3 +29,33 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'KimjungchulMyungjo-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GowunBatang';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangRegulareot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangRegular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangRegular.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangRegular.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'GowunBatang';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/yangheeryu/GowunBatangBold.ttf') format("truetype");
+    font-display: swap;
+} 
