@@ -1,14 +1,14 @@
 import ReactMarkdown from "react-markdown";
-import about from "../_posts/about.md"
+import projects from "../_posts/projects.md"
 import { Box, Typography } from "@mui/material"
 import { useEffect, useState } from "react";
 
-const About = () => {
+const PostList = () => {
   const [markdownContent, setMarkdownContent] = useState('');
 
   useEffect(() => {
     const fetchMarkdown = async () => {
-      const response = await fetch(about);
+      const response = await fetch(projects);
       const content = await response.text();
       setMarkdownContent(content);
     };
@@ -42,4 +42,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default PostList;

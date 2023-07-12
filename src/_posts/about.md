@@ -13,9 +13,11 @@
 
 &nbsp;
 
-![image alt<](https://images.unsplash.com/photo-1621361365424-06f0e1eb5c49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80)
-
 ***
+
+&nbsp;
+
+![image alt<](https://drive.google.com/uc?id=1KJloZ0PsuR5hphv-9lOPKs_FRfuCQz8a)
 
 #### 조영웅 Youngwoong Cho
 
@@ -25,10 +27,25 @@
 - Deep Learning with primary focus on RL and LLM
 
 ### Education
-- **Korean Minjok Leadership Academy** Class of 2015
-- **The Cooper Union for the Advancement of Science and Art** B.S. in Mechanical Engineering and Computer Science, Class of 2023
+- **Korean Minjok Leadership Academy**
+    - Class of 2015
+- **The Cooper Union for the Advancement of Science and Art**
+    - B.S. in Mechanical Engineering and Computer Science, Class of 2023
+    - Summa Cum Laude Gradute
 
 ### Experience
-- **Seoul Robotics** Machine Learning Research Engineer Intern @ Perception team
-- **NAVER LABS** Deep Learning Research Engineer Intern @ Autonomous Driving team
-- **LG CNS** Data Engineer
+- **Seoul Robotics**
+    - Machine Learning Research Engineer Intern @ Perception team
+    - May 2021 - March 2022
+
+- **NAVER LABS**
+    - Deep Learning Research Engineer Intern @ Autonomous Driving team
+    - March 2022 - August 2022
+
+- **MASSIVE**
+    - Full Stack Developer
+    - March 2023 - 
+
+- **LG CNS**
+    - Data Engineer
+    - July 2023 - 
