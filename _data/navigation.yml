@@ -73,4 +73,4 @@ docs:
     url: intro_to_java_programming
     children:
       - title: "Week1"
-        url: week1
+        url: java_week1
