@@ -70,6 +70,7 @@ docs:
         url: week5
 
   - title: "Introduction to Java Programming"
+    url: intro_to_java_programming
     children:
       - title: "Week1"
         url: java_week1
