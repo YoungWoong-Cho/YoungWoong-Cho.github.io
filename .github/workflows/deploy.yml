@@ -50,12 +50,6 @@ jobs:
             exit 1
           fi
 
-      - name: Print working directory
-        run: pwd
-
-      - name: List files
-        run: ls -la
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
