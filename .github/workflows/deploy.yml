@@ -31,8 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: YoungWoong-Cho.github.io
 
       - name: Detect package manager
         id: detect-package-manager
@@ -51,6 +49,12 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+
+      - name: Print working directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
 
       - name: Setup Node
         uses: actions/setup-node@v4
