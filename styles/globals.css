@@ -1,6 +1,11 @@
 :root {
-  --background: #ffffff;
+  --background: #202022;
   --foreground: #171717;
+  --color-primary: #CDD5C6;
+  --color-secondary: #FBF2ED;
+  --color-accent: #B7BCBF;
+  --color-highlight: #E8D4C6;
+  --color-light: #FFE2C3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +19,18 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+  overflow-y: scroll;
 }
 
 * {
@@ -39,4 +48,69 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/* Cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  background: var(--color-secondary);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  transition: width 0.15s ease, height 0.15s ease;
+}
+
+.cursor-dot.line {
+  background: var(--color-secondary);
+  border-radius: 1px;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#__next {
+  height: 100%;
+}
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide {
+  scroll-snap-align: start;
+  flex: 0 0 100vh;
+  height: 100vh;
+}
+
+.project-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 2px solid var(--color-secondary);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.project-image-wrapper:hover::after {
+  opacity: 1;
 }
