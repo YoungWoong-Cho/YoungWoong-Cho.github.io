@@ -1,14 +1,17 @@
-import "@/styles/globals.css";
+import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter } from "next/font/google";
-import CustomCursor from "../components/CustomCursor";
+import { Inter, JetBrains_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={inter.className}>
-      <CustomCursor />
+    <div id="top" className={`${sans.variable} ${mono.variable}`}>
       <Component {...pageProps} />
     </div>
   );

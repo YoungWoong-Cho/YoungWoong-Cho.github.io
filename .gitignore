@@ -29,3 +29,12 @@ _asset_bundler_cache
 _site
 
 .next
+
+# Next.js static export output (rebuilt by CI on every deploy)
+/out
+
+# TypeScript incremental build info
+*.tsbuildinfo
+
+# oh-my-claudecode session state
+.omc/
