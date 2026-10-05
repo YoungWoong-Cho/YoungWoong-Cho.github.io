@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { site } from "../../lib/site";
 
 const DEFAULT_IMAGE = "/media/images/hands-viewer.jpg";
@@ -11,6 +11,7 @@ export function Layout({
   path,
   image,
   type = "website",
+  nameAnchorId,
   children,
 }: {
   title?: string;
@@ -20,9 +21,32 @@ export function Layout({
   /** Site-relative social-preview image. */
   image?: string;
   type?: "website" | "article";
+  /**
+   * id of an on-page heading that already shows the name (the home hero).
+   * The header name then appears only once that heading has scrolled away.
+   */
+  nameAnchorId?: string;
   children: ReactNode;
 }) {
-  const fullTitle = title ? `${title} — ${site.name}` : site.title;
+  const [showName, setShowName] = useState(!nameAnchorId);
+  useEffect(() => {
+    if (!nameAnchorId) {
+      setShowName(true);
+      return;
+    }
+    const el = document.getElementById(nameAnchorId);
+    if (!el || !("IntersectionObserver" in window)) {
+      setShowName(true);
+      return;
+    }
+    // the sticky header covers the top 58px, so treat that strip as off-screen
+    const io = new IntersectionObserver(([e]) => setShowName(!e.isIntersecting), {
+      rootMargin: "-58px 0px 0px 0px",
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [nameAnchorId]);
+  const fullTitle = title ? `${title} | ${site.name}` : site.title;
   const desc = description ?? site.description;
   const url = `${site.url}${path}`;
   return (
@@ -44,14 +68,23 @@ export function Layout({
       </Head>
       <header className="site-header">
         <div className="page site-header-inner">
-          <Link href="/" className="site-name">
+          <Link
+            href="/"
+            className={`site-name${showName ? " is-visible" : ""}`}
+            aria-hidden={!showName}
+            tabIndex={showName ? undefined : -1}
+          >
             {site.name}
           </Link>
           <nav className="site-nav" aria-label="Main">
             <Link href="/#projects">Projects</Link>
             <Link href="/#experience">Experience</Link>
-            {site.cv && <a href={site.cv}>CV</a>}
-            <a href={`mailto:${site.email}`}>Contact</a>
+            {site.cv && (
+              <a href={site.cv} target="_blank" rel="noopener noreferrer">
+                CV
+              </a>
+            )}
+            <Link href="/#contact">Contact</Link>
           </nav>
         </div>
       </header>

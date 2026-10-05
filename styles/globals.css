@@ -12,7 +12,7 @@
   --fg-muted: #98a4b2;
   --fg-dim: #7d8996;
 
-  /* signal palette — one hue per semantic role, used consistently in every figure */
+  /* signal palette: one hue per semantic role, used consistently in every figure */
   --vision: #f0a04b;   /* pixels / perception */
   --lang: #7fa4f5;     /* language */
   --action: #45d0bd;   /* actions / the thing being generated */
@@ -75,7 +75,6 @@ h4 {
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  text-wrap: balance;
 }
 
 p {
@@ -256,6 +255,30 @@ a.inline,
 .site-name {
   font-weight: 600;
   letter-spacing: -0.01em;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0s linear 0.2s;
+}
+
+.site-name.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-name,
+  .site-name.is-visible {
+    transition: none;
+    transform: none;
+  }
 }
 
 .site-nav {
@@ -303,17 +326,14 @@ a.inline,
 
 .hero-name {
   font-size: clamp(40px, 6vw, 64px);
-  margin-top: 14px;
 }
 
 .hero-lede {
   margin-top: 22px;
-  max-width: 30ch;
   font-size: clamp(21px, 2.6vw, 28px);
   line-height: 1.35;
   letter-spacing: -0.015em;
   color: var(--fg);
-  text-wrap: balance;
 }
 
 .hero-sub {
@@ -329,27 +349,6 @@ a.inline,
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  color: var(--action);
-  background: color-mix(in srgb, var(--action) 10%, transparent);
-  border: 1px solid color-mix(in srgb, var(--action) 35%, transparent);
-  margin-right: 6px;
-}
-
-.badge::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--action);
 }
 
 .btn {
@@ -380,15 +379,6 @@ a.inline,
   text-transform: uppercase;
   color: var(--fg-dim);
   margin-bottom: 26px;
-}
-
-.feature-head h2 {
-  font-size: clamp(26px, 3.2vw, 34px);
-  margin: 10px 0 12px;
-}
-
-.feature-head {
-  margin-bottom: 22px;
 }
 
 .panel {
@@ -481,22 +471,6 @@ a.inline,
   flex: 1;
 }
 
-.chips {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-.chips li {
-  font-size: 12px;
-  color: var(--fg-muted);
-  padding: 2px 9px;
-  border-radius: 999px;
-  border: 1px solid var(--line-strong);
-}
-
 /* ---------- timeline ---------- */
 
 .timeline {
@@ -559,8 +533,7 @@ a.inline,
 
 .project-title {
   font-size: clamp(32px, 4.6vw, 48px);
-  margin-top: 10px;
-  max-width: 22ch;
+  margin-top: 28px;
 }
 
 .project-lede {
@@ -569,10 +542,6 @@ a.inline,
   font-size: clamp(18px, 2vw, 21px);
   line-height: 1.45;
   color: var(--fg);
-}
-
-.project .chips {
-  margin-top: 18px;
 }
 
 .project-cover {

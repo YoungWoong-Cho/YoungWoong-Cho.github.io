@@ -6,26 +6,26 @@ import { education, experience, site } from "../lib/site";
 
 export default function Home() {
   return (
-    <Layout path="/">
+    <Layout path="/" nameAnchorId="hero-name">
       <section className="page hero">
-        <p className="eyebrow">Robot learning · Dexterous manipulation</p>
-        <h1 className="hero-name">{site.name}</h1>
+        <h1 id="hero-name" className="hero-name">
+          {site.name}
+        </h1>
         <p className="hero-lede">
-          I work on getting robot policies to transfer across embodiments — from one dexterous hand to
-          another, and from human demonstrations to robots.
+          Generalizable robot policy: from one dexterous hand to another, and from human
+          demonstrations to robots.
         </p>
         <p className="hero-sub">
           M.S. Robotics student at Georgia Tech in Prof. Danfei Xu&apos;s{" "}
           <a href="https://rl2.cc.gatech.edu/">Robot Learning and Reasoning Lab</a>. Previously a
           Research Engineer at RLWRLD, adapting robot foundation models to dexterous hands.
         </p>
-        <div className="hero-actions">
-          <span className="badge">{site.seeking}</span>
+        <div id="contact" className="hero-actions">
           <a className="btn" href={`mailto:${site.email}`}>
             Email
           </a>
           {site.cv && (
-            <a className="btn" href={site.cv}>
+            <a className="btn" href={site.cv} target="_blank" rel="noopener noreferrer">
               CV
             </a>
           )}
@@ -35,21 +35,6 @@ export default function Home() {
           <a className="btn" href={site.linkedin}>
             LinkedIn
           </a>
-        </div>
-      </section>
-
-      <section className="page feature" aria-labelledby="feature-title">
-        <div className="feature-head">
-          <p className="eyebrow">Interactive</p>
-          <h2 id="feature-title">One action interface, seven hands</h2>
-          <p className="prose">
-            Every hand gets the same target: a wrist pose and five fingertip positions. Per-hand inverse
-            kinematics turns it into joint commands — the interface behind my cross-embodiment study.
-            Pick a grasp, drag the slider, or orbit the scene.
-          </p>
-        </div>
-        <div className="panel">
-          <MediaView media={{ kind: "hands" }} height={480} />
         </div>
       </section>
 
@@ -64,16 +49,8 @@ export default function Home() {
                 <MediaView media={p.card ?? p.cover} inLink />
               </div>
               <div className="card-body">
-                <p className="card-meta">
-                  {p.where} · {p.period}
-                </p>
                 <h3 className="card-title">{p.title}</h3>
                 <p className="card-text">{p.oneLiner}</p>
-                <ul className="chips" aria-label="Tags">
-                  {p.tags.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
               </div>
             </Link>
           ))}

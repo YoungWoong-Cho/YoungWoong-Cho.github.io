@@ -405,7 +405,7 @@ export class HandsScene {
     const center: Vec3 = [0, 1, 2].map((i) => (b.min[i] + b.max[i]) / 2) as Vec3;
     const extent: Vec3 = [0, 1, 2].map((i) => b.max[i] - b.min[i]) as Vec3;
     const { el, err } = this.makeLabel(info.name, `${info.dof} DoF · ${info.fingers} fingers`, true);
-    el.title = `${info.name} (${info.maker}) — ${info.license}`;
+    el.title = `${info.name} (${info.maker}), ${info.license}`;
     return { key: info.key, info, group, frame, label: el, err, targets, center, extent };
   }
 

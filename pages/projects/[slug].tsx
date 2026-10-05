@@ -46,16 +46,8 @@ export default function ProjectPage({ slug }: { slug: string }) {
         <Link href="/#projects" className="back mono">
           ← All projects
         </Link>
-        <p className="eyebrow" style={{ marginTop: 28 }}>
-          {p.where} · {p.period}
-        </p>
         <h1 className="project-title">{p.title}</h1>
         <p className="project-lede">{p.oneLiner}</p>
-        <ul className="chips" aria-label="Tags">
-          {p.tags.map((t) => (
-            <li key={t}>{t}</li>
-          ))}
-        </ul>
 
         <div className="panel project-cover">
           <MediaView media={p.cover} height={520} />
