@@ -1,0 +1,72 @@
+[
+ {
+  "key": "shadow",
+  "name": "Shadow Hand",
+  "maker": "Shadow Robot",
+  "source_url": "https://github.com/shadow-robot/sr_common/blob/172c3d9c3715ee75eb10dfe4ee57e26a342b4529/sr_description/robots/sr_hand.urdf.xacro",
+  "revision": "172c3d9c3715ee75eb10dfe4ee57e26a342b4529",
+  "license": "BSD-3-Clause",
+  "license_file": "/hands/shadow/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ },
+ {
+  "key": "sharpa",
+  "name": "Sharpa Wave",
+  "maker": "Sharpa",
+  "source_url": "https://github.com/sharpa-robotics/sharpa-urdf-usd-xml/blob/6eea427eb24189519f32b9f21674cd534d3f973c/wave_01/right_sharpa_wave/right_sharpa_wave.urdf",
+  "revision": "6eea427eb24189519f32b9f21674cd534d3f973c",
+  "license": "Apache-2.0",
+  "license_file": "/hands/sharpa/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ },
+ {
+  "key": "wuji-1",
+  "name": "Wuji Hand",
+  "maker": "Wuji Technology",
+  "source_url": "https://github.com/wuji-technology/wuji-description/blob/4c1073d0a3ad1daaf6546d219db751d8448d3888/hand/body/urdf/right.urdf",
+  "revision": "4c1073d0a3ad1daaf6546d219db751d8448d3888",
+  "license": "MIT",
+  "license_file": "/hands/wuji-1/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ },
+ {
+  "key": "wuji-2",
+  "name": "Wuji Hand 2 (beta)",
+  "maker": "Wuji Technology",
+  "source_url": "https://github.com/wuji-technology/wuji-description/blob/4c1073d0a3ad1daaf6546d219db751d8448d3888/hand2/hand2_beta2/body/urdf/right.urdf",
+  "revision": "4c1073d0a3ad1daaf6546d219db751d8448d3888",
+  "license": "MIT",
+  "license_file": "/hands/wuji-2/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ },
+ {
+  "key": "inspire-rh56",
+  "name": "Inspire RH56",
+  "maker": "Inspire Robots (model: Renesas RDK)",
+  "source_url": "https://github.com/renesas-rdk/inspire_rh56_hand_description/blob/39bfca04a69912e6561628156d1c63e37698eb75/urdf/reference/inspire_hand_right_ref.urdf",
+  "revision": "39bfca04a69912e6561628156d1c63e37698eb75",
+  "license": "No license file upstream (provenance note only); model derived from Inspire Robots' public STEP via dex_urdf",
+  "license_file": "/hands/inspire-rh56/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ },
+ {
+  "key": "allegro-v4",
+  "name": "Allegro Hand V4",
+  "maker": "Wonik Robotics / SimLab",
+  "source_url": "https://github.com/simlabrobotics/allegro_hand_ros_v4/blob/b19b18ea130c4fbe343f2c178eec6cb55186a4ac/src/allegro_hand_description/allegro_hand_description_right.urdf",
+  "revision": "b19b18ea130c4fbe343f2c178eec6cb55186a4ac",
+  "license": "BSD-2-Clause",
+  "license_file": "/hands/allegro-v4/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ },
+ {
+  "key": "leap-v1",
+  "name": "LEAP Hand",
+  "maker": "CMU (LEAP Hand)",
+  "source_url": "https://github.com/leap-hand/LEAP_Hand_Sim/blob/150bc3d4b61fd6619193ba5a8ef209f3609ced89/assets/leap_hand/robot.urdf",
+  "revision": "150bc3d4b61fd6619193ba5a8ef209f3609ced89",
+  "license": "MIT",
+  "license_file": "/hands/leap-v1/LICENSE",
+  "modifications": "Right hand only; trimmed to the palm subtree; collision/inertial/simulator tags removed; visual meshes merged per colour, decimated and converted to GLB."
+ }
+]

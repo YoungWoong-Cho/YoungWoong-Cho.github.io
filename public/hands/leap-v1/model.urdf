@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- LEAP Hand (right). Derived from https://github.com/leap-hand/LEAP_Hand_Sim/blob/150bc3d4b61fd6619193ba5a8ef209f3609ced89/assets/leap_hand/robot.urdf ; see LICENSE. Palm subtree only, visual meshes decimated. Root frame: +X fingers, +Y thumb side, +Z back of hand. -->
+<robot name="leap-v1">
+  <link name="palm_frame" />
+  <joint name="palm_frame_to_palm" type="fixed">
+    <parent link="palm_frame" />
+    <child link="palm_lower" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="palm_lower">
+    <visual>
+      <origin xyz="-0.0200952 0.0257578 -0.0347224" rpy="0 -0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.604 0.149 0.149 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="mcp_joint">
+    <visual>
+      <origin xyz="0.0084069 0.00776624 0.0146574" rpy="1.63758e-15 -1.02105e-30 1.7178e-31" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="mcp_joint_2">
+    <visual>
+      <origin xyz="0.0084069 0.00776624 0.0146574" rpy="1.63758e-15 -1.00765e-30 2.12093e-61" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="mcp_joint_3">
+    <visual>
+      <origin xyz="0.0084069 0.00776624 0.0146574" rpy="1.63758e-15 -1.00595e-30 5.72964e-32" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pip_4">
+    <visual>
+      <origin xyz="-0.00535664 0.0003 0.000784034" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.749 0.749 0.749 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_pip">
+    <visual>
+      <origin xyz="0.0119619 -5.30825e-16 -0.0158526" rpy="1.5708 1.60502e-46 -3.9205e-59" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_dip">
+    <visual>
+      <origin xyz="0.0439687 0.057953 -0.00862868" rpy="1.94289e-16 3.27516e-15 1.11238e-46" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_fingertip">
+    <visual>
+      <origin xyz="0.0625595 0.0784597 0.0489929" rpy="4.37906e-47 -3.33067e-16 1.20424e-46" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.604 0.149 0.149 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pip">
+    <visual>
+      <origin xyz="0.00964336 0.0003 0.000784034" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.749 0.749 0.749 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="dip">
+    <visual>
+      <origin xyz="0.0211334 -0.00843212 0.00978509" rpy="-3.14159 4.50751e-32 4.43955e-32" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="fingertip">
+    <visual>
+      <origin xyz="0.0132864 -0.00611424 0.0145" rpy="3.14159 1.19931e-33 4.43955e-32" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pip_2">
+    <visual>
+      <origin xyz="0.00964336 0.0003 0.000784034" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.749 0.749 0.749 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="dip_2">
+    <visual>
+      <origin xyz="0.0211334 -0.00843212 0.00978509" rpy="-3.14159 2.11469e-32 1.44082e-31" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="fingertip_2">
+    <visual>
+      <origin xyz="0.0132864 -0.00611424 0.0145" rpy="3.14159 -4.31796e-33 1.44082e-31" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pip_3">
+    <visual>
+      <origin xyz="0.00964336 0.0003 0.000784034" rpy="-1.5708 -1.5708 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.749 0.749 0.749 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="dip_3">
+    <visual>
+      <origin xyz="0.0211334 -0.00843212 0.00978509" rpy="-3.14159 -1.40957e-33 1.55654e-32" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="fingertip_3">
+    <visual>
+      <origin xyz="0.0132864 -0.00611424 0.0145" rpy="3.14159 8.61707e-33 1.55654e-32" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.867 0.867 0.051 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="1" type="revolute">
+    <parent link="palm_lower" />
+    <child link="mcp_joint" />
+    <origin xyz="-0.0070952496528625457958 0.023057756134899472233 -0.01872240357846021927" rpy="1.5707963267948950037 1.5707963267948945596 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.314" upper="2.23" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="5" type="revolute">
+    <parent link="palm_lower" />
+    <child link="mcp_joint_2" />
+    <origin xyz="-0.0070952496528625388569 -0.022392243865100525113 -0.018722403578460229678" rpy="1.570796326794896558 1.570796326794896558 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.314" upper="2.23" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="9" type="revolute">
+    <parent link="palm_lower" />
+    <child link="mcp_joint_3" />
+    <origin xyz="-0.0070952454426398371343 -0.067842243865100515521 -0.018722407666402932774" rpy="1.5707963267948950037 1.5707963267948945596 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.314" upper="2.23" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="12" type="revolute">
+    <parent link="palm_lower" />
+    <child link="pip_4" />
+    <origin xyz="-0.069395249652862533996 -0.0012422438651005258004 -0.021622403578460215601" rpy="-8.2381766464939424156e-17 1.5707963267948956698 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.349" upper="2.094" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="13" type="revolute">
+    <parent link="pip_4" />
+    <child link="thumb_pip" />
+    <origin xyz="-2.7755575615628913511e-17 0.014300000000000005415 -0.013000000000000011546" rpy="1.5707963267948958919 -1.570796326794896336 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.47" upper="2.443" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="14" type="revolute">
+    <parent link="thumb_pip" />
+    <child link="thumb_dip" />
+    <origin xyz="0 0.014499999999999966041 -0.017000000000000053263" rpy="-1.570796326794896558 1.6050198443300131245e-46 -1.9721522630516624601e-31" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.20" upper="1.90" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="15" type="revolute">
+    <parent link="thumb_dip" />
+    <child link="thumb_fingertip" />
+    <origin xyz="-1.249000902703301108e-16 0.046599999999999863753 0.00019999999999997710581" rpy="1.5063958491491781023e-44 5.4234187233935260503e-31 3.141592653589793116" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.34" upper="1.88" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="0" type="revolute">
+    <parent link="mcp_joint" />
+    <child link="pip" />
+    <origin xyz="-0.012200000000000007713 0.038099999999999994982 0.014500000000000000736" rpy="-1.570796326794896558 -1.0065212660796336576e-15 1.5707963267948943376" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.047" upper="1.047" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="2" type="revolute">
+    <parent link="pip" />
+    <child link="dip" />
+    <origin xyz="0.01499999999999996822 0.014299999999999904801 -0.012999999999999824196" rpy="1.5707963267948958919 -1.570796326794896336 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.506" upper="1.885" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="3" type="revolute">
+    <parent link="dip" />
+    <child link="fingertip" />
+    <origin xyz="-4.0880582495572692636e-09 -0.036100004210367367397 0.00020000000000007858714" rpy="4.5935029425113685044e-17 -2.8730071914463794583e-16 4.4395481053923607589e-32" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.366" upper="2.042" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="4" type="revolute">
+    <parent link="mcp_joint_2" />
+    <child link="pip_2" />
+    <origin xyz="-0.012200000000000019856 0.038099999999999981104 0.01450000000000000594" rpy="-1.570796326794896558 -1.0065212760057939085e-15 1.5707963267948943376" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.047" upper="1.047" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="6" type="revolute">
+    <parent link="pip_2" />
+    <child link="dip_2" />
+    <origin xyz="0.014999999999999975159 0.014300000000000000211 -0.013000000000000018485" rpy="1.5707963267948958919 -1.570796326794896336 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.506" upper="1.885" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="7" type="revolute">
+    <parent link="dip_2" />
+    <child link="fingertip_2" />
+    <origin xyz="1.0061396160665481148e-16 -0.036099999999999854428 0.00020000000000007858714" rpy="4.5935029425113654229e-17 -2.8730071914463794583e-16 1.4408183216511868558e-31" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.366" upper="2.042" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="8" type="revolute">
+    <parent link="mcp_joint_3" />
+    <child link="pip_3" />
+    <origin xyz="-0.012200000000000004244 0.038100000000000001921 0.014499999999999999001" rpy="-1.570796326794896558 -1.0065212660796360242e-15 1.5707963267948943376" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.047" upper="1.047" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="10" type="revolute">
+    <parent link="pip_3" />
+    <child link="dip_3" />
+    <origin xyz="0.014999999999999971689 0.014299999999999951639 -0.012999999999999959505" rpy="1.5707963267948958919 -1.570796326794896336 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.506" upper="1.885" effort="0.95" velocity="8.48" />
+  </joint>
+  <joint name="11" type="revolute">
+    <parent link="dip_3" />
+    <child link="fingertip_3" />
+    <origin xyz="9.7144514654701197287e-17 -0.036099999999999868305 0.00020000000000007511769" rpy="4.5935029425113685044e-17 -2.8730071914463799514e-16 1.5565411607615035382e-32" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-0.366" upper="2.042" effort="0.95" velocity="8.48" />
+  </joint>
+</robot>

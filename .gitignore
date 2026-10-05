@@ -38,3 +38,7 @@ _site
 
 # oh-my-claudecode session state
 .omc/
+
+# Figure source data and notes (unpublished interim results; kept local)
+scripts/figures/SOURCES.md
+scripts/figures/data/

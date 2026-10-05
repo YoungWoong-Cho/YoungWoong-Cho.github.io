@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="675pt" height="396pt" viewBox="0 0 675 396" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Policy error is higher where training demonstrations disagree about the action</title>
+ <desc>Line chart. Held-out frames binned into deciles of local action disagreement in the training data; policy error relative to each dataset's average rises from 0.76x to 1.35x (average of 6 datasets).</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 396 
+L 675 396 
+L 675 0 
+L 0 0 
+L 0 396 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.375 287.1 
+L 590.625 287.1 
+L 590.625 67.32 
+L 57.375 67.32 
+L 57.375 287.1 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(77.091328 299.984033)">1</text>
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(68.085703 308.531396)">agree</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="135.140625" y="299.85" transform="rotate(-0 135.140625 299.85)">2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="190.6875" y="299.85" transform="rotate(-0 190.6875 299.85)">3</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="246.234375" y="299.85" transform="rotate(-0 246.234375 299.85)">4</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="301.78125" y="299.85" transform="rotate(-0 301.78125 299.85)">5</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="357.328125" y="299.85" transform="rotate(-0 357.328125 299.85)">6</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="412.875" y="299.85" transform="rotate(-0 412.875 299.85)">7</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="468.421875" y="299.85" transform="rotate(-0 468.421875 299.85)">8</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="523.96875" y="299.85" transform="rotate(-0 523.96875 299.85)">9</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10"/>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(574.510781 299.984033)">10</text>
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(562.255312 308.531396)">disagree</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="324" y="325.78168" transform="rotate(-0 324 325.78168)">Held-out frames, ranked by how much the nearest training demos disagree about the next action (decile)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <path d="M 57.375 259.6275 
+L 590.625 259.6275 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_12">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="263.0025" transform="rotate(-0 51.375 263.0025)">0.75×</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_13">
+      <path d="M 57.375 206.795769 
+L 590.625 206.795769 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_13">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="210.170769" transform="rotate(-0 51.375 210.170769)">1.0×</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <path d="M 57.375 153.964038 
+L 590.625 153.964038 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_14">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="157.339038" transform="rotate(-0 51.375 157.339038)">1.25×</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_17">
+      <path d="M 57.375 101.132308 
+L 590.625 101.132308 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_15">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="104.507308" transform="rotate(-0 51.375 104.507308)">1.5×</text>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="18.501719" y="177.21" transform="rotate(-90 18.501719 177.21)">Policy error vs. dataset average</text>
+    </g>
+   </g>
+   <g id="line2d_19">
+    <path d="M 57.375 206.795769 
+L 590.625 206.795769 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke-dasharray: 3,3; stroke-dashoffset: 0; stroke: #2e3742"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 79.59375 264.931806 
+L 135.140625 254.006204 
+L 190.6875 249.357012 
+L 246.234375 238.600471 
+L 301.78125 230.231925 
+L 357.328125 228.07639 
+L 412.875 207.218423 
+L 468.421875 162.734106 
+L 523.96875 149.18805 
+L 579.515625 83.592173 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #98a4b2; stroke-opacity: 0.45; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 79.59375 261.296983 
+L 135.140625 249.251348 
+L 190.6875 240.882802 
+L 246.234375 234.754321 
+L 301.78125 226.829562 
+L 357.328125 218.461015 
+L 412.875 202.357904 
+L 468.421875 167.08744 
+L 523.96875 160.17705 
+L 579.515625 106.838135 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #98a4b2; stroke-opacity: 0.45; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 79.59375 252.336721 
+L 135.140625 227.484675 
+L 190.6875 213.114444 
+L 246.234375 208.401854 
+L 301.78125 211.719687 
+L 357.328125 198.173631 
+L 412.875 199.188 
+L 468.421875 194.55994 
+L 523.96875 189.466962 
+L 579.515625 173.511779 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #98a4b2; stroke-opacity: 0.45; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 79.59375 256.668923 
+L 135.140625 243.92591 
+L 190.6875 234.754321 
+L 246.234375 221.123735 
+L 301.78125 204.217581 
+L 357.328125 192.657998 
+L 412.875 186.487252 
+L 468.421875 181.584467 
+L 523.96875 180.18971 
+L 579.515625 166.326663 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #98a4b2; stroke-opacity: 0.45; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 79.59375 262.501546 
+L 135.140625 244.834615 
+L 190.6875 236.86759 
+L 246.234375 215.43904 
+L 301.78125 202.379037 
+L 357.328125 206.119523 
+L 412.875 194.517675 
+L 468.421875 185.874404 
+L 523.96875 175.32919 
+L 579.515625 144.052806 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #98a4b2; stroke-opacity: 0.45; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 79.59375 253.287692 
+L 135.140625 250.28685 
+L 190.6875 238.262348 
+L 246.234375 229.576812 
+L 301.78125 218.65121 
+L 357.328125 210.324929 
+L 412.875 204.069652 
+L 468.421875 183.148287 
+L 523.96875 157.556596 
+L 579.515625 122.793317 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #98a4b2; stroke-opacity: 0.45; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 57.375 287.1 
+L 590.625 287.1 
+" style="fill: none; stroke: #2e3742; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #e7ecf2" transform="translate(593.402344 124.447938)">average of</text>
+    <text style="font-size: 8.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #e7ecf2" transform="translate(593.402344 135.826151)">6 datasets</text>
+    <text style="font-size: 8.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #e7ecf2" transform="translate(593.402344 146.303231)">1.35×</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(593.402344 185.51027)">each thin line:</text>
+    <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(593.402344 195.430427)">one task ×</text>
+    <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(593.402344 204.560583)">retargeting</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #e7ecf2" x="65.707031" y="272.275387" transform="rotate(-0 65.707031 272.275387)">0.76×</text>
+   </g>
+   <g id="line2d_26">
+    <path d="M 79.59375 258.503945 
+L 135.140625 244.964934 
+L 190.6875 235.539753 
+L 246.234375 224.649372 
+L 301.78125 215.6715 
+L 357.328125 208.968914 
+L 412.875 198.973151 
+L 468.421875 179.164774 
+L 523.96875 168.65126 
+L 579.515625 132.852479 
+" clip-path="url(#p180b50fc31)" style="fill: none; stroke: #45d0bd; stroke-width: 2.2; stroke-linecap: round"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m6b4831c205" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #0b0d10; stroke-width: 1.5"/>
+    </defs>
+    <g clip-path="url(#p180b50fc31)">
+     <use xlink:href="#m6b4831c205" x="79.59375" y="258.503945" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="135.140625" y="244.964934" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="190.6875" y="235.539753" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="246.234375" y="224.649372" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="301.78125" y="215.6715" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="357.328125" y="208.968914" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="412.875" y="198.973151" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="468.421875" y="179.164774" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="523.96875" y="168.65126" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#m6b4831c205" x="579.515625" y="132.852479" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+    </g>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 600; font-size: 13.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #e7ecf2" x="8.1" y="23.985" transform="rotate(-0 8.1 23.985)">Policy error is higher where training demonstrations disagree about the action</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #98a4b2" x="8.1" y="49.429181" transform="rotate(-0 8.1 49.429181)">Open-loop error of a trained policy on held-out demonstrations, grouped by how consistent the training data is nearby.</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(8.1 363.336844)">Simulation: 3 DexMimicGen tasks (can sorting, pouring, coffee) × 2 retargetings; 2,996–3,374 frames from 10 held-out demos per dataset.</text>
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(8.1 374.344656)">Disagreement = spread of the next action over the 10 nearest training frames (image + joint state). Error = first predicted action, arm + torso.</text>
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(8.1 385.414969)">Spearman ρ = 0.25–0.50 per dataset; 0.17–0.37 after controlling for distance to the training data and how much the arm is moving. Correlational.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p180b50fc31">
+   <rect x="57.375" y="67.32" width="533.25" height="219.78"/>
+  </clipPath>
+ </defs>
+</svg>

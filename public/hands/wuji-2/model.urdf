@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Wuji Hand 2 (beta) (right). Derived from https://github.com/wuji-technology/wuji-description/blob/4c1073d0a3ad1daaf6546d219db751d8448d3888/hand2/hand2_beta2/body/urdf/right.urdf ; see LICENSE. Palm subtree only, visual meshes decimated. Root frame: +X fingers, +Y thumb side, +Z back of hand. -->
+<robot name="wuji-2">
+  <link name="palm_frame" />
+  <joint name="palm_frame_to_palm" type="fixed">
+    <parent link="palm_frame" />
+    <child link="r_wrist" />
+    <origin xyz="0 0 0" rpy="-1.5708 0 1.5708" />
+  </joint>
+  <link name="r_wrist">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p25" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_thumb_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p24" />
+      </geometry>
+      <material name="">
+        <color rgba="0.627 0.627 0.627 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_thumb_proximal_abd">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p21" />
+      </geometry>
+      <material name="">
+        <color rgba="0.627 0.627 0.627 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_thumb_middle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p9" />
+      </geometry>
+      <material name="">
+        <color rgba="0.627 0.627 0.627 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_thumb_distal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p15" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_thumb_tip" />
+  <link name="r_thumb_tip_sensor_frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p10" />
+      </geometry>
+      <material name="">
+        <color rgba="0.55 0.78 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_index_finger_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_index_finger_proximal_abd">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p19" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_index_finger_middle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p17" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_index_finger_distal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_index_finger_tip" />
+  <link name="r_index_finger_tip_sensor_frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p14" />
+      </geometry>
+      <material name="">
+        <color rgba="0.55 0.78 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_middle_finger_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p12" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_middle_finger_proximal_abd">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_middle_finger_middle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p22" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_middle_finger_distal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p20" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_middle_finger_tip" />
+  <link name="r_middle_finger_tip_sensor_frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.55 0.78 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_ring_finger_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p8" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_ring_finger_proximal_abd">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p11" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_ring_finger_middle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_ring_finger_distal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p18" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_ring_finger_tip" />
+  <link name="r_ring_finger_tip_sensor_frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.55 0.78 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_pinky_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_pinky_proximal_abd">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_pinky_middle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p13" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_pinky_distal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p23" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="r_pinky_tip" />
+  <link name="r_pinky_tip_sensor_frame">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p16" />
+      </geometry>
+      <material name="">
+        <color rgba="0.55 0.78 0.95 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="r_thumb_cmc_flex" type="revolute">
+    <parent link="r_wrist" />
+    <child link="r_thumb_proximal" />
+    <origin xyz="0.01721 0.008138 -0.016458" rpy="-1.6617 -1.059 1.9921" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.1870" upper="1.2910" effort="0.6000" velocity="8.587" />
+  </joint>
+  <joint name="r_thumb_cmc_abd" type="revolute">
+    <parent link="r_thumb_proximal" />
+    <child link="r_thumb_proximal_abd" />
+    <origin xyz="0.00024788 -0.00053658 -0.014754" rpy="0.20529 0.70051 0.025238" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.4840" upper="0.6980" effort="0.6000" velocity="11.1" />
+  </joint>
+  <joint name="r_thumb_mcp" type="revolute">
+    <parent link="r_thumb_proximal_abd" />
+    <child link="r_thumb_middle" />
+    <origin xyz="0 0 -0.0325" rpy="0 0.087266 0.56723" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="0.3000" velocity="12.86" />
+  </joint>
+  <joint name="r_thumb_ip" type="revolute">
+    <parent link="r_thumb_middle" />
+    <child link="r_thumb_distal" />
+    <origin xyz="-5E-05 0 -0.035" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="0.3000" velocity="13.5" />
+  </joint>
+  <joint name="r_thumb_tip_fixed" type="fixed">
+    <parent link="r_thumb_distal" />
+    <child link="r_thumb_tip" />
+    <origin xyz="0 0 -0.02978" rpy="0 0 0" />
+  </joint>
+  <joint name="r_thumb_tip_sensor_frame_fixed" type="fixed">
+    <parent link="r_thumb_distal" />
+    <child link="r_thumb_tip_sensor_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="r_index_finger_mcp_flex" type="revolute">
+    <parent link="r_wrist" />
+    <child link="r_index_finger_proximal" />
+    <origin xyz="0.022661 -0.0033252 -0.069975" rpy="-0.039792 -0.13705 0.10041" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="2.0000" velocity="8.203" />
+  </joint>
+  <joint name="r_index_finger_mcp_abd" type="revolute">
+    <parent link="r_index_finger_proximal" />
+    <child link="r_index_finger_proximal_abd" />
+    <origin xyz="0 -0.001201 -0.0145" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.6980" upper="0.6980" effort="0.2000" velocity="8.11" />
+  </joint>
+  <joint name="r_index_finger_pip" type="revolute">
+    <parent link="r_index_finger_proximal_abd" />
+    <child link="r_index_finger_middle" />
+    <origin xyz="0 0 -0.0376" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="2.0940" effort="0.3000" velocity="12.86" />
+  </joint>
+  <joint name="r_index_finger_dip" type="revolute">
+    <parent link="r_index_finger_middle" />
+    <child link="r_index_finger_distal" />
+    <origin xyz="0 0 -0.0295" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="0.3000" velocity="13.5" />
+  </joint>
+  <joint name="r_index_finger_tip_fixed" type="fixed">
+    <parent link="r_index_finger_distal" />
+    <child link="r_index_finger_tip" />
+    <origin xyz="0 0 -0.02475" rpy="0 0 0" />
+  </joint>
+  <joint name="r_index_finger_tip_sensor_frame_fixed" type="fixed">
+    <parent link="r_index_finger_distal" />
+    <child link="r_index_finger_tip_sensor_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="r_middle_finger_mcp_flex" type="revolute">
+    <parent link="r_wrist" />
+    <child link="r_middle_finger_proximal" />
+    <origin xyz="0.00095202 -0.008303 -0.073915" rpy="-0.03391 0.011037 -0.00071534" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="2.0000" velocity="8.203" />
+  </joint>
+  <joint name="r_middle_finger_mcp_abd" type="revolute">
+    <parent link="r_middle_finger_proximal" />
+    <child link="r_middle_finger_proximal_abd" />
+    <origin xyz="0 -0.001201 -0.0145" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.6980" upper="0.6980" effort="0.2000" velocity="8.11" />
+  </joint>
+  <joint name="r_middle_finger_pip" type="revolute">
+    <parent link="r_middle_finger_proximal_abd" />
+    <child link="r_middle_finger_middle" />
+    <origin xyz="0 0 -0.0376" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="2.0940" effort="0.3000" velocity="12.86" />
+  </joint>
+  <joint name="r_middle_finger_dip" type="revolute">
+    <parent link="r_middle_finger_middle" />
+    <child link="r_middle_finger_distal" />
+    <origin xyz="0 0 -0.0295" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="0.3000" velocity="13.5" />
+  </joint>
+  <joint name="r_middle_finger_tip_fixed" type="fixed">
+    <parent link="r_middle_finger_distal" />
+    <child link="r_middle_finger_tip" />
+    <origin xyz="0 0 -0.02475" rpy="0 0 0" />
+  </joint>
+  <joint name="r_middle_finger_tip_sensor_frame_fixed" type="fixed">
+    <parent link="r_middle_finger_distal" />
+    <child link="r_middle_finger_tip_sensor_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="r_ring_finger_mcp_flex" type="revolute">
+    <parent link="r_wrist" />
+    <child link="r_ring_finger_proximal" />
+    <origin xyz="-0.019744 -0.0055929 -0.0654" rpy="-0.016655 0.14163 -0.06832" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="2.0000" velocity="8.203" />
+  </joint>
+  <joint name="r_ring_finger_mcp_abd" type="revolute">
+    <parent link="r_ring_finger_proximal" />
+    <child link="r_ring_finger_proximal_abd" />
+    <origin xyz="0 -0.001201 -0.0145" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.6980" upper="0.6980" effort="0.2000" velocity="8.11" />
+  </joint>
+  <joint name="r_ring_finger_pip" type="revolute">
+    <parent link="r_ring_finger_proximal_abd" />
+    <child link="r_ring_finger_middle" />
+    <origin xyz="0 0 -0.0376" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="2.0940" effort="0.3000" velocity="12.86" />
+  </joint>
+  <joint name="r_ring_finger_dip" type="revolute">
+    <parent link="r_ring_finger_middle" />
+    <child link="r_ring_finger_distal" />
+    <origin xyz="0 0 -0.0295" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="0.3000" velocity="13.5" />
+  </joint>
+  <joint name="r_ring_finger_tip_fixed" type="fixed">
+    <parent link="r_ring_finger_distal" />
+    <child link="r_ring_finger_tip" />
+    <origin xyz="0 0 -0.02475" rpy="0 0 0" />
+  </joint>
+  <joint name="r_ring_finger_tip_sensor_frame_fixed" type="fixed">
+    <parent link="r_ring_finger_distal" />
+    <child link="r_ring_finger_tip_sensor_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="r_pinky_mcp_flex" type="revolute">
+    <parent link="r_wrist" />
+    <child link="r_pinky_proximal" />
+    <origin xyz="-0.037351 -0.00073376 -0.055296" rpy="-0.029938 0.24886 -0.13602" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="2.0000" velocity="8.203" />
+  </joint>
+  <joint name="r_pinky_mcp_abd" type="revolute">
+    <parent link="r_pinky_proximal" />
+    <child link="r_pinky_proximal_abd" />
+    <origin xyz="0 -0.001201 -0.0145" rpy="0 0 3.6273E-05" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.6980" upper="0.6980" effort="0.2000" velocity="8.11" />
+  </joint>
+  <joint name="r_pinky_pip" type="revolute">
+    <parent link="r_pinky_proximal_abd" />
+    <child link="r_pinky_middle" />
+    <origin xyz="0.0001 0 -0.0336" rpy="0 0 -3.6273E-05" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="2.0940" effort="0.3000" velocity="12.86" />
+  </joint>
+  <joint name="r_pinky_dip" type="revolute">
+    <parent link="r_pinky_middle" />
+    <child link="r_pinky_distal" />
+    <origin xyz="0 0 -0.0275" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-1.0470" upper="1.5700" effort="0.3000" velocity="13.5" />
+  </joint>
+  <joint name="r_pinky_tip_fixed" type="fixed">
+    <parent link="r_pinky_distal" />
+    <child link="r_pinky_tip" />
+    <origin xyz="0 0 -0.02475" rpy="0 0 0" />
+  </joint>
+  <joint name="r_pinky_tip_sensor_frame_fixed" type="fixed">
+    <parent link="r_pinky_distal" />
+    <child link="r_pinky_tip_sensor_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+</robot>

@@ -1,0 +1,2807 @@
+{
+ "schema": "hands-viewer/v1",
+ "slots": [
+  "thumb",
+  "index",
+  "middle",
+  "ring",
+  "little"
+ ],
+ "human": {
+  "fingers": [
+   {
+    "slot": "index",
+    "mcp": [
+     0.094,
+     0.026,
+     0
+    ],
+    "lengths": [
+     0.042,
+     0.025,
+     0.021
+    ],
+    "spread": 0.08
+   },
+   {
+    "slot": "middle",
+    "mcp": [
+     0.097,
+     0.004,
+     0
+    ],
+    "lengths": [
+     0.046,
+     0.028,
+     0.022
+    ],
+    "spread": 0
+   },
+   {
+    "slot": "ring",
+    "mcp": [
+     0.091,
+     -0.016,
+     -0.002
+    ],
+    "lengths": [
+     0.042,
+     0.027,
+     0.021
+    ],
+    "spread": -0.08
+   },
+   {
+    "slot": "little",
+    "mcp": [
+     0.082,
+     -0.033,
+     -0.005
+    ],
+    "lengths": [
+     0.034,
+     0.02,
+     0.019
+    ],
+    "spread": -0.18
+   }
+  ],
+  "thumb": {
+   "cmc": [
+    0.034,
+    0.024,
+    -0.018
+   ],
+   "lengths": [
+    0.045,
+    0.031,
+    0.025
+   ]
+  },
+  "conventions": "palm frame: +X wrist->fingers, +Y thumb side, +Z back of hand; metres; finger a=[abd, mcp, pip, dip] (flexion about local +Y); thumb a=[yaw (Rz), pitch (Ry), roll (Rx), mcp, ip] (flexion about local -Z)"
+ },
+ "presets": [
+  {
+   "id": "open",
+   "label": "Open",
+   "pose": {
+    "fingers": [
+     [
+      0,
+      0.1,
+      0.15,
+      0.08
+     ],
+     [
+      0,
+      0.1,
+      0.15,
+      0.08
+     ],
+     [
+      0,
+      0.1,
+      0.15,
+      0.08
+     ],
+     [
+      0,
+      0.1,
+      0.15,
+      0.08
+     ]
+    ],
+    "thumb": [
+     1.3068922945485746,
+     -0.02150641864534774,
+     0.30876942606484875,
+     0.3996999234806862,
+     0.374464237942248
+    ]
+   },
+   "contacts": [],
+   "thumb_solve_error_m": 0.00011
+  },
+  {
+   "id": "pinch",
+   "label": "Pinch",
+   "pose": {
+    "fingers": [
+     [
+      0.05,
+      0.8,
+      1.3,
+      0.65
+     ],
+     [
+      0,
+      0.6,
+      1,
+      0.5
+     ],
+     [
+      0,
+      0.66,
+      1.08,
+      0.55
+     ],
+     [
+      0,
+      0.72,
+      1.12,
+      0.6
+     ]
+    ],
+    "thumb": [
+     0.7983395752074008,
+     0.35507496542194483,
+     0.8284653458336806,
+     0.8933318215077244,
+     0.7660178006747306
+    ]
+   },
+   "contacts": [
+    [
+     "thumb",
+     "index"
+    ]
+   ],
+   "thumb_solve_error_m": 6e-05
+  },
+  {
+   "id": "tripod",
+   "label": "Tripod",
+   "pose": {
+    "fingers": [
+     [
+      0,
+      0.8,
+      1.3,
+      0.65
+     ],
+     [
+      0.12,
+      0.85,
+      1.3,
+      0.65
+     ],
+     [
+      0,
+      0.95,
+      1.25,
+      0.6
+     ],
+     [
+      0,
+      1,
+      1.3,
+      0.62
+     ]
+    ],
+    "thumb": [
+     0.6534661591582138,
+     0.4423207240568888,
+     0.7728822469010564,
+     0.8821022298973852,
+     0.7105662512257312
+    ]
+   },
+   "contacts": [
+    [
+     "thumb",
+     "index"
+    ],
+    [
+     "thumb",
+     "middle"
+    ]
+   ],
+   "thumb_solve_error_m": 4e-05
+  },
+  {
+   "id": "power",
+   "label": "Power grasp",
+   "pose": {
+    "fingers": [
+     [
+      0,
+      0.95,
+      1.25,
+      0.7
+     ],
+     [
+      0,
+      1,
+      1.3,
+      0.72
+     ],
+     [
+      0,
+      1.05,
+      1.32,
+      0.72
+     ],
+     [
+      0,
+      1.1,
+      1.35,
+      0.72
+     ]
+    ],
+    "thumb": [
+     0.32016209087457476,
+     0.3436044379405625,
+     0.793882848723814,
+     0.677088652370276,
+     0.5300083399210118
+    ]
+   },
+   "contacts": [],
+   "thumb_solve_error_m": 5e-05
+  },
+  {
+   "id": "point",
+   "label": "Point",
+   "pose": {
+    "fingers": [
+     [
+      0,
+      0.03,
+      0.05,
+      0.03
+     ],
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ],
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ],
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ]
+    ],
+    "thumb": [
+     0.45589151879677103,
+     0.3566880671407912,
+     0.5311938395306633,
+     1.0241811734690678,
+     0.7000873211329228
+    ]
+   },
+   "contacts": [],
+   "thumb_solve_error_m": 8e-05
+  },
+  {
+   "id": "thumbs_up",
+   "label": "Thumbs-up",
+   "pose": {
+    "fingers": [
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ],
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ],
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ],
+     [
+      0,
+      1.35,
+      1.55,
+      0.85
+     ]
+    ],
+    "thumb": [
+     1.1375377877512078,
+     0.04173833658726274,
+     0.09416186866032449,
+     -0.26249329909630537,
+     -0.29999999999999993
+    ]
+   },
+   "contacts": [],
+   "thumb_solve_error_m": 0.00015
+  }
+ ],
+ "hands": [
+  {
+   "key": "shadow",
+   "name": "Shadow Hand",
+   "maker": "Shadow Robot",
+   "urdf": "/hands/shadow/model.urdf",
+   "mesh": "/hands/shadow/meshes.glb",
+   "root": "palm_frame",
+   "palm": "rh_palm",
+   "dof": 22,
+   "fingers": 5,
+   "slots": {
+    "thumb": {
+     "link": "rh_thtip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "rh_THJ5",
+      "rh_THJ4",
+      "rh_THJ3",
+      "rh_THJ2",
+      "rh_THJ1"
+     ],
+     "neutral_tip": [
+      0.09794,
+      0.10294,
+      -0.00858
+     ]
+    },
+    "index": {
+     "link": "rh_fftip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "rh_FFJ4",
+      "rh_FFJ3",
+      "rh_FFJ2",
+      "rh_FFJ1"
+     ],
+     "neutral_tip": [
+      0.191,
+      0.033,
+      0
+     ]
+    },
+    "middle": {
+     "link": "rh_mftip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "rh_MFJ4",
+      "rh_MFJ3",
+      "rh_MFJ2",
+      "rh_MFJ1"
+     ],
+     "neutral_tip": [
+      0.195,
+      0.011,
+      0
+     ]
+    },
+    "ring": {
+     "link": "rh_rftip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "rh_RFJ4",
+      "rh_RFJ3",
+      "rh_RFJ2",
+      "rh_RFJ1"
+     ],
+     "neutral_tip": [
+      0.191,
+      -0.011,
+      0
+     ]
+    },
+    "little": {
+     "link": "rh_lftip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "rh_LFJ5",
+      "rh_LFJ4",
+      "rh_LFJ3",
+      "rh_LFJ2",
+      "rh_LFJ1"
+     ],
+     "neutral_tip": [
+      0.1826,
+      -0.033,
+      0
+     ]
+    }
+   },
+   "joints": [
+    {
+     "name": "rh_FFJ4",
+     "lower": -0.349066,
+     "upper": 0.349066
+    },
+    {
+     "name": "rh_FFJ3",
+     "lower": -0.261799,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_FFJ2",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_FFJ1",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_MFJ4",
+     "lower": -0.349066,
+     "upper": 0.349066
+    },
+    {
+     "name": "rh_MFJ3",
+     "lower": -0.261799,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_MFJ2",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_MFJ1",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_RFJ4",
+     "lower": -0.349066,
+     "upper": 0.349066
+    },
+    {
+     "name": "rh_RFJ3",
+     "lower": -0.261799,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_RFJ2",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_RFJ1",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_LFJ5",
+     "lower": 0,
+     "upper": 0.785398
+    },
+    {
+     "name": "rh_LFJ4",
+     "lower": -0.349066,
+     "upper": 0.349066
+    },
+    {
+     "name": "rh_LFJ3",
+     "lower": -0.261799,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_LFJ2",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_LFJ1",
+     "lower": 0,
+     "upper": 1.570796
+    },
+    {
+     "name": "rh_THJ5",
+     "lower": -1.047198,
+     "upper": 1.047198
+    },
+    {
+     "name": "rh_THJ4",
+     "lower": 0,
+     "upper": 1.22173
+    },
+    {
+     "name": "rh_THJ3",
+     "lower": -0.20944,
+     "upper": 0.20944
+    },
+    {
+     "name": "rh_THJ2",
+     "lower": -0.698132,
+     "upper": 0.698132
+    },
+    {
+     "name": "rh_THJ1",
+     "lower": -0.261799,
+     "upper": 1.570796
+    }
+   ],
+   "mimic": [],
+   "target_scale": 1,
+   "target_offset": [
+    0.007744,
+    0.006404,
+    0.00175
+   ],
+   "bounds": {
+    "min": [
+     -0.01952,
+     -0.043,
+     -0.02522
+    ],
+    "max": [
+     0.20102,
+     0.11344,
+     0.01946
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.01952,
+     -0.043,
+     -0.02522
+    ],
+    "max": [
+     0.20102,
+     0.043,
+     0.01946
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "BSD-3-Clause",
+   "source_url": "https://github.com/shadow-robot/sr_common/blob/172c3d9c3715ee75eb10dfe4ee57e26a342b4529/sr_description/robots/sr_hand.urdf.xacro",
+   "revision": "172c3d9c3715ee75eb10dfe4ee57e26a342b4529",
+   "ik_seeds": {
+    "open": [
+     -0.06775,
+     -0.04604,
+     0.29081,
+     0.21098,
+     0.006,
+     0.16829,
+     0,
+     0,
+     -0.06143,
+     -0.03157,
+     0.26103,
+     0.32366,
+     0,
+     -0.08642,
+     -0.2618,
+     0.42049,
+     1.20694,
+     -0.58285,
+     0.17418,
+     0,
+     0,
+     0
+    ],
+    "pinch": [
+     0.21762,
+     0.62559,
+     1.25194,
+     0.96137,
+     0.01876,
+     0.53548,
+     0.87175,
+     0.59967,
+     0.01157,
+     0.59561,
+     0.98131,
+     0.79114,
+     0.23797,
+     -0.29203,
+     0.39499,
+     1.14707,
+     1.43596,
+     0.18099,
+     0.80644,
+     0.20944,
+     0.58359,
+     -0.0339
+    ],
+    "tripod": [
+     0.02052,
+     0.62481,
+     1.24953,
+     0.96396,
+     0.34907,
+     0.73459,
+     1.20164,
+     0.80745,
+     -0.29796,
+     0.8712,
+     1.18562,
+     0.82244,
+     0.21477,
+     -0.09285,
+     0.72663,
+     1.38172,
+     1.30061,
+     0.39434,
+     0.95109,
+     0.17849,
+     0.4345,
+     -0.10813
+    ],
+    "power": [
+     -0.34907,
+     0.72561,
+     1.37167,
+     0.80458,
+     -0.05932,
+     0.86715,
+     1.27647,
+     0.79723,
+     -0.18656,
+     0.95277,
+     1.31159,
+     0.85067,
+     0.29627,
+     0.0474,
+     0.80218,
+     1.52186,
+     1.33694,
+     0.81654,
+     1.0751,
+     0,
+     0,
+     0
+    ],
+    "point": [
+     -0.068,
+     -0.13287,
+     0.23487,
+     0.17969,
+     -0.02027,
+     1.22477,
+     1.52827,
+     0.98235,
+     -0.13543,
+     1.28368,
+     1.48884,
+     1.05607,
+     0.30583,
+     -0.22681,
+     1.32537,
+     1.5708,
+     1.5708,
+     0.49156,
+     1.04865,
+     0.19018,
+     0.52837,
+     0.23785
+    ],
+    "thumbs_up": [
+     -0.12419,
+     1.19474,
+     1.5708,
+     1.1312,
+     -0.0203,
+     1.24779,
+     1.47709,
+     1.05706,
+     -0.13548,
+     1.30185,
+     1.45003,
+     1.11238,
+     0.14636,
+     -0.34907,
+     1.26051,
+     1.5708,
+     1.3643,
+     -1.0472,
+     0.4205,
+     0.01395,
+     -0.23875,
+     0.07657
+    ]
+   }
+  },
+  {
+   "key": "sharpa",
+   "name": "Sharpa Wave",
+   "maker": "Sharpa",
+   "urdf": "/hands/sharpa/model.urdf",
+   "mesh": "/hands/sharpa/meshes.glb",
+   "root": "palm_frame",
+   "palm": "right_hand_C_MC",
+   "dof": 22,
+   "fingers": 5,
+   "slots": {
+    "thumb": {
+     "link": "right_thumb_fingertip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_thumb_CMC_FE",
+      "right_thumb_CMC_AA",
+      "right_thumb_MCP_FE",
+      "right_thumb_MCP_AA",
+      "right_thumb_IP"
+     ],
+     "neutral_tip": [
+      0.11022,
+      0.12331,
+      -0.01539
+     ]
+    },
+    "index": {
+     "link": "right_index_fingertip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_index_MCP_FE",
+      "right_index_MCP_AA",
+      "right_index_PIP",
+      "right_index_DIP"
+     ],
+     "neutral_tip": [
+      0.20041,
+      0.0303,
+      -0.001
+     ]
+    },
+    "middle": {
+     "link": "right_middle_fingertip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_middle_MCP_FE",
+      "right_middle_MCP_AA",
+      "right_middle_PIP",
+      "right_middle_DIP"
+     ],
+     "neutral_tip": [
+      0.20341,
+      0.01,
+      0
+     ]
+    },
+    "ring": {
+     "link": "right_ring_fingertip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_ring_MCP_FE",
+      "right_ring_MCP_AA",
+      "right_ring_PIP",
+      "right_ring_DIP"
+     ],
+     "neutral_tip": [
+      0.19741,
+      -0.0103,
+      -0.0015
+     ]
+    },
+    "little": {
+     "link": "right_pinky_fingertip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_pinky_CMC",
+      "right_pinky_MCP_FE",
+      "right_pinky_MCP_AA",
+      "right_pinky_PIP",
+      "right_pinky_DIP"
+     ],
+     "neutral_tip": [
+      0.19141,
+      -0.0311,
+      -0.003
+     ]
+    }
+   },
+   "joints": [
+    {
+     "name": "right_thumb_CMC_FE",
+     "lower": -0.1745,
+     "upper": 1.9199
+    },
+    {
+     "name": "right_thumb_CMC_AA",
+     "lower": -0.3491,
+     "upper": 0.3491
+    },
+    {
+     "name": "right_thumb_MCP_FE",
+     "lower": -0.5236,
+     "upper": 1.3963
+    },
+    {
+     "name": "right_thumb_MCP_AA",
+     "lower": -0.3491,
+     "upper": 0.3491
+    },
+    {
+     "name": "right_thumb_IP",
+     "lower": 0,
+     "upper": 1.7453
+    },
+    {
+     "name": "right_index_MCP_FE",
+     "lower": -0.174533,
+     "upper": 1.5708
+    },
+    {
+     "name": "right_index_MCP_AA",
+     "lower": -0.3491,
+     "upper": 0.3491
+    },
+    {
+     "name": "right_index_PIP",
+     "lower": 0,
+     "upper": 1.7453
+    },
+    {
+     "name": "right_index_DIP",
+     "lower": 0,
+     "upper": 1.3963
+    },
+    {
+     "name": "right_middle_MCP_FE",
+     "lower": -0.174533,
+     "upper": 1.5708
+    },
+    {
+     "name": "right_middle_MCP_AA",
+     "lower": -0.3491,
+     "upper": 0.3491
+    },
+    {
+     "name": "right_middle_PIP",
+     "lower": 0,
+     "upper": 1.7453
+    },
+    {
+     "name": "right_middle_DIP",
+     "lower": 0,
+     "upper": 1.3963
+    },
+    {
+     "name": "right_ring_MCP_FE",
+     "lower": -0.174533,
+     "upper": 1.5708
+    },
+    {
+     "name": "right_ring_MCP_AA",
+     "lower": -0.3491,
+     "upper": 0.3491
+    },
+    {
+     "name": "right_ring_PIP",
+     "lower": 0,
+     "upper": 1.7453
+    },
+    {
+     "name": "right_ring_DIP",
+     "lower": 0,
+     "upper": 1.3963
+    },
+    {
+     "name": "right_pinky_CMC",
+     "lower": 0,
+     "upper": 0.2618
+    },
+    {
+     "name": "right_pinky_MCP_FE",
+     "lower": -0.174533,
+     "upper": 1.5708
+    },
+    {
+     "name": "right_pinky_MCP_AA",
+     "lower": -0.3491,
+     "upper": 0.3491
+    },
+    {
+     "name": "right_pinky_PIP",
+     "lower": 0,
+     "upper": 1.7453
+    },
+    {
+     "name": "right_pinky_DIP",
+     "lower": 0,
+     "upper": 1.3963
+    }
+   ],
+   "mimic": [],
+   "target_scale": 1.08864,
+   "target_offset": [
+    -0.000143,
+    0.007296,
+    -0.000515
+   ],
+   "bounds": {
+    "min": [
+     -0.00487,
+     -0.04614,
+     -0.03405
+    ],
+    "max": [
+     0.20512,
+     0.13146,
+     0.02473
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.00487,
+     -0.04614,
+     -0.0265
+    ],
+    "max": [
+     0.20512,
+     0.04369,
+     0.02473
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "Apache-2.0",
+   "source_url": "https://github.com/sharpa-robotics/sharpa-urdf-usd-xml/blob/6eea427eb24189519f32b9f21674cd534d3f973c/wave_01/right_sharpa_wave/right_sharpa_wave.urdf",
+   "revision": "6eea427eb24189519f32b9f21674cd534d3f973c",
+   "ik_seeds": {
+    "open": [
+     -0.11922,
+     -0.3491,
+     0.38485,
+     -0.08068,
+     0.68453,
+     -0.02805,
+     -0.12838,
+     0.23364,
+     0.32152,
+     0.18942,
+     -0.01493,
+     0,
+     0,
+     0.0972,
+     0.07245,
+     0.07167,
+     0.25109,
+     0.06989,
+     -0.17453,
+     0.1619,
+     0.22092,
+     1.3963
+    ],
+    "pinch": [
+     0.56007,
+     -0.16078,
+     0.86037,
+     -0.3491,
+     0.74144,
+     0.647,
+     -0.11798,
+     1.2004,
+     1.06086,
+     0.55374,
+     -0.02301,
+     0.8651,
+     0.53932,
+     0.6026,
+     0.01821,
+     0.88171,
+     0.9256,
+     0.13908,
+     0.57933,
+     0.14822,
+     1.14796,
+     1.25603
+    ],
+    "tripod": [
+     0.68507,
+     -0.17412,
+     1.04041,
+     -0.3491,
+     0.42954,
+     0.60924,
+     -0.12711,
+     1.2907,
+     0.93035,
+     0.67905,
+     -0.02016,
+     1.35908,
+     0.53546,
+     0.76963,
+     -0.0262,
+     1.32907,
+     0.65263,
+     0.08109,
+     0.92113,
+     -0.03671,
+     1.19861,
+     1.3963
+    ],
+    "power": [
+     0.84397,
+     0.03176,
+     0.67632,
+     -0.3491,
+     0.56805,
+     0.744,
+     -0.11006,
+     1.28893,
+     0.94204,
+     0.83695,
+     -0.03776,
+     1.29691,
+     0.74435,
+     0.91155,
+     -0.04645,
+     1.26031,
+     0.99183,
+     0.18553,
+     0.88108,
+     0.05341,
+     1.52726,
+     1.06688
+    ],
+    "point": [
+     0.90021,
+     -0.12908,
+     1.14717,
+     -0.20568,
+     0.50917,
+     -0.13445,
+     -0.12881,
+     0.222,
+     0.26591,
+     1.08389,
+     -0.07106,
+     1.69934,
+     0.7345,
+     1.16272,
+     -0.12979,
+     1.57225,
+     1.0518,
+     0.15829,
+     1.18328,
+     -0.1985,
+     1.61592,
+     1.28772
+    ],
+    "thumbs_up": [
+     -0.07466,
+     -0.3491,
+     -0.48767,
+     -0.3491,
+     1.26094,
+     1.05645,
+     -0.13339,
+     1.7453,
+     0.89431,
+     1.06572,
+     -0.07402,
+     1.7453,
+     0.65594,
+     1.07625,
+     -0.15488,
+     1.7453,
+     0.76879,
+     0.09208,
+     1.22496,
+     -0.2559,
+     1.55021,
+     1.38812
+    ]
+   }
+  },
+  {
+   "key": "wuji-1",
+   "name": "Wuji Hand",
+   "maker": "Wuji Technology",
+   "urdf": "/hands/wuji-1/model.urdf",
+   "mesh": "/hands/wuji-1/meshes.glb",
+   "root": "palm_frame",
+   "palm": "right_palm_link",
+   "dof": 20,
+   "fingers": 5,
+   "slots": {
+    "thumb": {
+     "link": "right_finger1_tip_link",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_finger1_joint1",
+      "right_finger1_joint2",
+      "right_finger1_joint3",
+      "right_finger1_joint4"
+     ],
+     "neutral_tip": [
+      0.068,
+      0.12446,
+      -0.01494
+     ]
+    },
+    "index": {
+     "link": "right_finger2_tip_link",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_finger2_joint1",
+      "right_finger2_joint2",
+      "right_finger2_joint3",
+      "right_finger2_joint4"
+     ],
+     "neutral_tip": [
+      0.19458,
+      0.043,
+      0.01405
+     ]
+    },
+    "middle": {
+     "link": "right_finger3_tip_link",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_finger3_joint1",
+      "right_finger3_joint2",
+      "right_finger3_joint3",
+      "right_finger3_joint4"
+     ],
+     "neutral_tip": [
+      0.19265,
+      0.00746,
+      0.02309
+     ]
+    },
+    "ring": {
+     "link": "right_finger4_tip_link",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_finger4_joint1",
+      "right_finger4_joint2",
+      "right_finger4_joint3",
+      "right_finger4_joint4"
+     ],
+     "neutral_tip": [
+      0.18716,
+      -0.02366,
+      0.01942
+     ]
+    },
+    "little": {
+     "link": "right_finger5_tip_link",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "right_finger5_joint1",
+      "right_finger5_joint2",
+      "right_finger5_joint3",
+      "right_finger5_joint4"
+     ],
+     "neutral_tip": [
+      0.17542,
+      -0.05564,
+      0.01198
+     ]
+    }
+   },
+   "joints": [
+    {
+     "name": "right_finger1_joint1",
+     "lower": 0.0475,
+     "upper": 1.6033
+    },
+    {
+     "name": "right_finger1_joint2",
+     "lower": -0.1387,
+     "upper": 0.9324
+    },
+    {
+     "name": "right_finger1_joint3",
+     "lower": -0.4642,
+     "upper": 1.5623
+    },
+    {
+     "name": "right_finger1_joint4",
+     "lower": -0.4699,
+     "upper": 1.5568
+    },
+    {
+     "name": "right_finger2_joint1",
+     "lower": -0.1585,
+     "upper": 1.5604
+    },
+    {
+     "name": "right_finger2_joint2",
+     "lower": -0.37,
+     "upper": 0.37
+    },
+    {
+     "name": "right_finger2_joint3",
+     "lower": -0.4777,
+     "upper": 1.5485
+    },
+    {
+     "name": "right_finger2_joint4",
+     "lower": -0.4683,
+     "upper": 1.5753
+    },
+    {
+     "name": "right_finger3_joint1",
+     "lower": -0.1644,
+     "upper": 1.5516
+    },
+    {
+     "name": "right_finger3_joint2",
+     "lower": -0.37,
+     "upper": 0.37
+    },
+    {
+     "name": "right_finger3_joint3",
+     "lower": -0.4739,
+     "upper": 1.5512
+    },
+    {
+     "name": "right_finger3_joint4",
+     "lower": -0.4684,
+     "upper": 1.5745
+    },
+    {
+     "name": "right_finger4_joint1",
+     "lower": -0.1554,
+     "upper": 1.5585
+    },
+    {
+     "name": "right_finger4_joint2",
+     "lower": -0.37,
+     "upper": 0.37
+    },
+    {
+     "name": "right_finger4_joint3",
+     "lower": -0.4765,
+     "upper": 1.5487
+    },
+    {
+     "name": "right_finger4_joint4",
+     "lower": -0.4777,
+     "upper": 1.5634
+    },
+    {
+     "name": "right_finger5_joint1",
+     "lower": -0.1626,
+     "upper": 1.5585
+    },
+    {
+     "name": "right_finger5_joint2",
+     "lower": -0.37,
+     "upper": 0.37
+    },
+    {
+     "name": "right_finger5_joint3",
+     "lower": -0.4768,
+     "upper": 1.549
+    },
+    {
+     "name": "right_finger5_joint4",
+     "lower": -0.4683,
+     "upper": 1.5735
+    }
+   ],
+   "mimic": [],
+   "target_scale": 1.08208,
+   "target_offset": [
+    -0.00892,
+    0.001972,
+    0.013746
+   ],
+   "bounds": {
+    "min": [
+     -0.009,
+     -0.06148,
+     -0.02229
+    ],
+    "max": [
+     0.19674,
+     0.12725,
+     0.0296
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.009,
+     -0.06148,
+     -0.01405
+    ],
+    "max": [
+     0.19674,
+     0.04942,
+     0.0296
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "MIT",
+   "source_url": "https://github.com/wuji-technology/wuji-description/blob/4c1073d0a3ad1daaf6546d219db751d8448d3888/hand/body/urdf/right.urdf",
+   "revision": "4c1073d0a3ad1daaf6546d219db751d8448d3888",
+   "ik_seeds": {
+    "open": [
+     0.0944,
+     0.16734,
+     -0.2338,
+     0.4861,
+     -0.1585,
+     -0.00075,
+     0.33721,
+     0.71396,
+     0.29606,
+     -0.01122,
+     -0.0535,
+     0.03927,
+     0.08771,
+     -0.01044,
+     0.14603,
+     0.38236,
+     -0.1626,
+     0.01026,
+     0.12744,
+     1.43443
+    ],
+    "pinch": [
+     0.55585,
+     -0.0863,
+     0.58613,
+     1.25145,
+     0.88661,
+     0.3518,
+     1.00397,
+     1.53378,
+     0.81908,
+     -0.01656,
+     0.30812,
+     1.27839,
+     0.62848,
+     -0.0942,
+     1.03416,
+     0.87812,
+     0.5401,
+     -0.24609,
+     1.24457,
+     1.33045
+    ],
+    "tripod": [
+     0.87253,
+     -0.11135,
+     0.19143,
+     1.5568,
+     0.83757,
+     0.37,
+     1.08981,
+     1.41898,
+     0.89029,
+     -0.04532,
+     1.06325,
+     1.05766,
+     0.87785,
+     -0.12746,
+     1.34573,
+     0.76306,
+     0.9847,
+     -0.24901,
+     1.26694,
+     1.5735
+    ],
+    "power": [
+     0.90255,
+     0.08442,
+     0.40097,
+     1.07148,
+     1.00647,
+     0.37,
+     1.0603,
+     1.43632,
+     0.96516,
+     -0.03066,
+     1.28531,
+     0.84422,
+     0.94009,
+     -0.15305,
+     1.5487,
+     0.65932,
+     1.0123,
+     -0.29212,
+     1.50266,
+     1.35873
+    ],
+    "point": [
+     0.86796,
+     0.15172,
+     0.66626,
+     1.32889,
+     -0.1585,
+     -0.03256,
+     0.00927,
+     0.90867,
+     1.33515,
+     -0.05121,
+     1.53063,
+     1.03842,
+     1.39664,
+     -0.15857,
+     1.51905,
+     1.17659,
+     1.51542,
+     -0.19116,
+     1.549,
+     1.5735
+    ],
+    "thumbs_up": [
+     0.0475,
+     -0.11211,
+     -0.1298,
+     -0.0678,
+     1.52488,
+     0.37,
+     1.4231,
+     1.37947,
+     1.54004,
+     -0.03789,
+     1.16867,
+     1.5745,
+     1.37957,
+     -0.16338,
+     1.5487,
+     1.12999,
+     1.51542,
+     -0.19116,
+     1.549,
+     1.5735
+    ]
+   }
+  },
+  {
+   "key": "wuji-2",
+   "name": "Wuji Hand 2 (beta)",
+   "maker": "Wuji Technology",
+   "urdf": "/hands/wuji-2/model.urdf",
+   "mesh": "/hands/wuji-2/meshes.glb",
+   "root": "palm_frame",
+   "palm": "r_wrist",
+   "dof": 20,
+   "fingers": 5,
+   "slots": {
+    "thumb": {
+     "link": "r_thumb_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "r_thumb_cmc_flex",
+      "r_thumb_cmc_abd",
+      "r_thumb_mcp",
+      "r_thumb_ip"
+     ],
+     "neutral_tip": [
+      0.07688,
+      0.10612,
+      -0.01938
+     ]
+    },
+    "index": {
+     "link": "r_index_finger_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "r_index_finger_mcp_flex",
+      "r_index_finger_mcp_abd",
+      "r_index_finger_pip",
+      "r_index_finger_dip"
+     ],
+     "neutral_tip": [
+      0.1752,
+      0.03764,
+      0.00727
+     ]
+    },
+    "middle": {
+     "link": "r_middle_finger_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "r_middle_finger_mcp_flex",
+      "r_middle_finger_mcp_abd",
+      "r_middle_finger_pip",
+      "r_middle_finger_dip"
+     ],
+     "neutral_tip": [
+      0.18016,
+      -0.00022,
+      0.01311
+     ]
+    },
+    "ring": {
+     "link": "r_ring_finger_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "r_ring_finger_mcp_flex",
+      "r_ring_finger_mcp_abd",
+      "r_ring_finger_pip",
+      "r_ring_finger_dip"
+     ],
+     "neutral_tip": [
+      0.17065,
+      -0.03492,
+      0.00753
+     ]
+    },
+    "little": {
+     "link": "r_pinky_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "r_pinky_mcp_flex",
+      "r_pinky_mcp_abd",
+      "r_pinky_pip",
+      "r_pinky_dip"
+     ],
+     "neutral_tip": [
+      0.1525,
+      -0.06229,
+      0.00156
+     ]
+    }
+   },
+   "joints": [
+    {
+     "name": "r_thumb_cmc_flex",
+     "lower": -1.187,
+     "upper": 1.291
+    },
+    {
+     "name": "r_thumb_cmc_abd",
+     "lower": -1.484,
+     "upper": 0.698
+    },
+    {
+     "name": "r_thumb_mcp",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_thumb_ip",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_index_finger_mcp_flex",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_index_finger_mcp_abd",
+     "lower": -0.698,
+     "upper": 0.698
+    },
+    {
+     "name": "r_index_finger_pip",
+     "lower": -1.047,
+     "upper": 2.094
+    },
+    {
+     "name": "r_index_finger_dip",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_middle_finger_mcp_flex",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_middle_finger_mcp_abd",
+     "lower": -0.698,
+     "upper": 0.698
+    },
+    {
+     "name": "r_middle_finger_pip",
+     "lower": -1.047,
+     "upper": 2.094
+    },
+    {
+     "name": "r_middle_finger_dip",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_ring_finger_mcp_flex",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_ring_finger_mcp_abd",
+     "lower": -0.698,
+     "upper": 0.698
+    },
+    {
+     "name": "r_ring_finger_pip",
+     "lower": -1.047,
+     "upper": 2.094
+    },
+    {
+     "name": "r_ring_finger_dip",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_pinky_mcp_flex",
+     "lower": -1.047,
+     "upper": 1.57
+    },
+    {
+     "name": "r_pinky_mcp_abd",
+     "lower": -0.698,
+     "upper": 0.698
+    },
+    {
+     "name": "r_pinky_pip",
+     "lower": -1.047,
+     "upper": 2.094
+    },
+    {
+     "name": "r_pinky_dip",
+     "lower": -1.047,
+     "upper": 1.57
+    }
+   ],
+   "mimic": [],
+   "target_scale": 1.10788,
+   "target_offset": [
+    -0.030743,
+    -0.004565,
+    0.007868
+   ],
+   "bounds": {
+    "min": [
+     -0.00701,
+     -0.0678,
+     -0.02893
+    ],
+    "max": [
+     0.1812,
+     0.11165,
+     0.02064
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.00701,
+     -0.0678,
+     -0.01706
+    ],
+    "max": [
+     0.1812,
+     0.04377,
+     0.02064
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "MIT",
+   "source_url": "https://github.com/wuji-technology/wuji-description/blob/4c1073d0a3ad1daaf6546d219db751d8448d3888/hand2/hand2_beta2/body/urdf/right.urdf",
+   "revision": "4c1073d0a3ad1daaf6546d219db751d8448d3888",
+   "ik_seeds": {
+    "open": [
+     -0.3082,
+     -0.22394,
+     0.29459,
+     0.18411,
+     -0.14037,
+     0.03656,
+     0.4932,
+     0.33432,
+     0.25226,
+     -0.0008,
+     -0.02305,
+     0,
+     0.01852,
+     -0.03226,
+     0.29069,
+     0.1849,
+     -0.33656,
+     -0.01841,
+     0.75524,
+     0.54125
+    ],
+    "pinch": [
+     0.50443,
+     -0.75577,
+     0.55223,
+     1.18409,
+     0.65455,
+     -0.31857,
+     1.61145,
+     0.52709,
+     0.67504,
+     0.01336,
+     0.88552,
+     0.55511,
+     0.61328,
+     0.12874,
+     1.11433,
+     0.63156,
+     0.4645,
+     0.41655,
+     1.38692,
+     0.81264
+    ],
+    "tripod": [
+     0.59275,
+     -0.86976,
+     0.76596,
+     0.93262,
+     0.72638,
+     -0.28349,
+     1.39424,
+     0.89927,
+     0.90646,
+     0.04915,
+     1.20672,
+     0.73503,
+     0.88576,
+     0.21145,
+     1.31955,
+     0.66502,
+     0.77492,
+     0.62923,
+     1.47498,
+     0.95284
+    ],
+    "power": [
+     0.70499,
+     -0.66541,
+     0.90488,
+     0.37314,
+     0.83627,
+     -0.31762,
+     1.48296,
+     0.74114,
+     1.03567,
+     0.03582,
+     1.2736,
+     0.71597,
+     0.97007,
+     0.26784,
+     1.4458,
+     0.6923,
+     0.92341,
+     0.698,
+     1.46083,
+     1.13114
+    ],
+    "point": [
+     0.7674,
+     -0.77598,
+     0.93457,
+     0.97591,
+     -0.17449,
+     0.0517,
+     0.19012,
+     0.60675,
+     1.33076,
+     0.08496,
+     1.68413,
+     0.61384,
+     1.16567,
+     0.698,
+     2.094,
+     0.00344,
+     1.42197,
+     0.698,
+     1.45491,
+     1.57
+    ],
+    "thumbs_up": [
+     -0.2777,
+     -0.39981,
+     -0.05448,
+     0,
+     1.33216,
+     -0.59615,
+     1.71451,
+     0.92866,
+     1.30352,
+     0.09149,
+     1.78464,
+     0.4274,
+     1.38908,
+     0.37317,
+     1.46541,
+     1.19517,
+     1.41704,
+     0.698,
+     1.45527,
+     1.57
+    ]
+   }
+  },
+  {
+   "key": "inspire-rh56",
+   "name": "Inspire RH56",
+   "maker": "Inspire Robots (model: Renesas RDK)",
+   "urdf": "/hands/inspire-rh56/model.urdf",
+   "mesh": "/hands/inspire-rh56/meshes.glb",
+   "root": "palm_frame",
+   "palm": "base",
+   "dof": 6,
+   "fingers": 5,
+   "slots": {
+    "thumb": {
+     "link": "thumb_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "thumb_proximal_yaw_joint",
+      "thumb_proximal_pitch_joint"
+     ],
+     "neutral_tip": [
+      0.11856,
+      0.11265,
+      -0.04376
+     ]
+    },
+    "index": {
+     "link": "index_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "index_proximal_joint"
+     ],
+     "neutral_tip": [
+      0.21371,
+      0.02896,
+      -0.00108
+     ]
+    },
+    "middle": {
+     "link": "middle_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "middle_proximal_joint"
+     ],
+     "neutral_tip": [
+      0.21714,
+      0.00695,
+      -0.00096
+     ]
+    },
+    "ring": {
+     "link": "ring_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "ring_proximal_joint"
+     ],
+     "neutral_tip": [
+      0.21352,
+      -0.01631,
+      -0.00089
+     ]
+    },
+    "little": {
+     "link": "pinky_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "pinky_proximal_joint"
+     ],
+     "neutral_tip": [
+      0.20374,
+      -0.03867,
+      -0.00126
+     ]
+    }
+   },
+   "joints": [
+    {
+     "name": "thumb_proximal_yaw_joint",
+     "lower": 0,
+     "upper": 1.308
+    },
+    {
+     "name": "thumb_proximal_pitch_joint",
+     "lower": 0,
+     "upper": 0.6
+    },
+    {
+     "name": "index_proximal_joint",
+     "lower": 0,
+     "upper": 1.47
+    },
+    {
+     "name": "middle_proximal_joint",
+     "lower": 0,
+     "upper": 1.47
+    },
+    {
+     "name": "ring_proximal_joint",
+     "lower": 0,
+     "upper": 1.47
+    },
+    {
+     "name": "pinky_proximal_joint",
+     "lower": 0,
+     "upper": 1.47
+    }
+   ],
+   "mimic": [
+    {
+     "name": "thumb_intermediate_joint",
+     "joint": "thumb_proximal_pitch_joint",
+     "multiplier": 1.334,
+     "offset": 0
+    },
+    {
+     "name": "thumb_distal_joint",
+     "joint": "thumb_proximal_pitch_joint",
+     "multiplier": 0.667,
+     "offset": 0
+    },
+    {
+     "name": "index_intermediate_joint",
+     "joint": "index_proximal_joint",
+     "multiplier": 1.06399,
+     "offset": -0.04545
+    },
+    {
+     "name": "middle_intermediate_joint",
+     "joint": "middle_proximal_joint",
+     "multiplier": 1.06399,
+     "offset": -0.04545
+    },
+    {
+     "name": "ring_intermediate_joint",
+     "joint": "ring_proximal_joint",
+     "multiplier": 1.06399,
+     "offset": -0.04545
+    },
+    {
+     "name": "pinky_intermediate_joint",
+     "joint": "pinky_proximal_joint",
+     "multiplier": 1.06399,
+     "offset": -0.04545
+    }
+   ],
+   "target_scale": 0.83616,
+   "target_offset": [
+    0.062119,
+    0.00465,
+    0.001083
+   ],
+   "bounds": {
+    "min": [
+     -0.00016,
+     -0.04292,
+     -0.04825
+    ],
+    "max": [
+     0.21781,
+     0.1152,
+     0.03336
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.00016,
+     -0.04292,
+     -0.02496
+    ],
+    "max": [
+     0.21781,
+     0.03877,
+     0.03336
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "No license file upstream (provenance note only); model derived from Inspire Robots' public STEP via dex_urdf",
+   "source_url": "https://github.com/renesas-rdk/inspire_rh56_hand_description/blob/39bfca04a69912e6561628156d1c63e37698eb75/urdf/reference/inspire_hand_right_ref.urdf",
+   "revision": "39bfca04a69912e6561628156d1c63e37698eb75",
+   "ik_seeds": {
+    "open": [
+     0,
+     0.16701,
+     0.09844,
+     0.09639,
+     0.11783,
+     0.16555
+    ],
+    "pinch": [
+     1.08561,
+     0.23448,
+     0.86599,
+     0.6928,
+     0.82941,
+     1.02052
+    ],
+    "tripod": [
+     1.24009,
+     0.23491,
+     0.86603,
+     0.86884,
+     1.07233,
+     1.24814
+    ],
+    "power": [
+     1.308,
+     0.35728,
+     1.05611,
+     1.06377,
+     1.17415,
+     1.33645
+    ],
+    "point": [
+     1.308,
+     0.40611,
+     0.0198,
+     1.40764,
+     1.46418,
+     1.47
+    ],
+    "thumbs_up": [
+     0,
+     0,
+     1.46249,
+     1.40764,
+     1.46418,
+     1.47
+    ]
+   }
+  },
+  {
+   "key": "allegro-v4",
+   "name": "Allegro Hand V4",
+   "maker": "Wonik Robotics / SimLab",
+   "urdf": "/hands/allegro-v4/model.urdf",
+   "mesh": "/hands/allegro-v4/meshes.glb",
+   "root": "palm_frame",
+   "palm": "palm_link",
+   "dof": 16,
+   "fingers": 4,
+   "slots": {
+    "thumb": {
+     "link": "link_15.0_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "joint_12.0",
+      "joint_13.0",
+      "joint_14.0",
+      "joint_15.0"
+     ],
+     "neutral_tip": [
+      -0.0855,
+      0.16123,
+      -0.02596
+     ]
+    },
+    "index": {
+     "link": "link_3.0_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "joint_0.0",
+      "joint_1.0",
+      "joint_2.0",
+      "joint_3.0"
+     ],
+     "neutral_tip": [
+      0.13344,
+      0.05531,
+      0
+     ]
+    },
+    "middle": {
+     "link": "link_7.0_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "joint_4.0",
+      "joint_5.0",
+      "joint_6.0",
+      "joint_7.0"
+     ],
+     "neutral_tip": [
+      0.1362,
+      0,
+      0
+     ]
+    },
+    "ring": {
+     "link": "link_11.0_tip",
+     "site": [
+      0,
+      0,
+      0
+     ],
+     "joints": [
+      "joint_8.0",
+      "joint_9.0",
+      "joint_10.0",
+      "joint_11.0"
+     ],
+     "neutral_tip": [
+      0.13344,
+      -0.05531,
+      0
+     ]
+    },
+    "little": null
+   },
+   "joints": [
+    {
+     "name": "joint_0.0",
+     "lower": -0.47,
+     "upper": 0.47
+    },
+    {
+     "name": "joint_1.0",
+     "lower": -0.196,
+     "upper": 1.61
+    },
+    {
+     "name": "joint_2.0",
+     "lower": -0.174,
+     "upper": 1.709
+    },
+    {
+     "name": "joint_3.0",
+     "lower": -0.227,
+     "upper": 1.618
+    },
+    {
+     "name": "joint_4.0",
+     "lower": -0.47,
+     "upper": 0.47
+    },
+    {
+     "name": "joint_5.0",
+     "lower": -0.196,
+     "upper": 1.61
+    },
+    {
+     "name": "joint_6.0",
+     "lower": -0.174,
+     "upper": 1.709
+    },
+    {
+     "name": "joint_7.0",
+     "lower": -0.227,
+     "upper": 1.618
+    },
+    {
+     "name": "joint_8.0",
+     "lower": -0.47,
+     "upper": 0.47
+    },
+    {
+     "name": "joint_9.0",
+     "lower": -0.196,
+     "upper": 1.61
+    },
+    {
+     "name": "joint_10.0",
+     "lower": -0.174,
+     "upper": 1.709
+    },
+    {
+     "name": "joint_11.0",
+     "lower": -0.227,
+     "upper": 1.618
+    },
+    {
+     "name": "joint_12.0",
+     "lower": 0.263,
+     "upper": 1.396
+    },
+    {
+     "name": "joint_13.0",
+     "lower": -0.105,
+     "upper": 1.163
+    },
+    {
+     "name": "joint_14.0",
+     "lower": -0.189,
+     "upper": 1.644
+    },
+    {
+     "name": "joint_15.0",
+     "lower": -0.162,
+     "upper": 1.719
+    }
+   ],
+   "mimic": [],
+   "target_scale": 1.41146,
+   "target_offset": [
+    -0.130216,
+    -0.006549,
+    0.000941
+   ],
+   "bounds": {
+    "min": [
+     -0.09962,
+     -0.06929,
+     -0.04035
+    ],
+    "max": [
+     0.1522,
+     0.17714,
+     0.04696
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.095,
+     -0.06929,
+     -0.014
+    ],
+    "max": [
+     0.1522,
+     0.06929,
+     0.0295
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "BSD-2-Clause",
+   "source_url": "https://github.com/simlabrobotics/allegro_hand_ros_v4/blob/b19b18ea130c4fbe343f2c178eec6cb55186a4ac/src/allegro_hand_description/allegro_hand_description_right.urdf",
+   "revision": "b19b18ea130c4fbe343f2c178eec6cb55186a4ac",
+   "ik_seeds": {
+    "open": [
+     -0.47,
+     -0.12825,
+     0.54169,
+     0.37002,
+     -0.03557,
+     0.20545,
+     0,
+     0,
+     0.47,
+     -0.10946,
+     0.56514,
+     0.38,
+     0.32975,
+     0.08483,
+     0.79751,
+     0
+    ],
+    "pinch": [
+     -0.16941,
+     0.97713,
+     1.26418,
+     0.58326,
+     -0.00885,
+     0.82467,
+     0.70962,
+     0.49031,
+     0.1462,
+     0.93137,
+     0.91027,
+     0.51801,
+     1.33805,
+     0.07834,
+     0.83713,
+     0
+    ],
+    "tripod": [
+     -0.13198,
+     0.92746,
+     1.49881,
+     0.18241,
+     0.00671,
+     1.04527,
+     1.20988,
+     0.38329,
+     0.15482,
+     1.24971,
+     1.20151,
+     0.03622,
+     1.396,
+     0.16228,
+     0.82536,
+     -0.01833
+    ],
+    "power": [
+     -0.1619,
+     1.19367,
+     0.98456,
+     0.87865,
+     -0.01039,
+     1.19715,
+     1.16419,
+     0.41057,
+     0.17143,
+     1.35294,
+     1.1779,
+     0.3116,
+     1.3919,
+     0.23283,
+     0.98913,
+     -0.06274
+    ],
+    "point": [
+     -0.47,
+     -0.196,
+     0.32014,
+     0.64197,
+     -0.01669,
+     1.52414,
+     1.38174,
+     0.57106,
+     0.26229,
+     1.61,
+     1.29898,
+     0.56023,
+     1.32091,
+     0.54912,
+     1.0991,
+     0.11007
+    ],
+    "thumbs_up": [
+     -0.2685,
+     1.52646,
+     1.4064,
+     0.66253,
+     -0.01669,
+     1.52414,
+     1.38174,
+     0.57106,
+     0.26229,
+     1.61,
+     1.29898,
+     0.56023,
+     0.263,
+     0.09891,
+     0.37986,
+     -0.08886
+    ]
+   }
+  },
+  {
+   "key": "leap-v1",
+   "name": "LEAP Hand",
+   "maker": "CMU (LEAP Hand)",
+   "urdf": "/hands/leap-v1/model.urdf",
+   "mesh": "/hands/leap-v1/meshes.glb",
+   "root": "palm_frame",
+   "palm": "palm_lower",
+   "dof": 16,
+   "fingers": 4,
+   "slots": {
+    "thumb": {
+     "link": "thumb_fingertip",
+     "site": [
+      -9.5e-05,
+      -0.050661,
+      -0.024705
+     ],
+     "joints": [
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "neutral_tip": [
+      -0.0823,
+      0.12732,
+      -0.03163
+     ]
+    },
+    "index": {
+     "link": "fingertip",
+     "site": [
+      -0.002569,
+      -0.039264,
+      0.022983
+     ],
+     "joints": [
+      "1",
+      "0",
+      "2",
+      "3"
+     ],
+     "neutral_tip": [
+      0.12137,
+      -0.00033,
+      -0.02209
+     ]
+    },
+    "middle": {
+     "link": "fingertip_2",
+     "site": [
+      -0.002569,
+      -0.039264,
+      0.022983
+     ],
+     "joints": [
+      "5",
+      "4",
+      "6",
+      "7"
+     ],
+     "neutral_tip": [
+      0.12137,
+      -0.04578,
+      -0.02209
+     ]
+    },
+    "ring": {
+     "link": "fingertip_3",
+     "site": [
+      -0.002569,
+      -0.039264,
+      0.022983
+     ],
+     "joints": [
+      "9",
+      "8",
+      "10",
+      "11"
+     ],
+     "neutral_tip": [
+      0.12137,
+      -0.09123,
+      -0.02209
+     ]
+    },
+    "little": null
+   },
+   "joints": [
+    {
+     "name": "1",
+     "lower": -0.314,
+     "upper": 2.23
+    },
+    {
+     "name": "5",
+     "lower": -0.314,
+     "upper": 2.23
+    },
+    {
+     "name": "9",
+     "lower": -0.314,
+     "upper": 2.23
+    },
+    {
+     "name": "12",
+     "lower": -0.349,
+     "upper": 2.094
+    },
+    {
+     "name": "13",
+     "lower": -0.47,
+     "upper": 2.443
+    },
+    {
+     "name": "14",
+     "lower": -1.2,
+     "upper": 1.9
+    },
+    {
+     "name": "15",
+     "lower": -1.34,
+     "upper": 1.88
+    },
+    {
+     "name": "0",
+     "lower": -1.047,
+     "upper": 1.047
+    },
+    {
+     "name": "2",
+     "lower": -0.506,
+     "upper": 1.885
+    },
+    {
+     "name": "3",
+     "lower": -0.366,
+     "upper": 2.042
+    },
+    {
+     "name": "4",
+     "lower": -1.047,
+     "upper": 1.047
+    },
+    {
+     "name": "6",
+     "lower": -0.506,
+     "upper": 1.885
+    },
+    {
+     "name": "7",
+     "lower": -0.366,
+     "upper": 2.042
+    },
+    {
+     "name": "8",
+     "lower": -1.047,
+     "upper": 1.047
+    },
+    {
+     "name": "10",
+     "lower": -0.506,
+     "upper": 1.885
+    },
+    {
+     "name": "11",
+     "lower": -0.366,
+     "upper": 2.042
+    }
+   ],
+   "mimic": [],
+   "target_scale": 1.3606,
+   "target_offset": [
+    -0.132765,
+    -0.040397,
+    -0.0195
+   ],
+   "bounds": {
+    "min": [
+     -0.1009,
+     -0.10084,
+     -0.03919
+    ],
+    "max": [
+     0.13155,
+     0.14217,
+     0.02365
+    ]
+   },
+   "core_bounds": {
+    "min": [
+     -0.1001,
+     -0.10084,
+     -0.03472
+    ],
+    "max": [
+     0.13155,
+     0.02716,
+     0.02365
+    ]
+   },
+   "display": {
+    "scale": 1
+   },
+   "license": "MIT",
+   "source_url": "https://github.com/leap-hand/LEAP_Hand_Sim/blob/150bc3d4b61fd6619193ba5a8ef209f3609ced89/assets/leap_hand/robot.urdf",
+   "revision": "150bc3d4b61fd6619193ba5a8ef209f3609ced89",
+   "ik_seeds": {
+    "open": [
+     -0.14833,
+     0.17795,
+     -0.12155,
+     0.29812,
+     -0.15917,
+     0.69556,
+     -0.00188,
+     -0.06143,
+     0.31174,
+     0.47297,
+     -0.11763,
+     0.01511,
+     -0.06534,
+     -0.25849,
+     0.31146,
+     0.47864
+    ],
+    "pinch": [
+     0.67071,
+     0.50863,
+     0.69349,
+     1.48219,
+     -0.11157,
+     0.80672,
+     0.01523,
+     0.3743,
+     0.98292,
+     1.03183,
+     -0.23086,
+     0.87705,
+     0.41896,
+     -0.67481,
+     0.66586,
+     0.90485
+    ],
+    "tripod": [
+     0.82087,
+     0.94778,
+     0.9887,
+     1.65373,
+     -0.14427,
+     0.78674,
+     -0.00188,
+     0.24449,
+     0.70485,
+     1.37916,
+     -0.32331,
+     0.50083,
+     1.43589,
+     -0.9299,
+     0.73243,
+     0.99123
+    ],
+    "power": [
+     0.89643,
+     0.88079,
+     1.15467,
+     1.75556,
+     -0.12815,
+     0.92451,
+     -0.00188,
+     0.29426,
+     0.77922,
+     1.2358,
+     -0.60899,
+     0.99994,
+     0.99182,
+     -1.02814,
+     0.60054,
+     1.25239
+    ],
+    "point": [
+     0.07725,
+     1.03712,
+     1.82356,
+     1.63483,
+     0.23065,
+     0.95885,
+     0.05826,
+     -0.05822,
+     -0.49326,
+     0.82607,
+     0.90047,
+     1.44465,
+     0.8914,
+     -1.047,
+     -0.04927,
+     2.0394
+    ],
+    "thumbs_up": [
+     0.99487,
+     0.89336,
+     1.82358,
+     0.19815,
+     -0.41927,
+     0.22958,
+     -0.00188,
+     -0.35965,
+     1.85723,
+     0.50467,
+     0.49766,
+     1.885,
+     0.28437,
+     -1.047,
+     -0.0493,
+     2.03942
+    ]
+   }
+  }
+ ]
+}

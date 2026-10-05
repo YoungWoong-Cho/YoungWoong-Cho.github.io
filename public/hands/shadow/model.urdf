@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Shadow Hand (right). Derived from https://github.com/shadow-robot/sr_common/blob/172c3d9c3715ee75eb10dfe4ee57e26a342b4529/sr_description/robots/sr_hand.urdf.xacro ; see LICENSE. Palm subtree only, visual meshes decimated. Root frame: +X fingers, +Y thumb side, +Z back of hand. -->
+<robot name="shadow">
+  <link name="palm_frame" />
+  <joint name="palm_frame_to_palm" type="fixed">
+    <parent link="palm_frame" />
+    <child link="rh_palm" />
+    <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+  </joint>
+  <link name="rh_palm">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p8" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_manipulator" />
+  <link name="rh_imu" />
+  <link name="rh_ffknuckle">
+    <visual>
+      <origin xyz="0 0 0.0005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_ffproximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_ffmiddle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_ffdistal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.165 0.165 0.165 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_fftip" />
+  <link name="rh_mfknuckle">
+    <visual>
+      <origin xyz="0 0 0.0005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_mfproximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_mfmiddle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_mfdistal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.165 0.165 0.165 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_mftip" />
+  <link name="rh_rfknuckle">
+    <visual>
+      <origin xyz="0 0 0.0005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_rfproximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_rfmiddle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_rfdistal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.165 0.165 0.165 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_rftip" />
+  <link name="rh_lfmetacarpal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0.9599 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_lfknuckle">
+    <visual>
+      <origin xyz="0 0 0.0005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.6 0.6 0.6 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_lfproximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_lfmiddle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_lfdistal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.165 0.165 0.165 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_lftip" />
+  <link name="rh_thbase" />
+  <link name="rh_thproximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_thhub" />
+  <link name="rh_thmiddle">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_thdistal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="rh_thtip" />
+  <joint name="rh_ee_fixed_joint" type="fixed">
+    <parent link="rh_palm" />
+    <child link="rh_manipulator" />
+    <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0" />
+  </joint>
+  <joint name="rh_palm_to_imu" type="fixed">
+    <parent link="rh_palm" />
+    <child link="rh_imu" />
+    <origin xyz="0.01785 0.00765 0.049125" rpy="-1.5707963 3.141592 0.0" />
+  </joint>
+  <joint name="rh_FFJ4" type="revolute">
+    <parent link="rh_palm" />
+    <child link="rh_ffknuckle" />
+    <origin xyz="0.033 0 0.095" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.3490658503988659" upper="0.3490658503988659" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_FFJ3" type="revolute">
+    <parent link="rh_ffknuckle" />
+    <child link="rh_ffproximal" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_FFJ2" type="revolute">
+    <parent link="rh_ffproximal" />
+    <child link="rh_ffmiddle" />
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_FFJ1" type="revolute">
+    <parent link="rh_ffmiddle" />
+    <child link="rh_ffdistal" />
+    <origin xyz="0 0 0.025" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_FFtip" type="fixed">
+    <parent link="rh_ffdistal" />
+    <child link="rh_fftip" />
+    <origin xyz="0 0 0.026" rpy="0 0 0" />
+  </joint>
+  <joint name="rh_MFJ4" type="revolute">
+    <parent link="rh_palm" />
+    <child link="rh_mfknuckle" />
+    <origin xyz="0.011 0 0.099" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="-0.3490658503988659" upper="0.3490658503988659" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_MFJ3" type="revolute">
+    <parent link="rh_mfknuckle" />
+    <child link="rh_mfproximal" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_MFJ2" type="revolute">
+    <parent link="rh_mfproximal" />
+    <child link="rh_mfmiddle" />
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_MFJ1" type="revolute">
+    <parent link="rh_mfmiddle" />
+    <child link="rh_mfdistal" />
+    <origin xyz="0 0 0.025" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_MFtip" type="fixed">
+    <parent link="rh_mfdistal" />
+    <child link="rh_mftip" />
+    <origin xyz="0 0 0.026" rpy="0 0 0" />
+  </joint>
+  <joint name="rh_RFJ4" type="revolute">
+    <parent link="rh_palm" />
+    <child link="rh_rfknuckle" />
+    <origin xyz="-0.011 0 0.095" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.3490658503988659" upper="0.3490658503988659" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_RFJ3" type="revolute">
+    <parent link="rh_rfknuckle" />
+    <child link="rh_rfproximal" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_RFJ2" type="revolute">
+    <parent link="rh_rfproximal" />
+    <child link="rh_rfmiddle" />
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_RFJ1" type="revolute">
+    <parent link="rh_rfmiddle" />
+    <child link="rh_rfdistal" />
+    <origin xyz="0 0 0.025" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_RFtip" type="fixed">
+    <parent link="rh_rfdistal" />
+    <child link="rh_rftip" />
+    <origin xyz="0 0 0.026" rpy="0 0 0" />
+  </joint>
+  <joint name="rh_LFJ5" type="revolute">
+    <parent link="rh_palm" />
+    <child link="rh_lfmetacarpal" />
+    <origin xyz="-0.033 0 0.02071" rpy="0 -0.9599 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="0.7853981633974483" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_LFJ4" type="revolute">
+    <parent link="rh_lfmetacarpal" />
+    <child link="rh_lfknuckle" />
+    <origin xyz="0.05397275 0 0.03779463" rpy="0 0.9599 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.3490658503988659" upper="0.3490658503988659" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_LFJ3" type="revolute">
+    <parent link="rh_lfknuckle" />
+    <child link="rh_lfproximal" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_LFJ2" type="revolute">
+    <parent link="rh_lfproximal" />
+    <child link="rh_lfmiddle" />
+    <origin xyz="0 0 0.045" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_LFJ1" type="revolute">
+    <parent link="rh_lfmiddle" />
+    <child link="rh_lfdistal" />
+    <origin xyz="0 0 0.025" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="0" upper="1.5707963267948966" effort="2" velocity="2.0" />
+  </joint>
+  <joint name="rh_LFtip" type="fixed">
+    <parent link="rh_lfdistal" />
+    <child link="rh_lftip" />
+    <origin xyz="0 0 0.026" rpy="0 0 0" />
+  </joint>
+  <joint name="rh_THJ5" type="revolute">
+    <parent link="rh_palm" />
+    <child link="rh_thbase" />
+    <origin xyz="0.034 -0.00858 0.029" rpy="-0.7853981633974483 0 -1.5707963267948966" />
+    <axis xyz="0 0 -1" />
+    <limit lower="-1.0471975511965976" upper="1.0471975511965976" effort="5.0" velocity="4.0" />
+  </joint>
+  <joint name="rh_THJ4" type="revolute">
+    <parent link="rh_thbase" />
+    <child link="rh_thproximal" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0.0" upper="1.2217304763960306" effort="3" velocity="4.0" />
+  </joint>
+  <joint name="rh_THJ3" type="revolute">
+    <parent link="rh_thproximal" />
+    <child link="rh_thhub" />
+    <origin xyz="0 0 0.038" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.20943951023931953" upper="0.20943951023931953" effort="2.0" velocity="4.0" />
+  </joint>
+  <joint name="rh_THJ2" type="revolute">
+    <parent link="rh_thhub" />
+    <child link="rh_thmiddle" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.6981317007977318" upper="0.6981317007977318" effort="2.0" velocity="2.0" />
+  </joint>
+  <joint name="rh_THJ1" type="revolute">
+    <parent link="rh_thmiddle" />
+    <child link="rh_thdistal" />
+    <origin xyz="0 0 0.032" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="1.5707963267948966" effort="1.0" velocity="4.0" />
+  </joint>
+  <joint name="rh_thtip" type="fixed">
+    <parent link="rh_thdistal" />
+    <child link="rh_thtip" />
+    <origin xyz="0 0 0.0275" rpy="0 0 0" />
+  </joint>
+</robot>

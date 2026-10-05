@@ -1,0 +1,527 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Sharpa Wave (right). Derived from https://github.com/sharpa-robotics/sharpa-urdf-usd-xml/blob/6eea427eb24189519f32b9f21674cd534d3f973c/wave_01/right_sharpa_wave/right_sharpa_wave.urdf ; see LICENSE. Palm subtree only, visual meshes decimated. Root frame: +X fingers, +Y thumb side, +Z back of hand. -->
+<robot name="sharpa">
+  <link name="palm_frame" />
+  <joint name="palm_frame_to_palm" type="fixed">
+    <parent link="palm_frame" />
+    <child link="right_hand_C_MC" />
+    <origin xyz="0 0 0" rpy="0 1.5708 0" />
+  </joint>
+  <link name="right_hand_C_MC">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p9" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_CMC_VL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_MC">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_MCP_VL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_PP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p11" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_DP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p10" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_elastomer">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p13" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 1 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_thumb_fingertip" />
+  <link name="right_index_MCP_VL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_index_PP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_index_MP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_index_DP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_index_elastomer">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 1 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_index_fingertip" />
+  <link name="right_middle_MCP_VL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_middle_PP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_middle_MP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_middle_DP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_middle_elastomer">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 1 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_middle_fingertip" />
+  <link name="right_ring_MCP_VL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_ring_PP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_ring_MP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_ring_DP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_ring_elastomer">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 1 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_ring_fingertip" />
+  <link name="right_pinky_MC">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p8" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_pinky_MCP_VL">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_pinky_PP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_pinky_MP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_pinky_DP">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792 0.82 0.933 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_pinky_elastomer">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p12" />
+      </geometry>
+      <material name="">
+        <color rgba="0.1 1 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="right_pinky_fingertip" />
+  <joint name="right_thumb_CMC_FE" type="revolute">
+    <parent link="right_hand_C_MC" />
+    <child link="right_thumb_CMC_VL" />
+    <origin xyz="0.01 0.026 0.0214" rpy="3.1416 0 1.5708" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.1745" upper="1.9199" effort="3.3" velocity="11.84076833" />
+  </joint>
+  <joint name="right_thumb_CMC_AA" type="revolute">
+    <parent link="right_thumb_CMC_VL" />
+    <child link="right_thumb_MC" />
+    <origin xyz="0 -0.005 0" rpy="-1.5708 0.7854 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3491" upper="0.3491" effort="3.3" velocity="11.84076833" />
+  </joint>
+  <joint name="right_thumb_MCP_FE" type="revolute">
+    <parent link="right_thumb_MC" />
+    <child link="right_thumb_MCP_VL" />
+    <origin xyz="0.065 -0.006 0.010392" rpy="0.5236 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.5236" upper="1.3963" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_thumb_MCP_AA" type="revolute">
+    <parent link="right_thumb_MCP_VL" />
+    <child link="right_thumb_PP" />
+    <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3491" upper="0.3491" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_thumb_IP" type="revolute">
+    <parent link="right_thumb_PP" />
+    <child link="right_thumb_DP" />
+    <origin xyz="0.039 0 0" rpy="1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.7453" effort="0.638" velocity="11.61831603" />
+  </joint>
+  <joint name="right_thumb_elastomer_fix_joint" type="fixed">
+    <parent link="right_thumb_DP" />
+    <child link="right_thumb_elastomer" />
+    <origin xyz="0 0 0" rpy="1.5708 -1.5708 0" />
+  </joint>
+  <joint name="right_thumb_fingertip_fix_joint" type="fixed">
+    <parent link="right_thumb_elastomer" />
+    <child link="right_thumb_fingertip" />
+    <origin xyz="0 -0.027611 0" rpy="1.5708 1.5708 0" />
+  </joint>
+  <joint name="right_index_MCP_FE" type="revolute">
+    <parent link="right_hand_C_MC" />
+    <child link="right_index_MCP_VL" />
+    <origin xyz="0.001 0.0303 0.0959" rpy="0 -1.5708 -1.5708" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.17453293" upper="1.5708" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_index_MCP_AA" type="revolute">
+    <parent link="right_index_MCP_VL" />
+    <child link="right_index_PP" />
+    <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3491" upper="0.3491" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_index_PIP" type="revolute">
+    <parent link="right_index_PP" />
+    <child link="right_index_MP" />
+    <origin xyz="0.047 0 0" rpy="1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.7453" effort="0.638" velocity="11.61831603" />
+  </joint>
+  <joint name="right_index_DIP" type="revolute">
+    <parent link="right_index_MP" />
+    <child link="right_index_DP" />
+    <origin xyz="0.0315 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.3963" effort="0.189369" velocity="14.66594768" />
+  </joint>
+  <joint name="right_index_elastomer_fix_joint" type="fixed">
+    <parent link="right_index_DP" />
+    <child link="right_index_elastomer" />
+    <origin xyz="0 0 0" rpy="1.5708 -1.5708 0" />
+  </joint>
+  <joint name="right_index_fingertip_fix_joint" type="fixed">
+    <parent link="right_index_elastomer" />
+    <child link="right_index_fingertip" />
+    <origin xyz="0 -0.026009 0" rpy="1.5708 1.5708 0" />
+  </joint>
+  <joint name="right_middle_MCP_FE" type="revolute">
+    <parent link="right_hand_C_MC" />
+    <child link="right_middle_MCP_VL" />
+    <origin xyz="0 0.01 0.0989" rpy="0 -1.5708 -1.5708" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.17453293" upper="1.5708" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_middle_MCP_AA" type="revolute">
+    <parent link="right_middle_MCP_VL" />
+    <child link="right_middle_PP" />
+    <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3491" upper="0.3491" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_middle_PIP" type="revolute">
+    <parent link="right_middle_PP" />
+    <child link="right_middle_MP" />
+    <origin xyz="0.047 0 0" rpy="1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.7453" effort="0.638" velocity="11.61831603" />
+  </joint>
+  <joint name="right_middle_DIP" type="revolute">
+    <parent link="right_middle_MP" />
+    <child link="right_middle_DP" />
+    <origin xyz="0.0315 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.3963" effort="0.189369" velocity="14.66594768" />
+  </joint>
+  <joint name="right_middle_elastomer_fix_joint" type="fixed">
+    <parent link="right_middle_DP" />
+    <child link="right_middle_elastomer" />
+    <origin xyz="0 0 0" rpy="1.5707963267949 -1.5707963267949 0" />
+  </joint>
+  <joint name="right_middle_fingertip_fix_joint" type="fixed">
+    <parent link="right_middle_elastomer" />
+    <child link="right_middle_fingertip" />
+    <origin xyz="0 -0.0260092574262507 0" rpy="1.5707963267949 1.5707963267949 0" />
+  </joint>
+  <joint name="right_ring_MCP_FE" type="revolute">
+    <parent link="right_hand_C_MC" />
+    <child link="right_ring_MCP_VL" />
+    <origin xyz="0.0015 -0.0103 0.0929" rpy="0 -1.5708 -1.5708" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.17453293" upper="1.5708" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_ring_MCP_AA" type="revolute">
+    <parent link="right_ring_MCP_VL" />
+    <child link="right_ring_PP" />
+    <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3491" upper="0.3491" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_ring_PIP" type="revolute">
+    <parent link="right_ring_PP" />
+    <child link="right_ring_MP" />
+    <origin xyz="0.047 0 0" rpy="1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.7453" effort="0.638" velocity="11.61831603" />
+  </joint>
+  <joint name="right_ring_DIP" type="revolute">
+    <parent link="right_ring_MP" />
+    <child link="right_ring_DP" />
+    <origin xyz="0.0315 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.3963" effort="0.189369" velocity="14.66594768" />
+  </joint>
+  <joint name="right_ring_elastomer_fix_joint" type="fixed">
+    <parent link="right_ring_DP" />
+    <child link="right_ring_elastomer" />
+    <origin xyz="0 0 0" rpy="1.5708 -1.5708 0" />
+  </joint>
+  <joint name="right_ring_fingertip_fix_joint" type="fixed">
+    <parent link="right_ring_elastomer" />
+    <child link="right_ring_fingertip" />
+    <origin xyz="0 -0.0260092574262503 0" rpy="1.5707963267949 1.5707963267949 0" />
+  </joint>
+  <joint name="right_pinky_CMC" type="revolute">
+    <parent link="right_hand_C_MC" />
+    <child link="right_pinky_MC" />
+    <origin xyz="0.01136 -0.0263 0.0869" rpy="0 0 3.1416" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0.2618" effort="0.5285" velocity="35.07416159" />
+  </joint>
+  <joint name="right_pinky_MCP_FE" type="revolute">
+    <parent link="right_pinky_MC" />
+    <child link="right_pinky_MCP_VL" />
+    <origin xyz="0.00836 0.0048 0" rpy="1.5708 -1.5708 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.17453293" upper="1.5708" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_pinky_MCP_AA" type="revolute">
+    <parent link="right_pinky_MCP_VL" />
+    <child link="right_pinky_PP" />
+    <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.3491" upper="0.3491" effort="1.864" velocity="16.07692878" />
+  </joint>
+  <joint name="right_pinky_PIP" type="revolute">
+    <parent link="right_pinky_PP" />
+    <child link="right_pinky_MP" />
+    <origin xyz="0.047 0 0" rpy="1.5708 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.7453" effort="0.638" velocity="11.61831603" />
+  </joint>
+  <joint name="right_pinky_DIP" type="revolute">
+    <parent link="right_pinky_MP" />
+    <child link="right_pinky_DP" />
+    <origin xyz="0.0315 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.3963" effort="0.189369" velocity="14.66594768" />
+  </joint>
+  <joint name="right_pinky_elastomer_fix_joint" type="fixed">
+    <parent link="right_pinky_DP" />
+    <child link="right_pinky_elastomer" />
+    <origin xyz="0 0 0" rpy="1.5708 -1.5708 0" />
+  </joint>
+  <joint name="right_pinky_fingertip_fix_joint" type="fixed">
+    <parent link="right_pinky_elastomer" />
+    <child link="right_pinky_fingertip" />
+    <origin xyz="0 -0.026009 0" rpy="1.5708 1.5708 0" />
+  </joint>
+</robot>

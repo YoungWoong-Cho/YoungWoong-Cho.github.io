@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Allegro Hand V4 (right). Derived from https://github.com/simlabrobotics/allegro_hand_ros_v4/blob/b19b18ea130c4fbe343f2c178eec6cb55186a4ac/src/allegro_hand_description/allegro_hand_description_right.urdf ; see LICENSE. Palm subtree only, visual meshes decimated. Root frame: +X fingers, +Y thumb side, +Z back of hand. -->
+<robot name="allegro-v4">
+  <link name="palm_frame" />
+  <joint name="palm_frame_to_palm" type="fixed">
+    <parent link="palm_frame" />
+    <child link="palm_link" />
+    <origin xyz="0 0 0" rpy="0 1.5708 0" />
+  </joint>
+  <link name="palm_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p9" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_0.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_1.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_2.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_3.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_3.0_tip">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.9 0.9 0.9 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_4.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_5.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_6.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_7.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_7.0_tip">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.9 0.9 0.9 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_8.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_9.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_10.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_11.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_11.0_tip">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.9 0.9 0.9 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_12.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_13.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p8" />
+      </geometry>
+      <material name="">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_14.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p10" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_15.0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="link_15.0_tip">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.9 0.9 0.9 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint_0.0" type="revolute">
+    <parent link="palm_link" />
+    <child link="link_0.0" />
+    <origin xyz="0 0.0435 -0.001542" rpy="-0.08726646255 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.47" upper="0.47" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_1.0" type="revolute">
+    <parent link="link_0.0" />
+    <child link="link_1.0" />
+    <origin xyz="0 0 0.0164" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.196" upper="1.61" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_2.0" type="revolute">
+    <parent link="link_1.0" />
+    <child link="link_2.0" />
+    <origin xyz="0 0 0.054" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.174" upper="1.709" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_3.0" type="revolute">
+    <parent link="link_2.0" />
+    <child link="link_3.0" />
+    <origin xyz="0 0 0.0384" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.227" upper="1.618" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_3.0_tip" type="fixed">
+    <parent link="link_3.0" />
+    <child link="link_3.0_tip" />
+    <origin xyz="0 0 0.0267" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_4.0" type="revolute">
+    <parent link="palm_link" />
+    <child link="link_4.0" />
+    <origin xyz="0 0 0.0007" rpy="0.0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.47" upper="0.47" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_5.0" type="revolute">
+    <parent link="link_4.0" />
+    <child link="link_5.0" />
+    <origin xyz="0 0 0.0164" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.196" upper="1.61" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_6.0" type="revolute">
+    <parent link="link_5.0" />
+    <child link="link_6.0" />
+    <origin xyz="0 0 0.054" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.174" upper="1.709" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_7.0" type="revolute">
+    <parent link="link_6.0" />
+    <child link="link_7.0" />
+    <origin xyz="0 0 0.0384" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.227" upper="1.618" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_7.0_tip" type="fixed">
+    <parent link="link_7.0" />
+    <child link="link_7.0_tip" />
+    <origin xyz="0 0 0.0267" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_8.0" type="revolute">
+    <parent link="palm_link" />
+    <child link="link_8.0" />
+    <origin xyz="0 -0.0435 -0.001542" rpy="0.08726646255 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.47" upper="0.47" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_9.0" type="revolute">
+    <parent link="link_8.0" />
+    <child link="link_9.0" />
+    <origin xyz="0 0 0.0164" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.196" upper="1.61" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_10.0" type="revolute">
+    <parent link="link_9.0" />
+    <child link="link_10.0" />
+    <origin xyz="0 0 0.054" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.174" upper="1.709" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_11.0" type="revolute">
+    <parent link="link_10.0" />
+    <child link="link_11.0" />
+    <origin xyz="0 0 0.0384" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.227" upper="1.618" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_11.0_tip" type="fixed">
+    <parent link="link_11.0" />
+    <child link="link_11.0_tip" />
+    <origin xyz="0 0 0.0267" rpy="0 0 0" />
+  </joint>
+  <joint name="joint_12.0" type="revolute">
+    <parent link="palm_link" />
+    <child link="link_12.0" />
+    <origin xyz="-0.0182 0.019333 -0.045987" rpy="0 -1.65806278845 -1.5707963259" />
+    <axis xyz="-1 0 0" />
+    <limit lower="0.263" upper="1.396" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_13.0" type="revolute">
+    <parent link="link_12.0" />
+    <child link="link_13.0" />
+    <origin xyz="-0.027 0.005 0.0399" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.105" upper="1.163" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_14.0" type="revolute">
+    <parent link="link_13.0" />
+    <child link="link_14.0" />
+    <origin xyz="0 0 0.0177" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.189" upper="1.644" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_15.0" type="revolute">
+    <parent link="link_14.0" />
+    <child link="link_15.0" />
+    <origin xyz="0 0 0.0514" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-0.162" upper="1.719" effort="15" velocity="7" />
+  </joint>
+  <joint name="joint_15.0_tip" type="fixed">
+    <parent link="link_15.0" />
+    <child link="link_15.0_tip" />
+    <origin xyz="0 0 0.0423" rpy="0 0 0" />
+  </joint>
+</robot>

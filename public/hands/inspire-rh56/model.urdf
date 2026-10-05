@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Inspire RH56 (right). Derived from https://github.com/renesas-rdk/inspire_rh56_hand_description/blob/39bfca04a69912e6561628156d1c63e37698eb75/urdf/reference/inspire_hand_right_ref.urdf ; see LICENSE. Palm subtree only, visual meshes decimated. Root frame: +X fingers, +Y thumb side, +Z back of hand. -->
+<robot name="inspire-rh56">
+  <link name="palm_frame" />
+  <joint name="palm_frame_to_palm" type="fixed">
+    <parent link="palm_frame" />
+    <child link="base" />
+    <origin xyz="0 0 0" rpy="0 1.5708 0" />
+  </joint>
+  <link name="base" />
+  <link name="hand_base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p5" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p6" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p7" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_proximal_base">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p17" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p10" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_intermediate">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p8" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p9" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_distal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p18" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p19" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="index_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="index_intermediate">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p11" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p12" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p13" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="middle_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="middle_intermediate">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p14" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p15" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p16" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="ring_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="ring_intermediate">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p11" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p12" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p13" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pinky_proximal">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p1" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="pinky_intermediate">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p2" />
+      </geometry>
+      <material name="">
+        <color rgba="0.853 0.853 0.853 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p3" />
+      </geometry>
+      <material name="">
+        <color rgba="0.665 0.665 0.665 1" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes.glb#p4" />
+      </geometry>
+      <material name="">
+        <color rgba="0.132 0.132 0.132 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="thumb_tip" />
+  <link name="index_tip" />
+  <link name="middle_tip" />
+  <link name="ring_tip" />
+  <link name="pinky_tip" />
+  <joint name="base_joint" type="fixed">
+    <parent link="base" />
+    <child link="hand_base_link" />
+    <origin xyz="0 0 0" rpy="-1.5707963 0 3.14159" />
+  </joint>
+  <joint name="thumb_proximal_yaw_joint" type="revolute">
+    <parent link="hand_base_link" />
+    <child link="thumb_proximal_base" />
+    <origin xyz="-0.01696 -0.0691 -0.02045" rpy="1.5708 -1.5708 0" />
+    <axis xyz="0 0 -1" />
+    <limit lower="0.0" upper="1.308" effort="1" velocity="0.5" />
+  </joint>
+  <joint name="thumb_proximal_pitch_joint" type="revolute">
+    <parent link="thumb_proximal_base" />
+    <child link="thumb_proximal" />
+    <origin xyz="-0.0088099 0.010892 -0.00925" rpy="1.5708 0 2.8587" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0.6" effort="1" velocity="0.5" />
+  </joint>
+  <joint name="thumb_intermediate_joint" type="revolute">
+    <parent link="thumb_proximal" />
+    <child link="thumb_intermediate" />
+    <origin xyz="0.04407 0.034553 -0.0008" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0.8" effort="1" velocity="0.5" />
+    <mimic joint="thumb_proximal_pitch_joint" multiplier="1.334" offset="0" />
+  </joint>
+  <joint name="thumb_distal_joint" type="revolute">
+    <parent link="thumb_intermediate" />
+    <child link="thumb_distal" />
+    <origin xyz="0.020248 0.010156 -0.0012" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="0.4" effort="1" velocity="0.5" />
+    <mimic joint="thumb_proximal_pitch_joint" multiplier="0.667" offset="0" />
+  </joint>
+  <joint name="index_proximal_joint" type="revolute">
+    <parent link="hand_base_link" />
+    <child link="index_proximal" />
+    <origin xyz="0.00028533 -0.13653 -0.032268" rpy="-3.1067 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.47" effort="1" velocity="0.5" />
+  </joint>
+  <joint name="index_intermediate_joint" type="revolute">
+    <parent link="index_proximal" />
+    <child link="index_intermediate" />
+    <origin xyz="-0.0026138 0.032026 -0.001" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.04545" upper="1.56" effort="1" velocity="0.5" />
+    <mimic joint="index_proximal_joint" multiplier="1.06399" offset="-0.04545" />
+  </joint>
+  <joint name="middle_proximal_joint" type="revolute">
+    <parent link="hand_base_link" />
+    <child link="middle_proximal" />
+    <origin xyz="0.00028533 -0.1371 -0.01295" rpy="-3.1416 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.47" effort="1" velocity="0.5" />
+  </joint>
+  <joint name="middle_intermediate_joint" type="revolute">
+    <parent link="middle_proximal" />
+    <child link="middle_intermediate" />
+    <origin xyz="-0.0024229 0.032041 -0.001" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.04545" upper="1.56" effort="1" velocity="0.5" />
+    <mimic joint="middle_proximal_joint" multiplier="1.06399" offset="-0.04545" />
+  </joint>
+  <joint name="ring_proximal_joint" type="revolute">
+    <parent link="hand_base_link" />
+    <child link="ring_proximal" />
+    <origin xyz="0.00028533 -0.13691 0.0062872" rpy="3.0892 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.47" effort="1" velocity="0.5" />
+  </joint>
+  <joint name="ring_intermediate_joint" type="revolute">
+    <parent link="ring_proximal" />
+    <child link="ring_intermediate" />
+    <origin xyz="-0.0024229 0.032041 -0.001" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.04545" upper="1.56" effort="1" velocity="0.5" />
+    <mimic joint="ring_proximal_joint" multiplier="1.06399" offset="-0.04545" />
+  </joint>
+  <joint name="pinky_proximal_joint" type="revolute">
+    <parent link="hand_base_link" />
+    <child link="pinky_proximal" />
+    <origin xyz="0.00028533 -0.13571 0.025488" rpy="3.0369 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.47" effort="1" velocity="0.5" />
+  </joint>
+  <joint name="pinky_intermediate_joint" type="revolute">
+    <parent link="pinky_proximal" />
+    <child link="pinky_intermediate" />
+    <origin xyz="-0.0024229 0.032041 -0.001" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.04545" upper="1.56" effort="1" velocity="0.5" />
+    <mimic joint="pinky_proximal_joint" multiplier="1.06399" offset="-0.04545" />
+  </joint>
+  <joint name="thumb_tip_joint" type="fixed">
+    <parent link="thumb_distal" />
+    <child link="thumb_tip" />
+    <origin xyz="0.0202 0.0140 -0.006" rpy="0 0 0" />
+  </joint>
+  <joint name="index_tip_joint" type="fixed">
+    <parent link="index_intermediate" />
+    <child link="index_tip" />
+    <origin xyz="-0.0008 0.045 -0.005" rpy="0 0 0" />
+  </joint>
+  <joint name="middle_tip_joint" type="fixed">
+    <parent link="middle_intermediate" />
+    <child link="middle_tip" />
+    <origin xyz="-0.001 0.048 -0.005" rpy="0 0 0" />
+  </joint>
+  <joint name="ring_tip_joint" type="fixed">
+    <parent link="ring_intermediate" />
+    <child link="ring_tip" />
+    <origin xyz="-0.0008 0.045 -0.005" rpy="0 0 0" />
+  </joint>
+  <joint name="pinky_tip_joint" type="fixed">
+    <parent link="pinky_intermediate" />
+    <child link="pinky_tip" />
+    <origin xyz="-0.0008 0.037 -0.005" rpy="0 0 0" />
+  </joint>
+</robot>

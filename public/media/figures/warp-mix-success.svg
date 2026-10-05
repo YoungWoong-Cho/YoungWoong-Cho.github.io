@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="675pt" height="388.8pt" viewBox="0 0 675 388.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Same demonstrations, different retargeting: success rises with the share of WARP-retargeted data</title>
+ <desc>Line chart with 95% intervals. Closed-loop success in the WARP scene for 0, 25, 50, 75 and 100% WARP-retargeted training demos: 0%, 17%, 21%, 29%, 37% (100 rollouts each).</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 388.8 
+L 675 388.8 
+L 675 0 
+L 0 0 
+L 0 388.8 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.375 297.432 
+L 637.875 297.432 
+L 637.875 69.984 
+L 57.375 69.984 
+L 57.375 297.432 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="88.473214" y="310.182" transform="rotate(-0 88.473214 310.182)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="218.049107" y="310.182" transform="rotate(-0 218.049107 310.182)">25%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="347.625" y="310.182" transform="rotate(-0 347.625 310.182)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="477.200893" y="310.182" transform="rotate(-0 477.200893 310.182)">75%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="606.776786" y="310.182" transform="rotate(-0 606.776786 310.182)">100%</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="347.625" y="326.836297" transform="rotate(-0 347.625 326.836297)">Share of WARP-retargeted demos among the 40 training demos (the rest use an IK baseline)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 57.375 297.432 
+L 637.875 297.432 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="300.807" transform="rotate(-0 51.375 300.807)">0%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 57.375 253.692 
+L 637.875 253.692 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_8">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="257.067" transform="rotate(-0 51.375 257.067)">10%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 57.375 209.952 
+L 637.875 209.952 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_9">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="213.327" transform="rotate(-0 51.375 213.327)">20%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 57.375 166.212 
+L 637.875 166.212 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_10">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="169.587" transform="rotate(-0 51.375 169.587)">30%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 57.375 122.472 
+L 637.875 122.472 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_15"/>
+     <g id="text_11">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="125.847" transform="rotate(-0 51.375 125.847)">40%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 57.375 78.732 
+L 637.875 78.732 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #212832; stroke-width: 0.8; stroke-linecap: round"/>
+     </g>
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #98a4b2" x="51.375" y="82.107" transform="rotate(-0 51.375 82.107)">50%</text>
+     </g>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #98a4b2" x="23.748086" y="183.708" transform="rotate(-90 23.748086 183.708)">Task success in the WARP scene</text>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 88.473214 297.432 
+L 88.473214 281.2482 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 218.049107 249.79914 
+L 218.049107 185.6763 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 347.625 235.45242 
+L 347.625 166.29948 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 477.200893 205.53426 
+L 477.200893 128.85804 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 606.776786 174.17268 
+L 606.776786 92.81628 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 82.771875 297.432 
+L 94.174554 297.432 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 212.347768 249.79914 
+L 223.750446 249.79914 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 341.923661 235.45242 
+L 353.326339 235.45242 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 471.499554 205.53426 
+L 482.902232 205.53426 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 601.075446 174.17268 
+L 612.478125 174.17268 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 82.771875 281.2482 
+L 94.174554 281.2482 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 212.347768 185.6763 
+L 223.750446 185.6763 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 341.923661 166.29948 
+L 353.326339 166.29948 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 471.499554 128.85804 
+L 482.902232 128.85804 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+    <path d="M 601.075446 92.81628 
+L 612.478125 92.81628 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-opacity: 0.6; stroke-width: 1.4"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 57.375 297.432 
+L 637.875 297.432 
+" style="fill: none; stroke: #2e3742; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 88.473214 297.432 
+L 218.049107 223.074 
+L 347.625 205.578 
+L 477.200893 170.586 
+L 606.776786 135.594 
+" clip-path="url(#p6597782697)" style="fill: none; stroke: #45d0bd; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 182.818722 289.117719 
+Q 141.268737 292.041024 99.718752 294.964328 
+" style="fill: none; stroke: #66727f; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #98a4b2" x="145.486607" y="283.7106" transform="rotate(-0 145.486607 283.7106)">0 of 100 at 0%: none of its training demos used the WARP robot-base placement</text>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="ma7f8a9aa04" d="M 0 4 
+C 1.060812 4 2.078319 3.578535 2.828427 2.828427 
+C 3.578535 2.078319 4 1.060812 4 0 
+C 4 -1.060812 3.578535 -2.078319 2.828427 -2.828427 
+C 2.078319 -3.578535 1.060812 -4 0 -4 
+C -1.060812 -4 -2.078319 -3.578535 -2.828427 -2.828427 
+C -3.578535 -2.078319 -4 -1.060812 -4 0 
+C -4 1.060812 -3.578535 2.078319 -2.828427 2.828427 
+C -2.078319 3.578535 -1.060812 4 0 4 
+z
+" style="stroke: #0b0d10; stroke-width: 1.5"/>
+    </defs>
+    <g clip-path="url(#p6597782697)">
+     <use xlink:href="#ma7f8a9aa04" x="88.473214" y="297.432" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#ma7f8a9aa04" x="218.049107" y="223.074" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#ma7f8a9aa04" x="347.625" y="205.578" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#ma7f8a9aa04" x="477.200893" y="170.586" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+     <use xlink:href="#ma7f8a9aa04" x="606.776786" y="135.594" style="fill: #45d0bd; stroke: #0b0d10; stroke-width: 1.5"/>
+    </g>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 500; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #e7ecf2" x="209.75625" y="215.336142" transform="rotate(-0 209.75625 215.336142)">17%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 500; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #e7ecf2" x="339.332143" y="197.840142" transform="rotate(-0 339.332143 197.840142)">21%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 500; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #e7ecf2" x="468.908036" y="162.848142" transform="rotate(-0 468.908036 162.848142)">29%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 500; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: end; fill: #e7ecf2" x="598.483929" y="127.856142" transform="rotate(-0 598.483929 127.856142)">37%</text>
+   </g>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 600; font-size: 13.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #e7ecf2" x="8.1" y="23.733" transform="rotate(-0 8.1 23.733)">Same demonstrations, different retargeting: success rises with the share of WARP data</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #98a4b2" x="8.1" y="49.09554" transform="rotate(-0 8.1 49.09554)">Each training set holds the same 40 source demonstrations; only how they are retargeted to the robot changes.</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(8.1 356.266444)">Simulation: DexMimicGen coffee task on a Rainbow RB-Y1. Each point: 2 training seeds × 50 rollouts = 100; bars = Wilson 95% interval.</text>
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(8.1 367.236756)">The two retargetings place the robot base about 17 cm apart, so the 0% policy never trained in this scene layout.</text>
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #98a4b2" transform="translate(8.1 378.313319)">40 of the 50 evaluation start states come from training demos; on the 10 unseen ones the trend is unclear (20/25/35/25% at 25–100%, n = 20 each).</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6597782697">
+   <rect x="57.375" y="69.984" width="580.5" height="227.448"/>
+  </clipPath>
+ </defs>
+</svg>
