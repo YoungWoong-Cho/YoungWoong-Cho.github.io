@@ -76,7 +76,7 @@ export const projects: Project[] = [
     slug: "retargeted-demonstrations",
     title: "What Makes Retargeted Demonstrations Learnable?",
     oneLiner:
-      "Retargeting the same human demonstrations in two different ways gave policies with very different success rates. I want to know which properties of the retargeted actions cause that.",
+      "Retargeting the same human demonstrations in two different ways gave policies with very different success rates. I studied which properties of the retargeted actions cause that.",
     ogImage: "/media/figures/warp-mix-success.png",
     cover: {
       kind: "image",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       { type: "h", text: "Question" },
       {
         type: "p",
-        text: "Retargeting maps human motion onto a robot. In a follow-up to WARP, two retargeting methods applied to the same source demonstrations produced policies with very different success (14% vs 37% on a coffee task in simulation, each evaluated in its own scene layout). I'm studying which properties of the action data, such as consistency, smoothness, diversity, and how well actions can be predicted from observations, make demonstrations easier to imitate.",
+        text: "Retargeting maps human motion onto a robot. In a follow-up to WARP, two retargeting methods applied to the same source demonstrations produced policies with very different success (14% vs 37% on a coffee task in simulation, each evaluated in its own scene layout). I studied which properties of the action data, such as consistency, smoothness, diversity, and how well actions can be predicted from observations, make demonstrations easier to imitate.",
       },
       { type: "h", text: "What I did" },
       {
@@ -108,7 +108,7 @@ export const projects: Project[] = [
         caption: "Same task, two demonstrators, clearly different motion in the retargeted data.",
         wide: true,
       },
-      { type: "h", text: "Findings so far" },
+      { type: "h", text: "Findings" },
       {
         type: "media",
         media: {
@@ -121,7 +121,7 @@ export const projects: Project[] = [
       },
       {
         type: "p",
-        text: "In the WARP scene, success goes up as the share of WARP-retargeted data increases. The two methods also place the robot base about 17 cm apart, though, so I haven't separated the effect of the scene layout from the effect of the data yet. None of the dataset-level metrics follows success consistently across tasks. Looking at individual frames shows a clearer pattern: the policy makes larger errors where its nearest training demonstrations disagree about the next action.",
+        text: "In the WARP scene, success goes up as the share of WARP-retargeted data increases. The two methods also place the robot base about 17 cm apart, though, so this result does not separate the effect of the scene layout from the effect of the data. None of the dataset-level metrics follows success consistently across tasks. Looking at individual frames shows a clearer pattern: the policy makes larger errors where its nearest training demonstrations disagree about the next action.",
       },
       {
         type: "media",
@@ -133,6 +133,11 @@ export const projects: Project[] = [
         caption:
           "Same trend in all 6 datasets (3 tasks × 2 retargeting methods, Spearman ρ 0.25 to 0.50). This is a correlation from open-loop evaluation. The policies are Zhenyang Chen's checkpoints and the analysis is mine.",
         wide: true,
+      },
+      { type: "h", text: "What came next" },
+      {
+        type: "p",
+        text: "The dataset-level metrics did not predict closed-loop success well enough to guide data collection, so I closed this study. The project now asks a more direct question: how well can a policy trained only on human demonstrations work on the real RBY1, and which observation choices, such as aligned viewpoints, point clouds versus RGB, and removing the human hand from the input, close the gap?",
       },
     ],
     credits: [

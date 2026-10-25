@@ -26,7 +26,7 @@ export const experience: ExperienceItem[] = [
     role: "Graduate Researcher, advised by Prof. Danfei Xu",
     period: "Aug 2026 – present",
     place: "Atlanta, GA",
-    note: "Cross-embodiment dexterous manipulation and learning from retargeted demonstrations.",
+    note: "Learning mobile manipulation from human demonstrations alone, and cross-embodiment dexterous manipulation.",
     href: "https://rl2.cc.gatech.edu/",
   },
   {
