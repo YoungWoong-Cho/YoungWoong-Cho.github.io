@@ -114,3 +114,21 @@ export const earlierProjects: { title: string; context: string; text: string; li
     text: "LiDAR- and RGB-based localization, mapping, and path planning in ROS, plus an OCR-based stop-sign classifier. Placed 2nd in autonomous navigation and 3rd in vehicle design.",
   },
 ];
+
+export const explainers: {
+  title: string;
+  context: string;
+  text: string;
+  video: string;
+  poster: string;
+  tags: string[];
+}[] = [
+  {
+    title: "How a Diffusion Transformer Generates Robot Actions",
+    context: "Animated explainer, 3 min, narrated",
+    text: "An explainer I made with Manim: an action chunk as a table of future joint commands, why the model is trained to predict the added noise, how the transformer attends over image, state and language tokens, and how repeated denoising turns random noise into a motion.",
+    video: "/media/videos/dit-explainer.mp4",
+    poster: "/media/videos/dit-explainer.jpg",
+    tags: ["Diffusion policy", "DiT", "Manim"],
+  },
+];

@@ -79,6 +79,87 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "vision-pro-teleop",
+    title: "Vision Pro Teleoperation for Dexterous Hands",
+    oneLiner:
+      "I built an Apple Vision Pro teleoperation setup for seven simulated robot hands and recorded 357 grasping demonstrations with it. On hardware, I teleoperate a Wuji Hand 2 with the Vision Pro to collect tactile data.",
+    affiliation: "Georgia Tech RL2",
+    tags: ["Apple Vision Pro", "Teleoperation", "Isaac Lab", "Tactile sensing"],
+    ogImage: "/media/videos/wuji2-tactile-teleop.jpg",
+    cover: {
+      kind: "video",
+      src: "/media/videos/wuji2-tactile-teleop.mp4",
+      poster: "/media/videos/wuji2-tactile-teleop.jpg",
+      alt: "Wearing an Apple Vision Pro, I move my hand and a Wuji Hand 2 on a Franka arm follows; a colleague touches the robot fingers.",
+    },
+    body: [
+      { type: "h", text: "What it does" },
+      {
+        type: "p",
+        text: "The operator wears an Apple Vision Pro and simply moves their hand. Hand and head poses stream to a GPU machine running Isaac Sim, get retargeted to whichever robot hand is loaded, and the rendered scene streams back into the headset, so the operator sees the robot hand in 3D and steers it like their own. Each successful grasp is saved as a training demonstration.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "image",
+          src: "/media/figures/teleop-pipeline.svg",
+          alt: "Pipeline: Vision Pro hand tracking, GPU session with Isaac Sim, retargeting, 60 Hz simulation of 7 hands, the view streamed back, then episode loop, dataset, review and conversion.",
+        },
+        caption: "Teal boxes are the parts I built or extended; grey boxes are the existing tools underneath.",
+        wide: true,
+      },
+      { type: "h", text: "What I built" },
+      {
+        type: "list",
+        items: [
+          "A one-click launcher that starts a full teleoperation session (Isaac Sim, the CloudXR runtime and the task) on a lab workstation or a Slurm GPU node, without Docker.",
+          "An in-headset control panel, added to NVIDIA's open-source visionOS client. It follows the operator's view, shows the task, and has Start, Restart episode and End collection buttons, plus clear error messages.",
+          "Six more robot hands next to the Shadow hand that DexVerse ships with: Inspire RH56, Allegro, LEAP, Sharpa Wave, Wuji and Wuji 2, each with a URDF bundle, DexPilot finger mapping and mimic-joint fixes.",
+          "The recording loop: an episode is saved once the cube is lifted 20 cm and held for 10 steps. Tracking dropouts under 0.5 s resume the episode; longer ones discard it. Recordings are then checked in a 3D replay and converted into the shared wrist + fingertip action labels used for training.",
+          "A small native visionOS app that records ARKit hand and head poses on the headset and exports them as JSON lines, for capturing human motion without the simulator.",
+        ],
+      },
+      { type: "h", text: "Demonstrations" },
+      {
+        type: "p",
+        text: "With this setup I recorded 357 Pick Cube demonstrations myself: 51 for each of the seven hands, each 1.4 to 2.7 seconds of simulated time at 60 Hz. They are the training data for the cross-embodiment project (One Action Interface, Seven Dexterous Hands).",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/teleop-seven-hands.mp4",
+          poster: "/media/videos/teleop-seven-hands.jpg",
+          alt: "Seven robot hands, each reaching for, grasping and lifting a blue cube in a recorded demonstration.",
+        },
+        caption: "The first recorded demonstration for each of the seven hands, replayed from the saved camera images at half speed.",
+        wide: true,
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/teleop-shadow-demos.mp4",
+          poster: "/media/videos/teleop-shadow-demos.jpg",
+          alt: "Five Shadow-hand demonstrations: the hand grasps and lifts the cube.",
+        },
+        caption: "Five saved Shadow-hand demonstrations, re-rendered for review.",
+        wide: true,
+      },
+      { type: "h", text: "On a real robot" },
+      {
+        type: "p",
+        text: "The video at the top is the same idea on hardware: I teleoperate a Wuji Hand 2 on a Franka arm with the Vision Pro while the hand's tactile readings are recorded, here while a colleague touches the robot fingers.",
+      },
+    ],
+    credits: [
+      "Advisor: Prof. Danfei Xu.",
+      "Headset app: NVIDIA's open-source Isaac XR teleop sample client for Apple Vision Pro, which I patched. Streaming and simulation: NVIDIA CloudXR, Isaac Sim and Isaac Lab.",
+      "Pick Cube task, wrist retargeter and the original VR recorder: DexVerse by Yunchao Yao.",
+      "Robot hand models: open-source URDFs from the hand makers (sources on the cross-embodiment project page).",
+    ],
+  },
+  {
     slug: "retargeted-demonstrations",
     title: "What Makes Retargeted Demonstrations Learnable?",
     oneLiner:
@@ -232,6 +313,17 @@ export const projects: Project[] = [
       {
         type: "media",
         media: {
+          kind: "image",
+          src: "/media/figures/gam-architecture.png",
+          alt: "Diagram of GAM: a frozen geometry foundation model split at layer 12, a causal future predictor, and action, depth and feature losses.",
+        },
+        caption:
+          "GAM as published, in a diagram I drew while porting it. Blue: pretrained and frozen. Orange: trained with GAM. Purple: training losses.",
+        wide: true,
+      },
+      {
+        type: "media",
+        media: {
           kind: "video",
           src: "/media/videos/dexjoco-hanoi-depth.mp4",
           poster: "/media/videos/dexjoco-hanoi-depth.jpg",
@@ -240,6 +332,17 @@ export const projects: Project[] = [
         caption:
           "The policy's predicted depth for the next step (middle) next to the depth that actually follows (right). The prediction is smoother and misses thin parts like the peg.",
         wide: true,
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/gam-attention-hanoi.mp4",
+          poster: "/media/videos/gam-attention-hanoi.jpg",
+          alt: "Attention heat maps over the front and both wrist cameras at four layers during a Tower of Hanoi episode.",
+        },
+        caption:
+          "Where the action tokens look: attention from GAM's action tokens to image patches in the front, left-wrist and right-wrist cameras (columns) at four layers (rows), over the same Tower of Hanoi task.",
       },
       { type: "h", text: "Fine-tuning and benchmarking VLAs" },
       {
@@ -270,7 +373,17 @@ export const projects: Project[] = [
       { type: "h", text: "Reproducible evaluation" },
       {
         type: "p",
-        text: "Running the same seed twice changed the outcome in 22.5% of episodes. The causes were unseeded flow-matching noise in the policy and nondeterministic GPU rendering. After fixing both, reruns gave identical results, so we could tell real differences between models apart from noise. I also built the training and evaluation platform for these runs across three compute clusters.",
+        text: "Running the same seed twice changed the outcome in 22.5% of episodes. The causes were unseeded flow-matching noise in the policy and nondeterministic GPU rendering. After fixing both, reruns gave identical results, so we could tell real differences between models apart from noise. I also built the training and evaluation platform for these runs: a web console that launches, monitors and collects results for training and evaluation jobs on two Slurm clusters and a Kubernetes cluster.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "image",
+          src: "/media/images/train-eval-console.jpg",
+          alt: "The training and evaluation console: a running DexJoCo evaluation job with per-GPU memory on 8 H200 GPUs.",
+        },
+        caption: "The console's job page: an 11-task DexJoCo evaluation running on 8 H200 GPUs, with progress and scheduler state.",
+        wide: true,
       },
       {
         type: "media",
@@ -287,6 +400,64 @@ export const projects: Project[] = [
     credits: [
       "Work done as a Research Engineer at RLWRLD.",
       "DexJoCo benchmark: Wang et al., arXiv 2605.16257. GAM: Han et al., arXiv 2606.17046. GR00T N1.6: NVIDIA. π0.5: Physical Intelligence.",
+    ],
+  },
+  {
+    slug: "robot-state-tokens",
+    title: "Splitting Robot State into Tokens in GR00T N1.6",
+    oneLiner:
+      "GR00T N1.6 packs a humanoid's 48 joint values into a single token. Splitting them into 11 tokens raised simulated success from 35.8% to 41.5% without adding any parameters.",
+    affiliation: "RLWRLD, Research Engineer",
+    tags: ["GR00T N1.6", "VLA", "Humanoid", "Isaac Sim"],
+    ogImage: "/media/figures/state-tokens.png",
+    cover: {
+      kind: "image",
+      src: "/media/figures/state-tokens.svg",
+      alt: "Task success against the number of robot-state tokens: 35.8% with 1 token, about 41.5% with 11 or 15 tokens.",
+    },
+    card: {
+      kind: "image",
+      src: "/media/images/allex-state-groups.jpg",
+      alt: "ALLEX humanoid joints, colored by the state token each joint is grouped into.",
+    },
+    body: [
+      { type: "h", text: "Question" },
+      {
+        type: "p",
+        text: "GR00T N1.6 encodes the robot's whole joint state as one token, while the camera images and the instruction get many. For the ALLEX humanoid that means 48 numbers squeezed into a single token. Does the policy do better if the body gets more tokens?",
+      },
+      { type: "h", text: "What I did" },
+      {
+        type: "list",
+        items: [
+          "Split the 48 joint values into K equal-sized random groups, zero-padded each group to the same length, and passed every group through the existing state encoder, so the model sees K state tokens. Everything else in the model stays the same and no parameters are added.",
+          "Trained GR00T N1.6 on three ALLEX manipulation tasks in Isaac Sim (cube into box, cube stacking, cylinder into tube) for K from 1 to 48, with three random groupings for each K between 3 and 15.",
+          "Evaluated every model at three object offsets, 70 episodes × 3 runs each.",
+        ],
+      },
+      {
+        type: "media",
+        media: {
+          kind: "image",
+          src: "/media/images/allex-state-groups.jpg",
+          alt: "ALLEX humanoid joints, colored by the state token each joint is grouped into.",
+        },
+        caption: "ALLEX joints colored by the state token they are grouped into, for one random grouping.",
+      },
+      { type: "h", text: "Result" },
+      {
+        type: "p",
+        text: "With 11 or 15 tokens, mean success rose from 35.8% to about 41.5%, with little spread across groupings (±0.6 and ±0.9 points). More tokens is not simply better: 3 tokens did slightly worse than the baseline and 5 to 9 tokens stayed close to it. One token per joint (48) scored highest at 44.0%, but that is a single configuration I have not repeated yet.",
+      },
+      { type: "h", text: "What didn't help" },
+      {
+        type: "p",
+        text: "Two follow-ups did not beat random groups. Choosing the groups by mutual information between joints or by body part gave about 42% at best, the same as random groups. Giving each part its own encoder, or conditioning a shared encoder on the part with FiLM, made results worse (32.8% and 33.7% against 41.6%).",
+      },
+    ],
+    credits: [
+      "Work done as a Research Engineer at RLWRLD.",
+      "GR00T N1.6: NVIDIA. ALLEX humanoid simulation and tasks: RLWRLD.",
     ],
   },
 ];

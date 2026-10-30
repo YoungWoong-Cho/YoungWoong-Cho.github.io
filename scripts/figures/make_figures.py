@@ -328,7 +328,123 @@ def fig_stages():
            "completed 1, 1, 0. 45-trial evaluation: approached 31, 19, 41; completed 6, 0, 0.")
 
 
-FIGS = {"a": fig_hat, "b": fig_warp, "c": fig_learnability, "d": fig_style, "e": fig_dexjoco, "f": fig_stages}
+# ------------------------------------------------------------------------------------------------ G
+def fig_state_tokens():
+    pts = load("state_tokens.json")["points"]
+    fig = plt.figure(figsize=(S.WIDTH_IN, 5.0))
+    ax = fig.add_axes([0.075, 0.2, 0.9, 0.6])
+    base = pts[0]["mean"]
+    ax.axhline(base, color=S.LINE_STRONG, lw=1, ls=(0, (3, 3)), zorder=1)
+    ax.text(len(pts) - 0.45, base + 0.3, f"1 token (GR00T N1.6 default): {base:.1f}%", ha="right", va="bottom",
+            fontsize=8.5, color=S.MUTED)
+    for i, q in enumerate(pts):
+        good = q["k"] in (11, 15)
+        col = S.TEAL if good else (S.ORANGE if q["k"] == 1 else S.MUTED)
+        if q["sd"]:
+            ax.plot([i, i], [q["mean"] - q["sd"], q["mean"] + q["sd"]], color=col, lw=1.4, alpha=0.7, zorder=2)
+        single = q["sd"] is None
+        ax.scatter([i], [q["mean"]], s=70 if good else 52, color="none" if single and q["k"] != 1 else col,
+                   edgecolors=col, linewidths=1.8, zorder=4)
+        ax.text(i, q["mean"] + (q["sd"] or 0) + 0.5, f"{q['mean']:.1f}%", ha="center", va="bottom", fontsize=9,
+                color=S.FG, fontweight="medium" if good else "normal")
+    ax.set_xticks(range(len(pts)))
+    ax.set_xticklabels([str(q["k"]) for q in pts])
+    ax.set_xlabel("Number of state tokens (48 joint values split into equal random groups)", labelpad=8)
+    ax.set_ylabel("Task success", labelpad=8)
+    ax.set_ylim(29, 46.5)
+    ax.set_yticks(range(30, 47, 5))
+    ax.set_yticklabels([f"{y}%" for y in range(30, 47, 5)])
+    ax.set_xlim(-0.5, len(pts) - 0.5)
+    S.clean_axes(ax, grid_axis="y")
+    S.header(fig, "Giving the humanoid's joint state more tokens in GR00T N1.6",
+             "Mean success over three manipulation tasks in simulation. 11 or 15 tokens add about 6 points with no new "
+             "parameters; 3 to 9 tokens stay near the baseline.")
+    S.footnote(fig,
+               "ALLEX humanoid, 48 joint values; tasks: cube into box, cube stacking, cylinder into tube, each at 3 object "
+               "offsets × 70 episodes × 3 evaluation runs. Action horizon 16.\n"
+               "Whiskers: ±1 SD over 3 random grouping seeds (3-15 tokens). 1 and 48 tokens are single configurations "
+               "(48 shown hollow: not yet repeated).")
+    S.save(fig, "state-tokens", "Task success vs number of robot-state tokens in GR00T N1.6",
+           "Dot plot. Mean success: 1 token 35.8%, 3: 33.7%, 5: 38.2%, 7: 35.1%, 9: 37.4%, 11: 41.5%, 15: 41.6%, "
+           "48: 44.0%.")
+
+
+# ------------------------------------------------------------------------------------------------ H
+def fig_teleop():
+    """Pipeline diagram of the Vision Pro -> Isaac Sim teleoperation setup (no data file)."""
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+
+    mine_fill, mine_edge = "#e3f3f0", S.TEAL
+    base_fill, base_edge = "#f1f1ef", S.LINE_STRONG
+    fig = plt.figure(figsize=(S.WIDTH_IN, 6.0))
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 64)
+    ax.axis("off")
+
+    def box(x, y, w, h, title, lines, mine):
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0,rounding_size=1.2", linewidth=1.3,
+                                    facecolor=mine_fill if mine else base_fill,
+                                    edgecolor=mine_edge if mine else base_edge, zorder=2))
+        ax.text(x + w / 2, y + h - 2.1, title, ha="center", va="top", fontsize=10, fontweight="semibold",
+                color=S.FG, zorder=3)
+        ax.text(x + w / 2, y + h - 5.4, "\n".join(lines), ha="center", va="top", fontsize=8.6, color=S.MUTED,
+                linespacing=1.45, zorder=3)
+
+    def arrow(x0, y0, x1, y1, label=None, lx=None, ly=None, rad=0.0, ha="center"):
+        ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>", mutation_scale=12, linewidth=1.3,
+                                     color=S.FG, connectionstyle=f"arc3,rad={rad}", zorder=1))
+        if label:
+            ax.text(lx if lx is not None else (x0 + x1) / 2, ly if ly is not None else (y0 + y1) / 2 + 1.2, label,
+                    ha=ha, va="bottom", fontsize=8.2, color=S.MUTED, zorder=3)
+
+    S.header(fig, "How the Vision Pro teleoperation works",
+             "Teal: what I built or extended. Grey: existing pieces I built on (NVIDIA Isaac Lab and CloudXR, DexVerse).",
+             top=0.975)
+    # top row: the existing stack
+    w, h, y = 21.5, 13.0, 36.0
+    xs = [1.5, 26.5, 51.5, 76.5]
+    box(xs[0], y, w, h, "Apple Vision Pro", ["hand + head tracking", "NVIDIA CloudXR client"], False)
+    box(xs[1], y, w, h, "GPU session", ["Isaac Sim 5.1 + Isaac Lab 2.3.2", "CloudXR runtime, RTX 4090"], False)
+    box(xs[2], y, w, h, "Retargeting", ["wrist: absolute pose", "fingers: DexPilot"], False)
+    box(xs[3], y, w, h, "Simulation, 60 Hz", ["7 robot hands", "Pick Cube task (DexVerse)"], False)
+    # my additions under the matching boxes
+    sw, sh, sy = 21.5, 10.0, 23.5
+    box(xs[0], sy, sw, sh, "In-headset panel", ["Start / Restart / End,", "task text, error messages"], True)
+    box(xs[1], sy, sw, sh, "One-click launcher", ["workstation or Slurm node,", "no Docker"], True)
+    box(xs[2], sy, sw, sh, "6 more hands", ["URDF import, DexPilot maps,", "mimic-joint fixes"], True)
+    # bottom row, read right to left (U-shaped flow)
+    bw, bh, by = 29.5, 14.0, 2.5
+    bx = [67.5, 35.25, 3.0]
+    box(bx[0], by, bw, bh, "Episode loop", ["save when the cube is lifted 20 cm", "and held for 10 steps;",
+                                           "resume after tracking dropouts < 0.5 s"], True)
+    box(bx[1], by, bw, bh, "Dataset", ["357 demonstrations", "51 per hand, 1.4-2.7 s each"], True)
+    box(bx[2], by, bw, bh, "Review and convert", ["3D replay check", "wrist + 5 fingertip action labels",
+                                                 "for policy training"], True)
+    # arrows along the top row
+    ym = y + h / 2
+    for i in range(3):
+        arrow(xs[i] + w + 0.4, ym, xs[i + 1] - 0.4, ym)
+    # stream back to the headset
+    ax.add_patch(FancyArrowPatch((xs[3] + w / 2, y + h), (xs[0] + w / 2, y + h), arrowstyle="-|>",
+                                 mutation_scale=12, linewidth=1.3, color=S.TEAL, linestyle=(0, (4, 3)),
+                                 connectionstyle="arc3,rad=0.1", zorder=1))
+    ax.text(50, y + h + 4.6, "rendered stereo view streamed back to the headset (CloudXR)", ha="center", va="bottom",
+            fontsize=8.4, color=S.TEAL)
+    # down into the episode loop, then right to left along the bottom row
+    cx = xs[3] + w / 2
+    arrow(cx, y - 0.4, cx, by + bh + 0.4)
+    ax.text(cx + 1.0, (y + by + bh) / 2, "every\nstep", ha="left", va="center", fontsize=8.2, color=S.MUTED,
+            linespacing=1.3)
+    arrow(bx[0] - 0.4, by + bh / 2, bx[1] + bw + 0.4, by + bh / 2)
+    arrow(bx[1] - 0.4, by + bh / 2, bx[2] + bw + 0.4, by + bh / 2)
+    S.save(fig, "teleop-pipeline", "How the Vision Pro teleoperation works",
+           "Diagram: Vision Pro hand tracking is streamed over CloudXR to Isaac Sim, retargeted to joint targets for 7 "
+           "robot hands, and the rendered view is streamed back. My additions: in-headset panel, one-click launcher, "
+           "6 imported hands, episode loop, dataset of 357 demos, review and conversion.")
+
+
+FIGS = {"a": fig_hat, "b": fig_warp, "c": fig_learnability, "d": fig_style, "e": fig_dexjoco, "f": fig_stages, "g": fig_state_tokens, "h": fig_teleop}
 
 if __name__ == "__main__":
     S.setup()

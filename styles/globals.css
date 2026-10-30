@@ -563,8 +563,20 @@ h3 {
   margin: 8px 0 4px;
 }
 
-.block-media .panel:has(.media-image[src$=".svg"]) {
+.block-media:not(.wide) {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-media .panel:has(.media-image[src$=".svg"]),
+.project-cover:has(.media-image[src$=".svg"]) {
   background: var(--bg);
+}
+
+.project-cover .media-image[src$=".svg"] {
+  padding: 16px;
 }
 
 .block-media .media-image[src$=".svg"] {
