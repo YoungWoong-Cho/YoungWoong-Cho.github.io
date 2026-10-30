@@ -13,6 +13,10 @@ export type Project = {
   slug: string;
   title: string;
   oneLiner: string;
+  /** Where the work was done, shown under the title on the home page. */
+  affiliation: string;
+  /** Short topic tags shown on the home page. */
+  tags: string[];
   /** Shown at the top of the project page (and on the home card unless `card` is set). */
   cover: Media;
   /** Lighter media for the home-page card. */
@@ -28,6 +32,8 @@ export const projects: Project[] = [
     slug: "cross-embodiment-hands",
     title: "One Action Interface, Seven Dexterous Hands",
     oneLiner: "Can a policy trained on several robot hands control a hand it has never seen?",
+    affiliation: "Georgia Tech RL2, advised by Prof. Danfei Xu",
+    tags: ["Cross-embodiment", "Dexterous hands", "Isaac Sim", "Vision Pro teleoperation"],
     cover: { kind: "hands" },
     card: {
       kind: "image",
@@ -77,6 +83,8 @@ export const projects: Project[] = [
     title: "What Makes Retargeted Demonstrations Learnable?",
     oneLiner:
       "Retargeting the same human demonstrations in two different ways gave policies with very different success rates. I studied which properties of the retargeted actions cause that.",
+    affiliation: "Georgia Tech RL2, part of the WARP project",
+    tags: ["Human demonstrations", "Retargeting", "Point clouds", "Rainbow RB-Y1"],
     ogImage: "/media/figures/warp-mix-success.png",
     cover: {
       kind: "image",
@@ -137,13 +145,69 @@ export const projects: Project[] = [
       { type: "h", text: "What came next" },
       {
         type: "p",
-        text: "The dataset-level metrics did not predict closed-loop success well enough to guide data collection, so I closed this study. The project now asks a more direct question: how well can a policy trained only on human demonstrations work on the real RBY1, and which observation choices, such as aligned viewpoints, point clouds versus RGB, and removing the human hand from the input, close the gap?",
+        text: "The dataset-level metrics did not predict closed-loop success well enough to guide data collection, so I closed this study. The project now asks a more direct question: how well can a policy trained only on human demonstrations work on the RBY1? The policies take point clouds as input, with the human hand removed from the cloud.",
+      },
+      { type: "h", text: "Current work: steering toward the object" },
+      {
+        type: "p",
+        text: "Policies trained only on the human demonstrations do reach and pick up the basket in simulation, but they don't steer toward it. In the human demonstrations, wherever the basket starts sideways, it ends up in the same place in front of the body by first contact (slope 0.00 across 53 demos). The baseline policy carries the starting offset straight into contact (slope 1.13 across 29 simulated trials), and the basket ends up 31 cm to its right on average.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/warp-sim-rollout.mp4",
+          poster: "/media/videos/warp-sim-rollout.jpg",
+          alt: "A policy trained only on human demonstrations picks up the basket with the RB-Y1 in simulation.",
+        },
+        caption:
+          "A successful simulated rollout of a policy trained only on human demonstrations. Left: third-person view. Right: the simulated egocentric (Aria) camera.",
+        wide: true,
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/warp-basket-offset.mp4",
+          poster: "/media/videos/warp-basket-offset.jpg",
+          alt: "Top-down rollouts and trajectory plots: humans correct the basket's sideways offset before contact, the policy does not.",
+        },
+        caption:
+          "Where the basket is relative to the body on the way to it. Human demonstrations (blue) correct the starting offset before contact; the baseline policy (orange) keeps it.",
+        wide: true,
+      },
+      {
+        type: "p",
+        text: "I'm testing a change to the model structure: plan the base motion relative to the basket's position. In simulation it brings the robot to the basket in 30 of 30 trials, against 13 for the baseline. It doesn't lift the basket more often, though, so full-task success hasn't improved yet. On a second set of 45 recorded layouts it approached the basket in 41 cases (baseline 31), while the baseline finished more full tasks (6 vs 0).",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/warp-same-scene.mp4",
+          poster: "/media/videos/warp-same-scene.jpg",
+          alt: "Top-down view of the same scene for three policy variants: the baseline sidesteps left, the basket-anchored variant lines up on the basket.",
+        },
+        caption:
+          "Same scene, three variants, seen from above (approach only, simulation, 2x speed). The basket starts 26 cm to the right; yellow dots trace the robot base. C0 sidesteps left and leaves the basket off to its right, C2 lines up on it. None of them lifts the basket in this scene.",
+        wide: true,
+      },
+      {
+        type: "media",
+        media: {
+          kind: "image",
+          src: "/media/figures/human-only-stages.svg",
+          alt: "Grouped bars: how many trials reached, lifted, and finished the basket task for three policy variants.",
+        },
+        caption: "All results in simulation. These policies have not been run on the real robot yet.",
+        wide: true,
       },
     ],
     credits: [
       "Advisor: Prof. Danfei Xu.",
       "Part of the WARP project in RL2, led by Chuye Zhang (WARP: arXiv 2606.29940).",
-      "DexMimicGen retargeted datasets, the baseline checkpoints used in the last figure, and the training and rollout code: Zhenyang Chen. I trained the 14 policies for the controlled study with that setup and did the analysis.",
+      "DexMimicGen retargeted datasets, the baseline checkpoints used in the learnability figure, and the training and rollout code: Zhenyang Chen. I trained the 14 policies for the controlled study with that setup and did the analysis.",
+      "Basket simulation for the RB-Y1, its renderer, and the baseline human-only policy: Chuye Zhang. Evaluation, analysis, and the basket-anchored variant: mine.",
     ],
   },
   {
@@ -151,6 +215,8 @@ export const projects: Project[] = [
     title: "Adapting Robot Foundation Models to a 16-DoF Hand",
     oneLiner:
       "At RLWRLD I worked on getting large pretrained policies (GR00T N1.6, π0.5, and a 3D geometry-aware policy) to work on DexJoCo, a public benchmark with 11 dexterous manipulation tasks.",
+    affiliation: "RLWRLD, Research Engineer",
+    tags: ["GR00T N1.6", "π0.5", "GAM", "DexJoCo"],
     cover: {
       kind: "video",
       src: "/media/videos/gam-water-plant-before-after.mp4",

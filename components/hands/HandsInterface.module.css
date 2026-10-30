@@ -1,20 +1,23 @@
+/* The 3D viewer keeps a dark stage on the light site so the pale hand meshes stay visible. */
 .root {
-  --h-bg: var(--bg-panel, #14181e);
-  --h-line: var(--line, #212832);
-  --h-fg: var(--fg, #e7ecf2);
-  --h-muted: var(--fg-muted, #98a4b2);
-  --h-dim: var(--fg-dim, #7d8996);
-  --h-accent: var(--action, #45d0bd);
-  --h-amber: var(--vision, #f0a04b);
-  --h-warn: var(--warn, #e5677f);
-  --h-mono: var(--font-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --h-bg: #14181e;
+  --h-line: #212832;
+  --h-line-strong: #2e3742;
+  --h-fg: #e7ecf2;
+  --h-muted: #98a4b2;
+  --h-dim: #7d8996;
+  --h-accent: #45d0bd;
+  --h-amber: #f0a04b;
+  --h-warn: #e5677f;
+  --h-mono: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 
   position: relative;
   width: 100%;
   margin: 0;
-  font-family: var(--font-sans), Inter, ui-sans-serif, system-ui, sans-serif;
-  border: 1px solid var(--h-line);
-  border-radius: var(--radius, 10px);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
   background:
     radial-gradient(120% 90% at 50% 38%, rgba(69, 208, 189, 0.05), transparent 60%),
     var(--h-bg);
@@ -151,7 +154,7 @@
 .preset:hover,
 .play:hover {
   color: var(--h-fg);
-  border-color: var(--line-strong, #2e3742);
+  border-color: var(--h-line-strong);
 }
 
 .preset[aria-pressed="true"] {
@@ -240,4 +243,60 @@
 
 .credits:hover {
   color: inherit;
+}
+
+.root :focus-visible {
+  outline-color: var(--h-accent);
+}
+
+.root input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  cursor: ew-resize;
+  display: block;
+}
+
+.root input[type="range"]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--h-line-strong);
+  border-radius: 2px;
+}
+
+.root input[type="range"]::-moz-range-track {
+  height: 2px;
+  background: var(--h-line-strong);
+  border-radius: 2px;
+}
+
+.root input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  margin-top: -5.5px;
+  border-radius: 50%;
+  background: var(--h-fg);
+  border: none;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.root input[type="range"]::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--h-fg);
+  border: none;
+}
+
+.root input[type="range"]:hover::-webkit-slider-thumb,
+.root input[type="range"]:focus-visible::-webkit-slider-thumb {
+  background: var(--h-accent);
+  transform: scale(1.15);
+}
+
+.root input[type="range"]:focus-visible {
+  outline: none;
 }

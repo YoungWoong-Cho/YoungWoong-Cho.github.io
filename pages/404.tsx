@@ -4,10 +4,10 @@ import { Layout } from "../components/site/Layout";
 export default function NotFound() {
   return (
     <Layout title="Not found" path="/404">
-      <section className="page hero">
+      <section className="not-found">
         <p className="eyebrow">404</p>
-        <h1 className="hero-name">Page not found</h1>
-        <p className="hero-sub">
+        <h1>Page not found</h1>
+        <p>
           <Link href="/">Back to the home page</Link>
         </p>
       </section>

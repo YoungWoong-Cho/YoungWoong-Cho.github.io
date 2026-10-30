@@ -1,4 +1,4 @@
-"""Shared look for the portfolio figures: dark site theme, transparent SVG, text kept as text."""
+"""Shared look for the portfolio figures: light site theme, transparent SVG, text kept as text."""
 import os
 import re
 from pathlib import Path
@@ -10,16 +10,16 @@ import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib import font_manager  # noqa: E402
 
 # site tokens (styles/globals.css)
-BG = "#0b0d10"
-PANEL = "#14181e"
-LINE = "#212832"
-LINE_STRONG = "#2e3742"
-FG = "#e7ecf2"
-MUTED = "#98a4b2"
-DIM = "#66727f"
-TEAL = "#45d0bd"      # the author's main result
-ORANGE = "#f0a04b"    # comparison / baseline
-RED = "#e5677f"       # failure
+BG = "#ffffff"
+PANEL = "#f6f6f4"
+LINE = "#e6e6e6"
+LINE_STRONG = "#c8c8c8"
+FG = "#1b1b1b"
+MUTED = "#5c5c5c"
+DIM = "#8a8a8a"
+TEAL = "#0f8f7f"      # the author's main result
+ORANGE = "#e07b1a"    # comparison / baseline
+RED = "#c8364f"       # failure
 
 WIDTH_IN = 9.375      # 675 pt = 900 CSS px
 PNG_DPI = 192         # 2x -> 1800 px wide
@@ -91,7 +91,7 @@ def save(fig, name, title, desc):
     s = re.sub(r"font-family: [^;\"]+", "font-family: " + SVG_FONT_STACK, s)
     s = re.sub(r"(<svg [^>]*>)", lambda m: m.group(1) + f"\n <title>{esc(title)}</title>\n <desc>{esc(desc)}</desc>", s, count=1)
     svg.write_text(s)
-    # social-preview PNG: opaque site background so light text stays readable on any host
+    # social-preview PNG: opaque site background so dark text stays readable on any host
     fig.savefig(OUT / f"{name}.png", format="png", dpi=PNG_DPI, facecolor=BG, transparent=False)
     plt.close(fig)
     print("wrote", svg, "and .png")

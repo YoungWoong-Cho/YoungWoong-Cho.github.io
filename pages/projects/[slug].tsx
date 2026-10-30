@@ -42,10 +42,7 @@ export default function ProjectPage({ slug }: { slug: string }) {
       image={p.ogImage ?? previewImage(p.card ?? p.cover)}
       type="article"
     >
-      <article className="page project">
-        <Link href="/#projects" className="back mono">
-          ← All projects
-        </Link>
+      <article className="project">
         <h1 className="project-title">{p.title}</h1>
         <p className="project-lede">{p.oneLiner}</p>
 

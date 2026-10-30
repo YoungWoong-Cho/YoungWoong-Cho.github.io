@@ -284,7 +284,51 @@ def fig_dexjoco():
            f"{d['mean_over_tasks_pct']['gr00t_n16']:.1f}%, pi0.5 {d['mean_over_tasks_pct']['pi05_published']:.1f}%.")
 
 
-FIGS = {"a": fig_hat, "b": fig_warp, "c": fig_learnability, "d": fig_style, "e": fig_dexjoco}
+# ------------------------------------------------------------------------------------------------ F
+def fig_stages():
+    d = load("human_only_stages.json")
+    conds = d["conditions"]
+    cols = [S.ORANGE, S.MUTED, S.TEAL]
+    fig = plt.figure(figsize=(S.WIDTH_IN, 5.6))
+    widths = [len(e["stages"]) for e in d["evals"]]
+    left, gap, right = 0.075, 0.07, 0.985
+    total = right - left - gap
+    x0 = left
+    for e, w in zip(d["evals"], widths):
+        ax = fig.add_axes([x0, 0.18, total * w / sum(widths), 0.45])
+        x0 += total * w / sum(widths) + gap
+        bw = 0.26
+        for si, (stage, vals) in enumerate(e["stages"]):
+            for ci, v in enumerate(vals):
+                xx = si + (ci - 1) * (bw + 0.03)
+                pct = 100 * v / e["n"]
+                ax.bar(xx, max(pct, 0.6), width=bw, color=cols[ci], zorder=3)
+                ax.text(xx, pct + 2.5, f"{v}", ha="center", va="bottom", fontsize=9, color=S.FG,
+                        fontweight="medium" if ci == 2 else "normal")
+        ax.set_xticks(range(len(e["stages"])))
+        ax.set_xticklabels([st for st, _ in e["stages"]], fontsize=9.5, color=S.FG, linespacing=1.3)
+        ax.set_ylim(0, 112)
+        ax.set_xlim(-0.6, len(e["stages"]) - 0.4)
+        ax.set_yticks(range(0, 101, 25))
+        ax.set_yticklabels([f"{y}%" for y in range(0, 101, 25)])
+        ax.set_title(f"{e['title']} ({e['n']} trials per condition)", loc="left", fontsize=10, color=S.FG, pad=10)
+        S.clean_axes(ax, grid_axis="y")
+    S.header(fig, "Policies trained only on human demos: reaching the basket vs. finishing the task",
+             "Anchoring the base plan to the basket gets the robot to it almost every time, but lifting does not "
+             "improve, so full-task success does not either.")
+    handles = [Line2D([], [], color=c, lw=7, label=f"{k['key']}: {k['label']}") for k, c in zip(conds, cols)]
+    fig.legend(handles=handles, loc="upper left", bbox_to_anchor=(0.004, 0.86), ncol=1, handlelength=1.2,
+               handletextpad=0.6, labelcolor=S.FG, fontsize=8.8)
+    S.footnote(fig,
+               "Simulation only: RB-Y1 basket carry in a MuJoCo scene built by Chuye Zhang. Policies trained on 53-60 "
+               "egocentric human demonstrations, no robot data. Bar labels are trial counts.\n"
+               "Stages are cumulative from the same rollouts. C0 and C1 also differ in training-data build.")
+    S.save(fig, "human-only-stages", "Policies trained only on human demos: reaching the basket vs. finishing the task",
+           "Grouped bars per condition. 30-trial evaluation: approached the basket C0 13, C1 24, C2 30; lifted 6, 6, 3; "
+           "completed 1, 1, 0. 45-trial evaluation: approached 31, 19, 41; completed 6, 0, 0.")
+
+
+FIGS = {"a": fig_hat, "b": fig_warp, "c": fig_learnability, "d": fig_style, "e": fig_dexjoco, "f": fig_stages}
 
 if __name__ == "__main__":
     S.setup()

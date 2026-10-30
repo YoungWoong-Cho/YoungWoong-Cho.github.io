@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import { site } from "../../lib/site";
 
 const DEFAULT_IMAGE = "/media/images/hands-viewer.jpg";
@@ -11,7 +11,6 @@ export function Layout({
   path,
   image,
   type = "website",
-  nameAnchorId,
   children,
 }: {
   title?: string;
@@ -21,34 +20,12 @@ export function Layout({
   /** Site-relative social-preview image. */
   image?: string;
   type?: "website" | "article";
-  /**
-   * id of an on-page heading that already shows the name (the home hero).
-   * The header name then appears only once that heading has scrolled away.
-   */
-  nameAnchorId?: string;
   children: ReactNode;
 }) {
-  const [showName, setShowName] = useState(!nameAnchorId);
-  useEffect(() => {
-    if (!nameAnchorId) {
-      setShowName(true);
-      return;
-    }
-    const el = document.getElementById(nameAnchorId);
-    if (!el || !("IntersectionObserver" in window)) {
-      setShowName(true);
-      return;
-    }
-    // the sticky header covers the top 58px, so treat that strip as off-screen
-    const io = new IntersectionObserver(([e]) => setShowName(!e.isIntersecting), {
-      rootMargin: "-58px 0px 0px 0px",
-    });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [nameAnchorId]);
   const fullTitle = title ? `${title} | ${site.name}` : site.title;
   const desc = description ?? site.description;
   const url = `${site.url}${path}`;
+  const isHome = path === "/";
   return (
     <>
       <Head>
@@ -64,41 +41,22 @@ export function Layout({
         <meta property="og:site_name" content={site.name} />
         <meta property="og:image" content={`${site.url}${image ?? DEFAULT_IMAGE}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="theme-color" content="#0b0d10" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
-      <header className="site-header">
-        <div className="page site-header-inner">
-          <Link
-            href="/"
-            className={`site-name${showName ? " is-visible" : ""}`}
-            aria-hidden={!showName}
-            tabIndex={showName ? undefined : -1}
-          >
-            {site.name}
-          </Link>
-          <nav className="site-nav" aria-label="Main">
-            <Link href="/#projects">Projects</Link>
-            <Link href="/#experience">Experience</Link>
-            {site.cv && (
-              <a href={site.cv} target="_blank" rel="noopener noreferrer">
-                CV
-              </a>
-            )}
-            <Link href="/#contact">Contact</Link>
+      <div className="container">
+        {!isHome && (
+          <nav className="topbar" aria-label="Main">
+            <Link href="/">← {site.name}</Link>
           </nav>
-        </div>
-      </header>
-      <main>{children}</main>
-      <footer className="site-footer">
-        <div className="page site-footer-inner">
-          <span>© 2026 {site.name}</span>
-          <span className="site-footer-links">
-            <a href={`mailto:${site.email}`}>Email</a>
-            <a href={site.github}>GitHub</a>
-            <a href={site.linkedin}>LinkedIn</a>
+        )}
+        <main>{children}</main>
+        <footer className="site-footer">
+          <a href="#top">Back to top</a>
+          <span>
+            Design inspired by <a href="https://jonbarron.info/">Jon Barron</a>&apos;s website.
           </span>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </>
   );
 }

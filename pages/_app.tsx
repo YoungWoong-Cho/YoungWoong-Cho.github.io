@@ -1,10 +1,18 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Lato } from "next/font/google";
 
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+// Same pairing as alfred-cueva.github.io: Lato for everything, JetBrains Mono for timeline dates.
+const sans = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-sans",
+  display: "swap",
+});
 const mono = JetBrains_Mono({
   subsets: ["latin"],
+  weight: ["500", "600"],
   variable: "--font-mono",
   display: "swap",
 });
