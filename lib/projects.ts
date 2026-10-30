@@ -161,19 +161,51 @@ export const projects: Project[] = [
   },
   {
     slug: "retargeted-demonstrations",
-    title: "What Makes Retargeted Demonstrations Learnable?",
+    title: "Humanoid Manipulation from Human Demonstrations Only",
     oneLiner:
-      "Retargeting the same human demonstrations in two different ways gave policies with very different success rates. I studied which properties of the retargeted actions cause that.",
+      "Policies trained only on egocentric human demonstrations, with no robot data, run zero-shot on a real RB-Y1 humanoid. Along the way I studied what makes retargeted demonstrations learnable.",
     affiliation: "Georgia Tech RL2, part of the WARP project",
-    tags: ["Human demonstrations", "Retargeting", "Point clouds", "Rainbow RB-Y1"],
-    ogImage: "/media/figures/warp-mix-success.png",
+    tags: ["Human demonstrations", "Point clouds", "Zero-shot transfer", "Rainbow RB-Y1"],
+    ogImage: "/media/videos/rby1-basket-zeroshot.jpg",
     cover: {
-      kind: "image",
-      src: "/media/images/aria-demo-contact-sheet.jpg",
-      alt: "Frames from my egocentric Aria-glasses demonstration of a two-handed basket carry.",
+      kind: "video",
+      src: "/media/videos/rby1-basket-zeroshot.mp4",
+      poster: "/media/videos/rby1-basket-zeroshot.jpg",
+      alt: "The real RB-Y1 humanoid grasps both handles of a soft basket, lifts it, turns and sets it on a table.",
     },
     body: [
-      { type: "h", text: "Question" },
+      { type: "h", text: "On the real robot" },
+      {
+        type: "p",
+        text: "I train RB-Y1 policies only on egocentric human demonstrations recorded with Aria glasses, with no robot data at all. The first task was to walk to a table, pick up a toy and put it in a basket, learned from 145 human demonstrations. Policies on RGB images learned to navigate but not to manipulate. A single point cloud helped one stage or the other: in the robot's camera frame it navigated well but never finished the task, and cropped around the hand it manipulated better but lost its way. What worked was a dual-stream point cloud: a global cloud in the camera frame for navigation, plus a local cloud cropped around the right hand for manipulation, with a DP3 PointNet encoder and an HPT backbone.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/rby1-penguin-human-only.mp4",
+          poster: "/media/videos/rby1-penguin-human-only.jpg",
+          alt: "The RB-Y1 walks to a table, picks up a toy penguin and places it in a blue basket.",
+        },
+        caption:
+          "Trained only on human demonstrations: the RB-Y1 walks to the table, picks up the toy and puts it in the basket (3x speed).",
+        wide: true,
+      },
+      {
+        type: "p",
+        text: "The same recipe then transferred to a harder bimanual task, lifting a soft basket by both handles while moving the base, from only 50 human demonstrations. Colors near both hands are neutralized so human and robot hands look alike to the policy. The video at the top is that policy running zero-shot on the real robot (2x speed). It works for some basket placements but not all yet; the main failures are grasping only one handle, navigation errors that lead to unseen states, and jerky motion at action-chunk boundaries.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "image",
+          src: "/media/images/aria-demo-contact-sheet.jpg",
+          alt: "Frames from my egocentric Aria-glasses demonstration of a two-handed basket carry.",
+        },
+        caption: "One of my egocentric Aria demonstrations of the basket task: what the policy learns from.",
+        wide: true,
+      },
+      { type: "h", text: "Earlier study: what makes retargeted demonstrations learnable?" },
       {
         type: "p",
         text: "Retargeting maps human motion onto a robot. In a follow-up to WARP, two retargeting methods applied to the same source demonstrations produced policies with very different success (14% vs 37% on a coffee task in simulation, each evaluated in its own scene layout). I studied which properties of the action data, such as consistency, smoothness, diversity, and how well actions can be predicted from observations, make demonstrations easier to imitate.",
@@ -226,12 +258,12 @@ export const projects: Project[] = [
       { type: "h", text: "What came next" },
       {
         type: "p",
-        text: "The dataset-level metrics did not predict closed-loop success well enough to guide data collection, so I closed this study. The project now asks a more direct question: how well can a policy trained only on human demonstrations work on the RBY1? The policies take point clouds as input, with the human hand removed from the cloud.",
+        text: "The dataset-level metrics did not predict closed-loop success well enough to guide data collection, so I closed this study. I moved to training policies directly on the human demonstrations, with point clouds as input; the real-robot results are at the top of this page.",
       },
-      { type: "h", text: "Current work: steering toward the object" },
+      { type: "h", text: "Current work: why only some placements work" },
       {
         type: "p",
-        text: "Policies trained only on the human demonstrations do reach and pick up the basket in simulation, but they don't steer toward it. In the human demonstrations, wherever the basket starts sideways, it ends up in the same place in front of the body by first contact (slope 0.00 across 53 demos). The baseline policy carries the starting offset straight into contact (slope 1.13 across 29 simulated trials), and the basket ends up 31 cm to its right on average.",
+        text: "To find out why the basket policy only works for some placements, I evaluate human-only policies in a simulated copy of the task. They do reach and pick up the basket, but they don't steer toward it. In the human demonstrations, wherever the basket starts sideways, it ends up in the same place in front of the body by first contact (slope 0.00 across 53 demos). The baseline policy carries the starting offset straight into contact (slope 1.13 across 29 simulated trials), and the basket ends up 31 cm to its right on average.",
       },
       {
         type: "media",

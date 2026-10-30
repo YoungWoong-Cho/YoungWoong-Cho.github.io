@@ -21,9 +21,6 @@ export type ExperienceItem = {
   logo: string;
   role: string;
   period: string;
-  place: string;
-  note?: string;
-  href?: string;
 };
 
 export const experience: ExperienceItem[] = [
@@ -33,39 +30,27 @@ export const experience: ExperienceItem[] = [
     logo: "/media/logos/gatech.png",
     role: "Graduate Researcher, advised by Prof. Danfei Xu",
     period: "Aug 2026 – present",
-    place: "Atlanta, GA",
-    note: "Learning mobile manipulation from human demonstrations alone, and cross-embodiment dexterous manipulation.",
-    href: "https://rl2.cc.gatech.edu/",
   },
   {
     org: "RLWRLD",
     short: "RLWRLD",
     logo: "/media/logos/rlwrld.png",
-    href: "https://www.rlwrld.ai/en",
     role: "Research Engineer",
     period: "Apr – Aug 2026",
-    place: "Seoul, Korea",
-    note: "Adapted robot foundation models (GR00T N1.6, π0.5, GAM) to dexterous hands and built the training and evaluation platform.",
   },
   {
     org: "Naver Labs",
     short: "Naver Labs",
     logo: "/media/logos/naverlabs.png",
-    href: "https://www.naverlabs.com",
     role: "Deep Learning Research Intern, Autonomous Driving",
     period: "Mar – Aug 2022",
-    place: "Seongnam, Korea",
-    note: "RL and imitation learning for 3D annotation, and a 3D annotation tool for collecting human demonstrations.",
   },
   {
     org: "Seoul Robotics",
     short: "Seoul Robotics",
     logo: "/media/logos/seoulrobotics.png",
-    href: "https://seoulrobotics.tech",
     role: "Machine Learning Research Engineer Intern",
     period: "May 2021 – Mar 2022",
-    place: "Seoul, Korea",
-    note: "LiDAR perception: curb detection, multi-view annotation tools, and the evaluation pipeline.",
   },
   {
     org: "Seoul National University, Interactive & Network Robotics Lab",
@@ -73,8 +58,6 @@ export const experience: ExperienceItem[] = [
     logo: "/media/logos/snu.png",
     role: "Research Intern, Prof. Dongjun Lee",
     period: "May – Jul 2020",
-    place: "Seoul, Korea",
-    note: "Cooperative manipulation on a physical multi-robot testbed.",
   },
 ];
 
@@ -112,23 +95,5 @@ export const earlierProjects: { title: string; context: string; text: string; li
     title: "Cooper Union IGVC",
     context: "Intelligent Ground Vehicle Competition · 2022–2023",
     text: "LiDAR- and RGB-based localization, mapping, and path planning in ROS, plus an OCR-based stop-sign classifier. Placed 2nd in autonomous navigation and 3rd in vehicle design.",
-  },
-];
-
-export const explainers: {
-  title: string;
-  context: string;
-  text: string;
-  video: string;
-  poster: string;
-  tags: string[];
-}[] = [
-  {
-    title: "How a Diffusion Transformer Generates Robot Actions",
-    context: "Animated explainer, 3 min, narrated",
-    text: "An explainer I made with Manim: an action chunk as a table of future joint commands, why the model is trained to predict the added noise, how the transformer attends over image, state and language tokens, and how repeated denoising turns random noise into a motion.",
-    video: "/media/videos/dit-explainer.mp4",
-    poster: "/media/videos/dit-explainer.jpg",
-    tags: ["Diffusion policy", "DiT", "Manim"],
   },
 ];

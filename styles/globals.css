@@ -398,24 +398,6 @@ h3 {
   object-fit: cover;
 }
 
-.row-logo {
-  display: grid;
-  place-items: center;
-  aspect-ratio: auto;
-  background: none;
-}
-
-.company-logo {
-  display: block;
-  width: 100%;
-  max-width: 120px;
-  height: auto;
-  padding: 6px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
 .row-body {
   padding: 20px;
 }
@@ -424,8 +406,7 @@ h3 {
   padding: 12px 0;
 }
 
-.papertitle,
-.org {
+.papertitle {
   font-weight: 700;
 }
 
@@ -447,12 +428,6 @@ h3 {
   }
   .row-media {
     margin: 16px 0 0;
-  }
-  .row-logo {
-    justify-items: start;
-  }
-  .company-logo {
-    max-width: 72px;
   }
   .row-body {
     padding: 12px 0 8px;

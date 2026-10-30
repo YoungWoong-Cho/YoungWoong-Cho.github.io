@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Layout } from "../components/site/Layout";
 import { MediaView } from "../components/site/Media";
 import { projects } from "../lib/projects";
-import { earlierProjects, education, experience, explainers, site } from "../lib/site";
+import { earlierProjects, education, experience, site } from "../lib/site";
 
 const external = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -89,63 +89,6 @@ export default function Home() {
                 <p className="tags">
                   <em>{p.tags.join(" · ")}</em>
                 </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="explainers" className="section" aria-labelledby="explainers-title">
-        <h2 id="explainers-title">Explainers</h2>
-        <div className="rows">
-          {explainers.map((x) => (
-            <article key={x.title} className="row">
-              <a href={x.video} className="row-media" tabIndex={-1} aria-hidden {...external}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="media-image" src={x.poster} alt="" loading="lazy" />
-              </a>
-              <div className="row-body">
-                <span className="papertitle">{x.title}</span>
-                <br />
-                <a href={x.video} {...external}>
-                  [Video]
-                </a>
-                <br />
-                <em>{x.context}</em>
-                <p className="row-text">{x.text}</p>
-                <p className="tags">
-                  <em>{x.tags.join(" · ")}</em>
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="experience" className="section" aria-labelledby="experience-title">
-        <h2 id="experience-title">Experience</h2>
-        <div className="rows">
-          {experience.map((e) => (
-            <article key={e.org} className="row">
-              <div className="row-media row-logo">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="company-logo" src={e.logo} alt={e.short} loading="lazy" />
-              </div>
-              <div className="row-body">
-                {e.href ? (
-                  <a className="org" href={e.href} {...external}>
-                    {e.org}
-                  </a>
-                ) : (
-                  <span className="org">{e.org}</span>
-                )}
-                <br />
-                <span className="papertitle">{e.role}</span>
-                <br />
-                <em>
-                  {e.period} · {e.place}
-                </em>
-                {e.note && <p className="row-text">{e.note}</p>}
               </div>
             </article>
           ))}
