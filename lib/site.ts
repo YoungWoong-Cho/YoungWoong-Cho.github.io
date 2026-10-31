@@ -11,6 +11,8 @@ export const site = {
   cv: "/cv.pdf" as string | null,
   /** Square headshot shown in the intro, e.g. "/media/images/profile.jpg". */
   photo: "/media/images/profile.jpg" as string | null,
+  /** Highlighted line under the intro; null hides it. */
+  seeking: "I'm looking for research internships for Summer 2027. Feel free to reach out!" as string | null,
 };
 
 export type ExperienceItem = {

@@ -55,7 +55,7 @@ export const projects: Project[] = [
           "A leave-one-hand-out benchmark with Shadow, Inspire RH56, Allegro, LEAP, Sharpa Wave, Wuji, and Wuji 2, plus the tooling that runs and tracks over a hundred training and evaluation jobs on our Slurm cluster.",
         ],
       },
-      { type: "h", text: "Early result" },
+      { type: "h", text: "Result" },
       {
         type: "media",
         media: {
@@ -63,12 +63,12 @@ export const projects: Project[] = [
           src: "/media/figures/hat-zero-shot.svg",
           alt: "Zero-shot success on each held-out hand when training on one hand versus six hands.",
         },
-        caption: "Interim results in simulation, 100 episodes per evaluation. The target hand is never used in training.",
+        caption: "Final results in simulation, 100 episodes per evaluation. The target hand is never used in training; six-hand models are one training seed.",
         wide: true,
       },
       {
         type: "p",
-        text: "With the same amount of demonstration data, a policy trained on six hands gets about twice the zero-shot success of one trained on a single hand, and it does better on every target hand tested so far. It doesn't beat the best single source hand yet. Runs with two to five training hands are still in progress.",
+        text: "With the same amount of demonstration data, a policy trained on six hands reached 1.9 times the zero-shot success of one trained on a single hand (61% vs 32% on average) and did better on all seven target hands. It beat the best single source hand on four of seven targets, but not on average, and the best source is hard to know before testing. A few five-hand runs scored about as well as six hands, which suggests most of the gain comes before the last hand is added, but there are too few of them to draw a curve. I closed the study after 90 single- and six-hand evaluations.",
       },
     ],
     credits: [
@@ -194,6 +194,45 @@ export const projects: Project[] = [
       {
         type: "p",
         text: "The same recipe then transferred to a harder bimanual task, lifting a soft basket by both handles while moving the base, from only 50 human demonstrations. Colors near both hands are neutralized so human and robot hands look alike to the policy. The video at the top is that policy running zero-shot on the real robot (2x speed). It works for some basket placements but not all yet; the main failures are grasping only one handle, navigation errors that lead to unseen states, and jerky motion at action-chunk boundaries.",
+      },
+      {
+        type: "p",
+        text: "Jerky motion at chunk boundaries made the robot drop things, so I changed how actions are executed. The policy predicts 32 steps and executes 16. Running it synchronously at 10 Hz is smooth but slow. With inference-time real-time chunking (RTC) at 20 Hz, each new chunk is made to continue the motion that is still being executed, so the robot keeps moving smoothly while the next chunk is computed. In the two runs below, the same lift and place took about 32 s instead of about 50 s.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/rby1-rtc-comparison.mp4",
+          poster: "/media/videos/rby1-rtc-comparison.jpg",
+          alt: "Side by side on the real RB-Y1: synchronous 10 Hz inference is still carrying the basket while the real-time chunking run has already set it down.",
+        },
+        caption: "Real RB-Y1, same task, 2x speed. Left: synchronous inference at 10 Hz. Right: inference-time real-time chunking at 20 Hz.",
+        wide: true,
+      },
+      { type: "h", text: "Which observations carry over from humans to the robot?" },
+      {
+        type: "p",
+        text: "To see which inputs survive the jump from human to robot, I compared eight observation variants for human-only policies in a digital twin of the basket task, 30 rollouts each. With RGB images, no variant finished the task. Re-rendering the human view from the robot's camera height (EgoHumanoid-style reprojection with inpainting) never even reached the basket, and erasing the human arm or rendering the robot arm in its place did not help. RGB also carries a bigger sim-to-real gap: simulated images are much sharper than real ones (Laplacian variance 1,245 in simulation against 748 for robot and 643 for human camera images). Point clouds reached the basket every time, and replacing the human hand's points with robot-hand surface points doubled the grasps (20 vs 9 of 30) and gave the most full successes.",
+      },
+      {
+        type: "media",
+        media: {
+          kind: "image",
+          src: "/media/figures/observation-ablation.svg",
+          alt: "Table of eight observation variants by stage reached: point-cloud variants reach the basket every time, RGB variants mostly never do.",
+        },
+        wide: true,
+      },
+      {
+        type: "media",
+        media: {
+          kind: "video",
+          src: "/media/videos/twin-v0-vs-i2.mp4",
+          poster: "/media/videos/twin-v0-vs-i2.jpg",
+          alt: "Digital twin, same scene and seed: the baseline policy fails to grasp, the variant with robot-hand points completes the task.",
+        },
+        caption: "Same scene and seed in the digital twin. Top: baseline point-cloud policy, no grasp. Bottom: human hand replaced by robot-hand points, full success.",
       },
       {
         type: "media",

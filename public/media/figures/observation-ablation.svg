@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="675pt" height="446.4pt" viewBox="0 0 675 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Which observations carry over from human demonstrations to the robot?</title>
+ <desc>Table of 8 policy variants by stage. Point clouds: baseline 30/9/7/2, hand removed 30/10/7/1, robot hand inserted 30/20/10/3 of 30. RGB: no alignment 30/10/0/0; all aligned or augmented variants 0.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 446.4 
+L 675 446.4 
+L 675 0 
+L 0 0 
+L 0 446.4 
+z
+" style="fill: none"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 353.3112 130.991616 
+L 427.0968 130.991616 
+L 427.0968 156.489984 
+L 353.3112 156.489984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #0f8f7f; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 432.3672 130.991616 
+L 506.1528 130.991616 
+L 506.1528 156.489984 
+L 432.3672 156.489984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #a3d4ce; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 511.4232 130.991616 
+L 585.2088 130.991616 
+L 585.2088 156.489984 
+L 511.4232 156.489984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #b1dbd5; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 590.4792 130.991616 
+L 664.2648 130.991616 
+L 664.2648 156.489984 
+L 590.4792 156.489984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #d5ebe8; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 353.3112 161.346816 
+L 427.0968 161.346816 
+L 427.0968 186.845184 
+L 353.3112 186.845184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #0f8f7f; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 432.3672 161.346816 
+L 506.1528 161.346816 
+L 506.1528 186.845184 
+L 432.3672 186.845184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #9cd1ca; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 511.4232 161.346816 
+L 585.2088 161.346816 
+L 585.2088 186.845184 
+L 511.4232 186.845184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #b1dbd5; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 590.4792 161.346816 
+L 664.2648 161.346816 
+L 664.2648 186.845184 
+L 590.4792 186.845184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #dbeeec; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 353.3112 191.702016 
+L 427.0968 191.702016 
+L 427.0968 217.200384 
+L 353.3112 217.200384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #0f8f7f; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 432.3672 191.702016 
+L 506.1528 191.702016 
+L 506.1528 217.200384 
+L 432.3672 217.200384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #56b0a5; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 511.4232 191.702016 
+L 585.2088 191.702016 
+L 585.2088 217.200384 
+L 511.4232 217.200384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #9cd1ca; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 590.4792 191.702016 
+L 664.2648 191.702016 
+L 664.2648 217.200384 
+L 590.4792 217.200384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #cde8e4; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 353.3112 252.412416 
+L 427.0968 252.412416 
+L 427.0968 277.910784 
+L 353.3112 277.910784 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #0f8f7f; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 432.3672 252.412416 
+L 506.1528 252.412416 
+L 506.1528 277.910784 
+L 432.3672 277.910784 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #9cd1ca; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 511.4232 252.412416 
+L 585.2088 252.412416 
+L 585.2088 277.910784 
+L 511.4232 277.910784 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 590.4792 252.412416 
+L 664.2648 252.412416 
+L 664.2648 277.910784 
+L 590.4792 277.910784 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 353.3112 282.767616 
+L 427.0968 282.767616 
+L 427.0968 308.265984 
+L 353.3112 308.265984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 432.3672 282.767616 
+L 506.1528 282.767616 
+L 506.1528 308.265984 
+L 432.3672 308.265984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 511.4232 282.767616 
+L 585.2088 282.767616 
+L 585.2088 308.265984 
+L 511.4232 308.265984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 590.4792 282.767616 
+L 664.2648 282.767616 
+L 664.2648 308.265984 
+L 590.4792 308.265984 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 353.3112 313.122816 
+L 427.0968 313.122816 
+L 427.0968 338.621184 
+L 353.3112 338.621184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 432.3672 313.122816 
+L 506.1528 313.122816 
+L 506.1528 338.621184 
+L 432.3672 338.621184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 511.4232 313.122816 
+L 585.2088 313.122816 
+L 585.2088 338.621184 
+L 511.4232 338.621184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 590.4792 313.122816 
+L 664.2648 313.122816 
+L 664.2648 338.621184 
+L 590.4792 338.621184 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 353.3112 343.478016 
+L 427.0968 343.478016 
+L 427.0968 368.976384 
+L 353.3112 368.976384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 432.3672 343.478016 
+L 506.1528 343.478016 
+L 506.1528 368.976384 
+L 432.3672 368.976384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 511.4232 343.478016 
+L 585.2088 343.478016 
+L 585.2088 368.976384 
+L 511.4232 368.976384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 590.4792 343.478016 
+L 664.2648 343.478016 
+L 664.2648 368.976384 
+L 590.4792 368.976384 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 353.3112 373.833216 
+L 427.0968 373.833216 
+L 427.0968 399.331584 
+L 353.3112 399.331584 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 432.3672 373.833216 
+L 506.1528 373.833216 
+L 506.1528 399.331584 
+L 432.3672 399.331584 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 511.4232 373.833216 
+L 585.2088 373.833216 
+L 585.2088 399.331584 
+L 511.4232 399.331584 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 590.4792 373.833216 
+L 664.2648 373.833216 
+L 664.2648 399.331584 
+L 590.4792 399.331584 
+z
+" clip-path="url(#p3463fb07be)" style="fill: #e3f2f0; stroke: #e6e6e6; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #5c5c5c" x="390.204" y="89.089903" transform="rotate(-0 390.204 89.089903)">Reached the basket</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #5c5c5c" x="469.26" y="88.743262" transform="rotate(-0 469.26 88.743262)">Grasped it</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #5c5c5c" x="548.316" y="89.089903" transform="rotate(-0 548.316 89.089903)">Lifted it</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #5c5c5c" x="627.372" y="89.089903" transform="rotate(-0 627.372 89.089903)">Full success</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 600; font-size: 8.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #5c5c5c" x="11.394" y="119.406544" transform="rotate(-0 11.394 119.406544)">POINT CLOUD</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="146.496171" transform="rotate(-0 11.394 146.496171)">V0</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="146.204675" transform="rotate(-0 44.334 146.204675)">Point cloud (baseline policy)</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #ffffff" x="390.204" y="146.351152" transform="rotate(-0 390.204 146.351152)">30/30</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="146.351152" transform="rotate(-0 469.26 146.351152)">9/30</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="146.351152" transform="rotate(-0 548.316 146.351152)">7/30</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="146.351152" transform="rotate(-0 627.372 146.351152)">2/30</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="176.851371" transform="rotate(-0 11.394 176.851371)">I1</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="176.587188" transform="rotate(-0 44.334 176.587188)">Human hand points removed</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #ffffff" x="390.204" y="176.706352" transform="rotate(-0 390.204 176.706352)">30/30</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="176.706352" transform="rotate(-0 469.26 176.706352)">10/30</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="176.706352" transform="rotate(-0 548.316 176.706352)">7/30</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="176.706352" transform="rotate(-0 627.372 176.706352)">1/30</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="207.206571" transform="rotate(-0 11.394 207.206571)">I2</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 600; font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="206.910763" transform="rotate(-0 44.334 206.910763)">Human hand replaced by robot hand points</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #ffffff" x="390.204" y="207.061552" transform="rotate(-0 390.204 207.061552)">30/30</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #ffffff" x="469.26" y="207.061552" transform="rotate(-0 469.26 207.061552)">20/30</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="207.061552" transform="rotate(-0 548.316 207.061552)">10/30</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 600; font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="207.061552" transform="rotate(-0 627.372 207.061552)">3/30</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 600; font-size: 8.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #5c5c5c" x="11.394" y="240.827344" transform="rotate(-0 11.394 240.827344)">RGB</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="267.916971" transform="rotate(-0 11.394 267.916971)">A4</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="267.59385" transform="rotate(-0 44.334 267.59385)">No view alignment, no augmentation</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #ffffff" x="390.204" y="267.771952" transform="rotate(-0 390.204 267.771952)">30/30</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="267.771952" transform="rotate(-0 469.26 267.771952)">10/30</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="267.771952" transform="rotate(-0 548.316 267.771952)">0/30</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="267.771952" transform="rotate(-0 627.372 267.771952)">0/30</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="298.272171" transform="rotate(-0 11.394 298.272171)">A5</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="297.94905" transform="rotate(-0 44.334 297.94905)">No view alignment, image augmentation</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="390.204" y="298.127152" transform="rotate(-0 390.204 298.127152)">0/30</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="298.127152" transform="rotate(-0 469.26 298.127152)">0/30</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="298.127152" transform="rotate(-0 548.316 298.127152)">0/30</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="298.127152" transform="rotate(-0 627.372 298.127152)">0/30</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="328.627371" transform="rotate(-0 11.394 328.627371)">A1</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="328.30425" transform="rotate(-0 44.334 328.30425)">View-aligned to the robot camera, augmentation</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="390.204" y="328.482352" transform="rotate(-0 390.204 328.482352)">0/30</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="328.482352" transform="rotate(-0 469.26 328.482352)">0/30</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="328.482352" transform="rotate(-0 548.316 328.482352)">0/30</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="328.482352" transform="rotate(-0 627.372 328.482352)">0/30</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="358.982571" transform="rotate(-0 11.394 358.982571)">R1</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="358.65945" transform="rotate(-0 44.334 358.65945)">A1 + human arm erased (EgoPoser mask, ProPainter)</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="390.204" y="358.837552" transform="rotate(-0 390.204 358.837552)">0/30</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="358.837552" transform="rotate(-0 469.26 358.837552)">0/30</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="358.837552" transform="rotate(-0 548.316 358.837552)">0/30</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="358.837552" transform="rotate(-0 627.372 358.837552)">0/30</text>
+   </g>
+   <g id="text_49">
+    <text style="font-weight: 600; font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="11.394" y="389.337771" transform="rotate(-0 11.394 389.337771)">R2</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 9.2px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="44.334" y="389.01465" transform="rotate(-0 44.334 389.01465)">R1 + robot arm rendered at the retargeted joints</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="390.204" y="389.192752" transform="rotate(-0 390.204 389.192752)">0/30</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="469.26" y="389.192752" transform="rotate(-0 469.26 389.192752)">0/30</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="548.316" y="389.192752" transform="rotate(-0 548.316 389.192752)">0/30</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 9px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: middle; fill: #1b1b1b" x="627.372" y="389.192752" transform="rotate(-0 627.372 389.192752)">0/30</text>
+   </g>
+  </g>
+  <g id="text_55">
+   <text style="font-weight: 600; font-size: 13.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-anchor: start; fill: #1b1b1b" x="8.1" y="21.285" transform="rotate(-0 8.1 21.285)">Which observations carry over from human demonstrations to the robot?</text>
+  </g>
+  <g id="text_56">
+   <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #5c5c5c" transform="translate(8.1 46.729181)">Human-only policies in a digital twin of the basket task, 30 rollouts each. No RGB variant finished the task, and view-aligned RGB never</text>
+   <text style="font-size: 9.5px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #5c5c5c" transform="translate(8.1 59.319464)">reached the basket. Point clouds always reached it; replacing the human hand with robot-hand points gave the most grasps and successes.</text>
+  </g>
+  <g id="text_57">
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #5c5c5c" transform="translate(8.1 423.868706)">Simulation: MuJoCo digital twin of the RB-Y1 basket task (Chuye Zhang's). Stages are cumulative from the same rollouts. View alignment re-renders the human</text>
+   <text style="font-size: 8px; font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #5c5c5c" transform="translate(8.1 434.876519)">view from the robot camera height (EgoHumanoid-style 2D to 3D to 2D reprojection with inpainting), with a ResNet-18 image encoder.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3463fb07be">
+   <rect x="8.1" y="98.208" width="658.8" height="303.552"/>
+  </clipPath>
+ </defs>
+</svg>

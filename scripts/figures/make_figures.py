@@ -65,11 +65,11 @@ def fig_hat():
                columnspacing=1.6, labelcolor=S.FG)
     pd_ = d["paired_difference_pts"]
     S.footnote(fig,
-               f"Interim results, simulation. {d['n_single_hand_evaluations'] + d['n_six_hand_evaluations']} evaluations "
+               f"Final results, simulation (study closed). {d['n_single_hand_evaluations'] + d['n_six_hand_evaluations']} evaluations "
                f"({d['n_single_hand_evaluations']} single-hand, {d['n_six_hand_evaluations']} six-hand), "
                f"{d['episodes_per_evaluation']} episodes each. Every model gets the same demonstration budget:\n"
                "1,800 unique demonstration frames and 8,000 training updates. Single-hand: several source hands, up to "
-               "3 seeds; six-hand: 1 seed so far.\n"
+               "3 seeds; six-hand: 1 seed.\n"
                f"Six-hand training beats the single-hand average on {pd_['positive']}/{pd_['n']} hands "
                f"(+{pd_['mean']:.0f} points on average); the single best source hand does as well or better on "
                f"{sum(r['best_single_source_mean'] >= r['six_hand_pct'] - 1 for r in rows)} of {n}.")
@@ -444,7 +444,56 @@ def fig_teleop():
            "6 imported hands, episode loop, dataset of 357 demos, review and conversion.")
 
 
-FIGS = {"a": fig_hat, "b": fig_warp, "c": fig_learnability, "d": fig_style, "e": fig_dexjoco, "f": fig_stages, "g": fig_state_tokens, "h": fig_teleop}
+# ------------------------------------------------------------------------------------------------ I
+def fig_observations():
+    from matplotlib.colors import LinearSegmentedColormap
+    from matplotlib.patches import Rectangle
+
+    d = load("observation_ablation.json")
+    stages, n = d["stages"], d["n"]
+    cmap = LinearSegmentedColormap.from_list("t", ["#ffffff", S.TEAL])
+    rows = []
+    for g in d["groups"]:
+        rows.append(("group", g["name"]))
+        rows += [("row", r) for r in g["rows"]]
+    fig = plt.figure(figsize=(S.WIDTH_IN, 6.2))
+    ax = fig.add_axes([0.012, 0.1, 0.976, 0.68])
+    ax.set_xlim(0, 100)
+    ax.set_ylim(len(rows), 0)
+    ax.axis("off")
+    x0, cw = 52.0, 12.0
+    for j, st in enumerate(stages):
+        ax.text(x0 + cw * j + cw / 2, -0.25, st, ha="center", va="bottom", fontsize=9, color=S.MUTED)
+    for i, (kind, r) in enumerate(rows):
+        if kind == "group":
+            ax.text(0.5, i + 0.62, r.upper(), ha="left", va="center", fontsize=8.2, color=S.MUTED,
+                    fontweight="semibold")
+            continue
+        key, label, vals = r
+        best = key == "I2"
+        ax.text(0.5, i + 0.5, key, ha="left", va="center", fontsize=9.5, color=S.FG, fontweight="semibold")
+        ax.text(5.5, i + 0.5, label, ha="left", va="center", fontsize=9.2, color=S.FG,
+                fontweight="semibold" if best else "normal")
+        for j, v in enumerate(vals):
+            frac = v / n
+            ax.add_patch(Rectangle((x0 + cw * j + 0.4, i + 0.08), cw - 0.8, 0.84, facecolor=cmap(0.12 + 0.88 * frac),
+                                   edgecolor=S.LINE, linewidth=0.8))
+            ax.text(x0 + cw * j + cw / 2, i + 0.5, f"{v}/{n}", ha="center", va="center", fontsize=9,
+                    color="#ffffff" if frac > 0.55 else S.FG, fontweight="semibold" if (best and j == 3) else "normal")
+    S.header(fig, "Which observations carry over from human demonstrations to the robot?",
+             "Human-only policies in a digital twin of the basket task, 30 rollouts each. No RGB variant finished the "
+             "task, and view-aligned RGB never\nreached the basket. Point clouds always reached it; replacing the human "
+             "hand with robot-hand points gave the most grasps and successes.", top=0.975)
+    S.footnote(fig,
+               "Simulation: MuJoCo digital twin of the RB-Y1 basket task (Chuye Zhang's). Stages are cumulative from "
+               "the same rollouts. View alignment re-renders the human\nview from the robot camera height "
+               "(EgoHumanoid-style 2D to 3D to 2D reprojection with inpainting), with a ResNet-18 image encoder.")
+    S.save(fig, "observation-ablation", "Which observations carry over from human demonstrations to the robot?",
+           "Table of 8 policy variants by stage. Point clouds: baseline 30/9/7/2, hand removed 30/10/7/1, robot hand "
+           "inserted 30/20/10/3 of 30. RGB: no alignment 30/10/0/0; all aligned or augmented variants 0.")
+
+
+FIGS = {"a": fig_hat, "b": fig_warp, "c": fig_learnability, "d": fig_style, "e": fig_dexjoco, "f": fig_stages, "g": fig_state_tokens, "h": fig_teleop, "i": fig_observations}
 
 if __name__ == "__main__":
     S.setup()

@@ -11,6 +11,7 @@
   --link-hover: #f09228;
   --accent: #1a9e5c;
   --accent-soft: rgba(26, 158, 92, 0.16);
+  --accent-wine: #b33a5a;
 
   --container: 1000px;
 }
@@ -150,6 +151,10 @@ h3 {
 
 .intro-text .link-row {
   text-align: center;
+}
+
+.intro-text .seeking {
+  color: var(--accent-wine);
 }
 
 .link-sep {

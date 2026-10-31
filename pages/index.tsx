@@ -32,6 +32,11 @@ export default function Home() {
             <a href="https://seoulrobotics.tech">Seoul Robotics</a>, and received my B.E. in
             Mechanical Engineering from <a href="https://cooper.edu">The Cooper Union</a>.
           </p>
+          {site.seeking && (
+            <p className="seeking">
+              <strong>{site.seeking}</strong>
+            </p>
+          )}
           <p className="link-row">
             {links.map((l, i) => (
               <span key={l.label}>
